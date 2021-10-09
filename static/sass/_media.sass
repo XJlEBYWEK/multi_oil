@@ -1,0 +1,471 @@
+@import "vars"
+@import "bootstrap/scss/mixins/_breakpoints.scss"
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+    
+        
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+    .steps-item
+        margin-bottom: 55px
+
+    .steps-item__title
+        white-space: normal
+
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+    .language
+        margin-left: 45px
+
+    .main-section__descr
+        margin-top: 30px
+
+    .section-title
+        font-size: 40px
+
+    .feedback-section__col
+        margin-bottom: 30px
+
+    .feedback-section
+        padding: 70px 0 95px
+
+    .steps-item__title
+        font-size: 16px
+        font-weight: 500
+
+    .news-section__col
+        margin-bottom: 30px
+
+    .news-card__title
+        font-size: 18px
+
+    .news-section
+        padding: 70px 0 95px
+
+    .footer__col--hidden-laptop
+        display: none
+
+    .price-table__title
+        font-size: 14px
+        padding: 10px 0
+
+    .price-table__col
+        font-size: 18px
+
+    .price-table__row
+        padding: 20px 0
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+    .header__logo
+        display: none
+
+    .menu-toggle
+        display: block
+
+    .menu
+        position: absolute
+        top: 100%
+        right: 0
+        width: 100%
+        background: #151515
+        flex-direction: column-reverse
+        align-items: flex-start
+        z-index: 100
+        width: 220px
+        padding: 15px 0
+        opacity: 0
+        visibility: hidden
+        transition: all .5s ease
+
+        &__list
+            display: block
+            width: 100%
+
+        &__item
+            margin: 0
+
+        &__link
+            display: block
+            padding: 10px 15px
+            text-align: right
+
+        &.is-visible
+            opacity: 1
+            visibility: visible
+
+    .language
+        margin: 0 0 10px
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        padding: 0 15px
+
+        &__list
+            top: 0
+            right: 40px
+            left: auto
+            opacity: 1
+            visibility: visible
+            display: flex
+            align-items: center
+            justify-content: flex-end
+
+        &__item
+            margin: 0 5px
+
+    .main-section
+        display: none
+
+    .mobile-section
+        display: block
+
+    .about-section
+        padding: 30px 0 50px
+        border-radius: 20px 20px 0 0
+        background: $green
+
+        &:before
+            display: none
+
+    .section-title
+        font-size: 24px
+
+    .about-section__title
+        margin-bottom: 20px
+
+        .section-title__line
+            display: none
+
+        span
+            margin: 0
+
+    .about-section__descr
+        font-size: 16px
+        max-width: 285px
+
+    .advantages-section
+        padding: 20px 0 25px
+
+    .advantages-section__title
+        margin-bottom: 20px
+
+    .advantages-item
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        background: #171717
+        border-radius: 5px
+        margin-bottom: 10px
+        padding: 15px
+        text-align: left
+
+        &__circle
+            width: 32px
+            height: 32px
+            min-width: 32px
+            margin: 0 20px 0 0
+
+        &__icon
+            width: 18px
+            height: 18px
+
+        &__title
+            font-size: 16px
+            margin-bottom: 5px
+
+        &__text
+            font-size: 12px
+            font-weight: 300
+            line-height: 1.2
+
+    .feedback-section
+        padding: 25px 0
+        border-radius: 20px 20px 0 0
+
+    .feedback-section__title
+        margin-bottom: 20px
+
+    .feedback-card
+        padding: 25px 20px 20px
+        display: flex
+        flex-direction: column-reverse
+
+    .feedback-card__author
+        margin-bottom: 15px
+
+    .feedback-card__text
+        margin: 0
+
+    .feedback-section__col
+        margin-bottom: 10px
+
+    .steps-section
+        padding: 20px 0
+
+    .steps-section__title
+        margin-bottom: 20px
+
+    .steps
+        display: none
+
+    .steps-slider__slide
+        background: #151515
+        border-radius: 10px
+        padding: 15px 20px
+        height: auto
+        display: flex
+        width: 100%
+        flex-direction: column
+
+    .steps-slider__picture
+        margin-top: auto
+
+    .steps-slider__title
+        display: block
+
+    .steps-slider-pagination
+        display: block
+
+    .news-section
+        padding: 25px 0 15px
+
+    .news-section__title
+        margin-bottom: 20px
+
+    .news-section__col
+        margin-bottom: 10px
+
+    .news-card
+        flex-direction: row
+        padding: 0
+        border-radius: 10px
+        overflow: hidden
+
+        &__picture
+            height: 100%
+            min-height: 105px
+            width: 140px
+            min-width: 140px
+            border-radius: 0
+            margin: 0
+
+        &__descr
+            display: block
+            padding: 10px 15px
+
+        &__title
+            font-size: 14px
+            font-weight: 500
+            text-align: left
+            margin: 0 0 5px
+            line-height: 1.2
+
+        &__text
+            font-size: 12px
+            font-weight: 300
+            text-align: left
+            line-height: 1.2
+
+    .contacts-section
+        display: none
+
+    .partner-section
+        padding: 25px 0 50px
+
+        &__title
+            margin-bottom: 50px
+
+    .partner-section__picture
+        max-width: 195px
+        margin: 0 auto 55px
+
+    .footer__logo
+        display: none
+
+    .footer__col:first-child
+        display: flex
+        flex-direction: column-reverse
+
+    .footer-phone
+        margin: 0
+        justify-content: center
+
+    .footer-phone__link
+        font-size: 14px
+        font-weight: 500
+
+    .footer__social
+        justify-content: center
+        margin-bottom: 25px
+
+        .social__icon
+            width: 32px
+            height: 32px
+
+    .footer__col--hidden-mobile
+        display: none
+
+    .footer-block__title
+        margin-bottom: 8px
+        text-align: center
+
+    .footer__download
+
+        .download__title
+            font-size: 14px
+            text-align: center
+            max-width: 100%
+            margin-bottom: 15px
+
+        .download__link
+            height: 45px
+            max-width: 155px
+
+    .footer__bottom
+        flex-direction: column-reverse
+        justify-content: center
+
+    .footer-links
+        text-align: center
+        margin-bottom: 15px
+        width: 100%
+
+        &__list
+            justify-content: space-between
+        
+        &__item
+            margin: 0
+
+        &__link
+            font-size: 11px
+
+    .popup
+        padding: 40px 15px
+
+    .popup__title
+        font-size: 22px
+
+    .popup--success .popup__title
+        font-size: 22px
+
+    .popup__descr
+        font-size: 16px
+
+    .popup--price .popup__title
+        font-size: 22px
+        margin-bottom: 20px
+
+    .price-table__header
+        margin-bottom: 20px
+
+        .row
+            margin: 0 -5px
+
+        .col-3
+            padding: 0 5px
+
+    .price-table__title
+        font-size: 9px
+        padding: 5px 0
+
+        &:before
+            width: 46px
+            margin-left: -23px
+
+    .price-table__col
+        font-size: 14px
+        font-weight: 500
+
+    .price-table__row
+        padding: 20px 10px
+
+    // FAQ
+    .faq-article
+        padding: 80px 0 25px
+
+    .faq-article__title
+        font-size: 40px
+
+    .faq-article__descr
+        font-size: 16px
+        margin-bottom: 35px
+
+    .faq-block__toggle
+        padding: 20px 35px 20px 15px
+
+        &:before
+            right: 10px
+
+        &:after
+            right: 16px
+
+    .faq-block__descr
+        padding: 0 15px 25px
+
+    .faq-block__title
+        font-size: 16px
+        font-weight: 500
+
+    .faq-block__descr
+        font-size: 14px
+        font-weight: 300
+
+    // Terms
+    .terms-article
+        padding: 80px 0 50px
+
+    .terms-article__title
+        font-size: 26px
+
+    .terms-article__descr
+        margin: 0 0 35px
+        font-size: 14px
+
+    .terms-article__text
+        h2
+            font-size: 22px
+
+        p
+            font-size: 14px
+
+//Extra small: >0
++media-breakpoint-down(xs)
+
+    
+
+@media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    /**/
+
+
+@media only screen and (max-width: 991.98px), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    /**/
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)

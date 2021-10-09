@@ -1,0 +1,182 @@
+.footer
+    position: relative
+    padding: 35px 0 20px
+    background: #151515
+    margin-top: auto
+
+    &__col
+        margin-bottom: 25px
+
+    &__logo
+        margin-bottom: 25px
+
+    &-phone
+        line-height: 1
+        margin-bottom: 30px
+        display: inline-flex
+        align-items: center
+        justify-content: flex-start
+
+        &__link
+            text-decoration: none
+            color: #fff
+            font-size: 16px
+            line-height: 1
+            transition: all .5s ease
+
+            &:hover
+                color: $green
+
+        &__icon
+            width: 18px
+            height: 18px
+            fill: #fff
+            margin-right: 10px
+
+    &__social
+        justify-content: flex-start
+
+        .social__item
+            margin-right: 25px
+
+            &:last-child
+                margin-right: 0
+
+        .social__icon
+            width: 24px
+            height: 24px
+
+    &-block
+
+        &__title
+            font-weight: 700
+            text-transform: uppercase
+            margin-bottom: 25px
+            font-size: 16px
+
+    &-menu
+        line-height: 1
+        margin: 0 auto
+
+        &__list
+            padding-left: 0
+            list-style: none
+            margin: 0
+            line-height: 1
+
+        &__item
+            line-height: 1.2
+            position: relative
+            margin-bottom: 15px
+            padding-left: 15px
+
+            &:before
+                position: absolute
+                top: 50%
+                left: 0
+                width: 4px
+                height: 4px
+                margin-top: -1px
+                border-radius: 50%
+                background: $green
+                content: ""
+
+            &:last-child
+                margin-bottom: 0
+
+        &__link
+            position: relative
+            font-size: 14px
+            font-weight: 500
+            color: #fff
+            text-decoration: none
+            transition: all .5s ease
+
+            &:hover
+                color: $green
+
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-top: 1px solid #444444
+        padding-top: 15px
+
+    &-links
+        line-height: 1
+
+        &__list
+            padding-left: 0
+            list-style: none
+            margin: 0
+            line-height: 1
+            display: flex
+            align-items: center
+            justify-content: flex-start
+
+        &__item
+            line-height: 1.2
+            position: relative
+            margin-right: 40px
+
+            &:last-child
+                margin-right: 0
+
+        &__link
+            position: relative
+            font-size: 12px
+            font-weight: 100
+            color: #a1a1a1
+            text-decoration: none
+            transition: all .5s ease
+
+            &:hover
+                color: #fff
+
+.download
+
+    &__title
+        font-size: 16px
+        font-weight: 500
+        color: #a1a1a1
+        max-width: 270px
+        margin-bottom: 10px
+
+    &__list
+        padding-left: 0
+        list-style: none
+        margin: 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__item
+        margin-right: 10px
+
+        &:last-child
+            margin-right: 0
+
+    &__link
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid #a1a1a1
+        background: #151515
+        border-radius: 5px
+        max-width: 170px
+        height: 50px
+        padding: 5px 10px
+        transition: all .5s ease
+
+        &:hover
+            border-color: #fff
+
+    &__img
+        max-width: 100%
+        height: auto
+
+.copyright
+    font-size: 16px
+    color: #a1a1a1
+    line-height: 1
+

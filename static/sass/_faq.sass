@@ -1,0 +1,92 @@
+.faq-article
+    padding: 165px 0 100px
+    background: #252525
+
+    &__title
+        text-align: center
+        font-size: 56px
+        font-weight: 700
+        margin: 0 0 15px
+
+    &__descr
+        text-align: center
+        font-size: 30px
+        font-weight: 600
+        margin: 0 0 90px
+    
+
+// FAQ Block
+.faq-block
+    border-radius: 3px
+    overflow: hidden
+    margin-bottom: 25px
+
+    &__toggle
+        padding: 22px 75px 22px 50px
+        cursor: pointer
+        transition: all .5s ease
+        background: #3D3D3D
+        color: #fff
+        position: relative
+
+        &:before
+            position: absolute
+            top: 50%
+            right: 50px
+            width: 14px
+            height: 2px
+            margin-top: -1px
+            background: $green
+            content: ""
+
+        &:after
+            position: absolute
+            top: 50%
+            right: 56px
+            width: 2px
+            height: 14px
+            margin-top: -7px
+            background: $green
+            opacity: 1
+            transition: all .5s ease
+            content: ""
+
+
+        &:hover
+            color: $green
+
+    &__title
+        font-size: 16px
+        line-height: 1.4
+        margin: 0
+        font-weight: 700
+        text-transform: uppercase
+
+    &.on
+
+        .faq-block__toggle
+            &:after
+                opacity: 0
+
+
+    &__hidden
+        // display: none
+
+        &.hidden
+            display: none
+        
+        &.visible
+            display: block
+
+
+    &__descr
+        background: #3D3D3D
+        padding: 0 50px 35px
+        color: #b1b1b1
+        font-size: 16px
+        line-height: 1.6
+        font-weight: 400
+
+        p
+            &:last-child
+                margin-bottom: 0

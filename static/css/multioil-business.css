@@ -1,0 +1,430 @@
+.multioil-business {
+    position: relative;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #710101 100%);
+}
+
+.multioil-business:before {
+    content: '';
+    position: absolute;
+    background-image: url("../img/multioil-business/figure-multioil.svg");
+    width: 100%;
+    height: 100%;
+    padding-right: 100px;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.multioil-business__descr {
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 119px;
+    letter-spacing: 0.01em;
+    color: #F2F2F2;
+}
+
+.multioil-business__text {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.multioil-business__button {
+    background: #B80505;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 120px rgba(0, 0, 0, 0.5));
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    max-width: 370px;
+    margin-top: 80px;
+    color: #FFFFFF;
+}
+
+.multioil-business-what {
+    position: relative;
+}
+
+.multioil-business-what:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #650101 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.multioil-business-what__title {
+    margin-top: 260px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 57px;
+}
+
+.multioil-business-what__promo {
+    margin-top: 16px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 29px;
+    color: #CFCFCF;
+    padding-right: 40px;
+}
+
+.multioil-business-what__promo span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.multioil-business-what__img {
+    display: block;
+    margin-top: 52px;
+}
+
+.why-multioil-business {
+    position: relative;
+}
+
+.why-multioil-business:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/multioil-business/why-multioil-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.why-multioil-business__title {
+    padding-top: 56px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 57px;
+}
+
+.why-multioil-business__descr {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 540px;
+    display: block;
+    margin: 16px auto 115px auto;
+    text-align: center;
+}
+
+.why-multioil-business__descr span {
+    font-weight: bold;
+}
+
+.multioil-business-advantage {
+    padding: 71px 0 115px 0;
+    background: #1A1A1A;
+    text-align: center;
+}
+
+.multioil-business-advantage__title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 57px;
+}
+
+.multioil-business-advantage__line {
+    display: block;
+    margin: 16px auto 77px auto;
+    max-width: 370px;
+    height: 4px;
+    background: linear-gradient(90deg, #AE0707 0%, rgba(0, 0, 0, 0.0001) 94.96%);
+    border-radius: 2px;
+}
+
+.multioil-business-advantage__wrapper {
+    width: 370px;
+    height: 370px;
+    background: #020000;
+    box-shadow: 0 4px 100px rgba(0, 0, 0, 0.5);
+    display: flex;
+   justify-content: center;
+    flex-direction: column;
+}
+
+.multioil-business-advantage__description {
+    padding: 40px 40px 0 40px;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.multioil-how-works {
+    background: linear-gradient(111.77deg, #760101 0%, #200707 70.17%);
+    position: relative;
+}
+
+.multioil-how-works:before {
+    content: '';
+    position: absolute;
+    background-image: url("../img/multioil-business/how-works-bg.svg");
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.multioil-how-works__title {
+    padding-top: 64px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 57px;
+}
+
+.multioil-how-works__wrapper {
+    position: relative;
+}
+
+.multioil-how-works__list {
+    padding: 47px 0 0 0;
+    counter-reset: item;
+    list-style: none;
+}
+
+.multioil-how-works__list-item {
+    counter-increment: item;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 82px;
+    display: flex;
+    align-items: center;
+}
+
+.multioil-how-works__list-item:before {
+    margin-right: 10px;
+    content: counter(item);
+    background: #000000;
+    border-radius: 100%;
+    width: 96px;
+    height: 96px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.multioil-how-works__img {
+    position: absolute;
+    display: block;
+    top: -60px
+}
+
+.feedback-multioil-business {
+    padding: 141px 0 59px 0;
+    background: #010101;
+    text-align: center;
+}
+
+.feedback-multioil-business__title {
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.feedback-multioil-business .multioil-business__button {
+    margin-top: 32px;
+}
+
+.footer-multioil-business {
+    background: #381A1A;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.footer-business__descr {
+    padding-bottom: 24px;
+}
+
+
+@media (max-width: 1439px) {
+    .multioil-how-works__img {
+        left: -40px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .multioil-how-works__img {
+        left: -120px;
+    }
+    .multioil-business-what__img {
+        width: 480px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .multioil-business__descr {
+        font-size: 100px;
+    }
+    .multioil-business__button {
+        margin-top: 60px;
+    }
+    .multioil-business-what__title {
+        margin-top: 60px;
+        text-align: center;
+    }
+    .multioil-business-what__promo {
+        text-align: center;
+        padding-right: 0;
+    }
+    .multioil-business-what__img {
+        margin: 0 auto;
+    }
+    .multioil-business-advantage__line {
+        margin: 16px auto 32px auto;
+    }
+    .multioil-business-advantage__wrapper {
+        margin: 32px auto 0 auto;
+        width: 100%;
+
+    }
+    .multioil-how-works__list-item {
+        width: 800px;
+        margin: 0 auto 40px auto ;
+    }
+    .multioil-how-works__img {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        top: 0;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .multioil-how-works__list-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .multioil-business {
+        padding: 0 0 60px 0;
+        height: 670px;
+    }
+    .multioil-business__descr {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .multioil-business__text {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+    }
+    .multioil-business .multioil-business__button {
+        margin-top: 35px;
+        width: 340px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .multioil-business-what__title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .multioil-business-what__promo {
+        font-size: 14px;
+        line-height: 29px;
+    }
+    .why-multioil-business__title {
+        font-size: 30px;
+        line-height: 57px;
+    }
+    .why-multioil-business__descr {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .multioil-business-advantage__title {
+        font-size: 32px;
+        line-height: 57px;
+    }
+    .multioil-business-advantage__description {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .multioil-how-works__title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .multioil-how-works__list-item {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .multioil-how-works__list-item:before {
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .multioil-how-works__img {
+        width: 245px;
+        height: 350px;
+    }
+    .feedback-multioil-business__title {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+    }
+    .feedback-multioil-business__title p {
+        margin-top: 12px;
+    }
+    .multioil-business-what__img {
+        width: 340px;
+        height: 330px;
+    }
+    .multioil-business-advantage__wrapper {
+        height: 270px;
+    }
+    .multioil-business-advantage__description {
+        padding: 10px;
+    }
+    .feedback-multioil-business {
+        padding: 205px 0 235px 0;
+    }
+    .multioil-business:before {
+        content: '';
+        position: absolute;
+        background-image: url("../img/multioil-business/figure-multioil_mobile.svg");
+        width: 100%;
+        height: 100%;
+        opacity: 0.9;
+        top: -30px;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 380px) {
+    .multioil-business .multioil-business__button {
+        width: 100%;
+    }
+    .multioil-business-what__img {
+        width: 280px;
+        height: auto;
+    }
+    .multioil-how-works__list-item:before {
+        font-size: 18px;
+        line-height: 20px;
+        width: 26px;
+        height: 26px;
+    }
+}

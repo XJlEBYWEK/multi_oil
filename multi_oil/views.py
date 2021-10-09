@@ -1,0 +1,112 @@
+import telebot
+from django.shortcuts import redirect
+from django.views.generic import TemplateView
+import json
+import requests
+
+
+TOKEN = "1676155536:AAFRozMpefP9nHWAhKhLHrrzNHd1afc07Xk"
+CHANNEL_NAME_1 = -1001405418274
+CHANNEL_NAME_2 = -1001439028729
+
+bot = telebot.TeleBot(TOKEN)
+
+class HomePageView(TemplateView):
+    template_name = "index.html"
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     response = json.loads(requests.get("https://s54.kiev.ua/stels/prices.json").text)
+
+    #     context['price'] = response['networks'][0]['systemPrice']
+
+    #     for i in response['networks'][0]['prices']:
+    #         station = i["station"]
+    #         system = i["system"]
+    #         name = "name_" + i["systemName"].replace("+", "_")
+    #         context[name] = {"station": station, "system": system}
+    #     return context
+        
+
+class TermsPageView(TemplateView):
+    template_name = "terms.html"
+
+class BuisinnessPageView(TemplateView):
+    template_name = "business.html"
+    
+class ForAzsPageView(TemplateView):
+    template_name = "multioilForAzs.html"
+
+class stocksTestForBenefitView(TemplateView):
+    template_name = "stocksTestForBenefit.html"
+
+class StocksView(TemplateView):
+    template_name = "stocks.html"
+
+class stocksJustInstallView(TemplateView):
+    template_name = "stocksJustInstall.html"
+
+class PolicyPageView(TemplateView):
+    template_name = "privacy-policy.html"
+
+class MultiBuisinnessPageView(TemplateView):
+    template_name = "multioilBusiness.html"
+
+class FaqPageView(TemplateView):
+    template_name = "faq.html"
+
+def set_message(request):
+    inputCompany = request.POST.get('inputCompany', False)
+    inputIpn = request.POST.get('inputIpn', False)
+    inputName = request.POST.get('inputName', False)
+    inputPhone = request.POST.get('inputPhone', False)
+    inputEmail = request.POST.get('inputEmail', False)
+    textarea = request.POST.get('textarea', False)
+
+    text = f"Стать партнёром\n" \
+           "--------------------------------------\n" \
+           f"Название компании: {inputCompany}\n" \
+            f"ИПН: {inputIpn}\n"\
+            f"Контактное лицо: {inputName} \n"\
+            f"Номер телефона: {inputPhone} \n"\
+            f"Email: {inputEmail} \n"\
+            f"Текстовое сообщение: {textarea} \n"
+
+    # bot.send_message(CHANNEL_NAME_1, text)
+    return redirect('/')
+
+def set_phone_form(request):
+    inputPhone = request.POST.get('inputPhone', False)
+    text = f"Получить ссылку\n" \
+           "--------------------------------------\n" \
+           f"Номер телефона: {inputPhone}\n"
+           
+    # bot.send_message(CHANNEL_NAME_2, text)
+    return redirect('/')
+
+
+def set_return_form(request):
+    inputCompany = request.POST.get('inputCompany', False)
+    inputSeries = request.POST.get('inputSeries', False)
+    dataD = request.POST.get('dataD', False)
+    inputName = request.POST.get('issuedBy', False)
+    idTranz = request.POST.get('idTranz', False)
+    BeforeTurning = request.POST.get('BeforeTurning', False)
+    inputPhone = request.POST.get('inputPhone', False)
+    inputEmail = request.POST.get('inputEmail', False)
+    textarea = request.POST.get('inputEmail', False)
+
+    text = f"Оформить возврат\n" \
+           "--------------------------------------\n" \
+           f"Название компании: {inputCompany}\n" \
+            f"Серия и/или номер: {inputSeries}\n"\
+           f"Дата выдачи: {dataD} \n" \
+           f"Кем выдано: {inputName} \n"\
+            f"ID транзакции: {idTranz} \n"\
+            f"Сума к возврату: {BeforeTurning} \n" \
+           f"Контактный телефон: {inputPhone} \n" \
+           f"Почта: {inputEmail} \n" \
+           f"Текстовое сообщение: {textarea} \n"
+
+    # bot.send_message(CHANNEL_NAME_1, text)
+    return redirect('/')

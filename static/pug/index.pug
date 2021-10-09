@@ -1,0 +1,343 @@
+doctype html
+html(lang="ru")
+	head
+		// Meta 
+		- var pageTitle = 'Index Page';
+		include ./includes/_meta.pug
+
+		// CSS 
+		include ./includes/_css.pug
+	
+	body
+		// Preloader 
+		include ./includes/_preloader.pug
+		
+		// Header 
+		include ./includes/_header.pug
+
+		// Mobile Section 
+		section.mobile-section
+			.container
+				.row
+					.col-12
+						.logo.mobile-section__logo
+							a.logo__link(href="#")
+								img.logo__img(src="img/logo.svg" alt="logo")
+								.logo__title MultiOil
+									span АЗС в смартфоне
+
+						.mobile-section__slogan Швидко. Зручно. Дешево
+
+						.download.mobile-section__download
+							ul.download__list
+								li.download__item
+									a.download__link(href="#")
+										img.download__img(src="img/GooglePlay-ru.svg" alt="alt")
+								li.download__item
+									a.download__link(href="#")
+										img.download__img(src="img/AppStore-ru.svg" alt="alt")
+
+						.mobile-section__price Цена на любое топливо: 
+							strong 21.00
+							|  грн/л
+
+		// Main Section 
+		section.main-section
+			.container
+				.row
+					.col-lg-6.col-md-5
+						picture.main-section__picture
+							img.main-section__img(src="img/main-phone.png" srcset="img/main-phone@2x.png 2x" alt="alt")
+
+					.col-lg-6.col-md-7
+						.main-section__descr
+							h1.main-section__title MultiOil 
+								span АЗС в смартфоне
+
+							.main-section__text
+								p Приложение для покупки топлива от наших партнеров по выгодным ценам.
+
+							.main-section__price Цена на любое топливо: 
+								strong 21.00
+								|  грн/л
+
+							form.form.phone-form(data-toggle="validator" data-focus="false" role="form")
+								.form__group.phone-form__group.form-group.has-feedback
+									input.form__input.phone-form__input.phone-mask(type="text" name="inputPhone" placeholder="+38 (000) 00 00 000" autocomplete="off" data-error="Поле обязательное для заполнения" required)
+
+									label.form__help.help-block.with-errors
+
+									button.button.phone-form__button Получить ссылку
+
+								.phone-form__info
+									p Оставьте номер вашего телефона и мы пришлем
+									p СМС с ссылкой на скачивание приложения.
+
+		// About Section 
+		section.about-section
+			.container
+				.row
+					.col-12
+						h2.section-title.about-section__title
+							.section-title__line
+							span Что такое MultiOil
+							.section-title__line
+
+						.about-section__descr
+							p
+								strong MultiOil
+								|  - это мобильное приложение, которое позволяет Вам легко и быстро купить топливо
+
+		// Advantages Section 
+		section.advantages-section
+			.container
+				.row
+					.col-12
+						h2.section-title.advantages-section__title Наши преимущества
+
+				.row.justify-content-md-center
+					.col-lg-4.col-md-6
+						.advantages-item
+							.advantages-item__circle
+								svg.advantages-item__icon(width="43" height="37")
+									use(xlink:href="img/sprite.svg#a-icon-1")
+
+							.advantages-item__descr
+								h3.advantages-item__title Единая цена
+								.advantages-item__text
+									p Запрявляй любой вид топлива от 92 по 95 премиум по единой цене
+
+					.col-lg-4.col-md-6
+						.advantages-item
+							.advantages-item__circle
+								svg.advantages-item__icon(width="43" height="34")
+									use(xlink:href="img/sprite.svg#a-icon-2")
+
+							.advantages-item__descr
+								h3.advantages-item__title Удобство
+								.advantages-item__text
+									p Никаких бумажных талонов.
+									p Все топливо в Вашем телефоне
+
+					.col-lg-4.col-md-6
+						.advantages-item
+							.advantages-item__circle
+								svg.advantages-item__icon(width="43" height="46")
+									use(xlink:href="img/sprite.svg#a-icon-3")
+
+							.advantages-item__descr
+								h3.advantages-item__title Экономия
+								.advantages-item__text
+									p Помимо выгодных цен, Вы можете покупать топливо наперед тем самым защищая себя от повышения цен
+
+					.col-lg-4.col-md-6
+						.advantages-item
+							.advantages-item__circle
+								svg.advantages-item__icon(width="43" height="51")
+									use(xlink:href="img/sprite.svg#a-icon-4")
+
+							.advantages-item__descr
+								h3.advantages-item__title Надежность
+								.advantages-item__text
+									p Купленое топливо под надежой защитой, доступ к которому имеете только Вы
+
+					.col-lg-4.col-md-6
+						.advantages-item
+							.advantages-item__circle
+								svg.advantages-item__icon(width="43" height="37")
+									use(xlink:href="img/sprite.svg#a-icon-5")
+
+							.advantages-item__descr
+								h3.advantages-item__title Качество топлива
+								.advantages-item__text
+									p Только качественное топливо от наших партнеров
+
+		// Partner Section 
+		section.partner-section
+			.container
+				.row
+					.col-12
+						h2.section-title.partner-section__title Наши партнеры
+
+						picture.partner-section__picture
+							img.partner-section__img(src="img/stels-logo.svg" alt="alt")
+
+						a.button.partner-section__button(href="javascript:;" data-fancybox data-src="#price-popup") Узнать больше
+
+		// Feedback Section 
+		//- section.feedback-section
+		//- 	.container
+		//- 		.row
+		//- 			.col-12
+		//- 				h2.section-title.feedback-section__title
+		//- 					.section-title__line
+		//- 					span Отзывы
+		//- 					.section-title__line
+
+		//- 		.row.justify-content-md-center
+		//- 			.col-lg-4.col-md-6.feedback-section__col
+		//- 				.feedback-card
+		//- 					.feedback-card__text
+		//- 						p "Дуже зручна і проста в користуванні, Все доступно та зрозуміло"
+
+		//- 					.feedback-card__author
+		//- 						picture.feedback-card__picture
+		//- 							img.feedback-card__img(src="img/avatar.png" srcset="img/avatar@2x.png 2x" alt="alt")
+		//- 						.feedback-card__name Олег
+
+		//- 			.col-lg-4.col-md-6.feedback-section__col
+		//- 				.feedback-card
+		//- 					.feedback-card__text
+		//- 						p "Дуже зручна і проста в користуванні, Все доступно та зрозуміло"
+
+		//- 					.feedback-card__author
+		//- 						picture.feedback-card__picture
+		//- 							img.feedback-card__img(src="img/avatar.png" srcset="img/avatar@2x.png 2x" alt="alt")
+		//- 						.feedback-card__name Олег
+
+		//- 			.col-lg-4.col-md-6.feedback-section__col
+		//- 				.feedback-card
+		//- 					.feedback-card__text
+		//- 						p "Дуже зручна і проста в користуванні, Все доступно та зрозуміло"
+
+		//- 					.feedback-card__author
+		//- 						picture.feedback-card__picture
+		//- 							img.feedback-card__img(src="img/avatar.png" srcset="img/avatar@2x.png 2x" alt="alt")
+		//- 						.feedback-card__name Олег
+
+		// Steps Section 
+		section.steps-section
+			.container
+				.row
+					.col-12
+						h2.section-title.steps-section__title Как начать пользоваться MultiOil
+
+				.row
+					.col-lg-4.col-md-5
+						.steps-slider.swiper-container
+							.swiper-wrapper
+								.swiper-slide.steps-slider__slide
+									.steps-slider__title Скачайте приложение с PlayMarket или AppStore
+
+									picture.steps-slider__picture
+										img.steps-slider__img(src="img/slider-img-1.png" srcset="img/slider-img-1@2x.png 2x" alt="alt")
+
+								.swiper-slide.steps-slider__slide
+									.steps-slider__title Зарегестрируйтесь
+
+									picture.steps-slider__picture
+										img.steps-slider__img(src="img/slider-img-1.png" srcset="img/slider-img-1@2x.png 2x" alt="alt")
+
+								.swiper-slide.steps-slider__slide
+									.steps-slider__title Купите топливо кликнув на бочку
+
+									picture.steps-slider__picture
+										img.steps-slider__img(src="img/slider-img-1.png" srcset="img/slider-img-1@2x.png 2x" alt="alt")
+
+								.swiper-slide.steps-slider__slide
+									.steps-slider__title Нажмите на кнопку "Создать талон для заправки"
+
+									picture.steps-slider__picture
+										img.steps-slider__img(src="img/slider-img-1.png" srcset="img/slider-img-1@2x.png 2x" alt="alt")
+
+								.swiper-slide.steps-slider__slide
+									.steps-slider__title Покажите код оператору АЗС и Ваша машина заправляется!
+
+									picture.steps-slider__picture
+										img.steps-slider__img(src="img/slider-img-1.png" srcset="img/slider-img-1@2x.png 2x" alt="alt")
+
+						.swiper-pagination.steps-slider-pagination
+
+					.col-lg-8.col-md-7
+						.steps
+							.steps-item.is-active(data-slide="1")
+								.steps-item__number 01.
+								.steps-item__title Скачайте приложение с PlayMarket или AppStore
+
+							.steps-item(data-slide="2")
+								.steps-item__number 02.
+								.steps-item__title Зарегестрируйтесь
+
+							.steps-item(data-slide="3")
+								.steps-item__number 03.
+								.steps-item__title Купите топливо кликнув на бочку
+
+							.steps-item(data-slide="4")
+								.steps-item__number 04.
+								.steps-item__title Нажмите на кнопку "Создать талон для заправки"
+
+							.steps-item(data-slide="5")
+								.steps-item__number 05.
+								.steps-item__title Покажите код оператору АЗС и Ваша машина заправляется!
+
+		// News Section 
+		section.news-section
+			.container
+				.row
+					.col-12
+						h2.section-title.news-section__title Новости компании
+
+				.row.justify-content-md-center
+					.col-lg-4.col-md-6.news-section__col
+						a.news-card(href="#")
+							picture.news-card__picture
+								img.news-card__img(src="img/news-img-1.jpg" srcset="img/news-img-1@2x.jpg 2x" alt="alt")
+							.news-card__descr
+								h3.news-card__title Релиз новых функций Март 2021
+								p.news-card__text Nam libero tempore, cum soluta nobis est eligendi optio placeat facere voluptas.
+
+					.col-lg-4.col-md-6.news-section__col
+						a.news-card(href="#")
+							picture.news-card__picture
+								img.news-card__img(src="img/news-img-2.jpg" srcset="img/news-img-2@2x.jpg 2x" alt="alt")
+							.news-card__descr
+								h3.news-card__title У Нас новый партнер!
+								p.news-card__text Libero tempore, cum soluta nobis est eligendi optio placeat facere voluptas.
+
+					.col-lg-4.col-md-6.news-section__col
+						a.news-card(href="#")
+							picture.news-card__picture
+								img.news-card__img(src="img/news-img-3.jpg" srcset="img/news-img-3@2x.jpg 2x" alt="alt")
+							.news-card__descr
+								h3.news-card__title Пригласи друга и получи топливо в подарок
+								p.news-card__text Nam libero tempore, cum soluta nobis est eligendi optio placeat facere voluptas.
+
+		// Contacts Section 
+		section.contacts-section
+			.container
+				.row
+					.col-12
+						h2.section-title.contacts-section__title Возникли вопросы? 
+							br
+							| Обращайтесь в службу техподдержки.
+
+						ul.social.contacts-section__social
+							li.social__item
+								a.social__link(href="#")
+									svg.social__icon
+										use(xlink:href="img/sprite.svg#telegram")
+
+								.social__title Telegram
+
+							li.social__item
+								a.social__link(href="#")
+									svg.social__icon
+										use(xlink:href="img/sprite.svg#viber")
+
+								.social__title Viber
+
+							li.social__item
+								a.social__link(href="#")
+									svg.social__icon
+										use(xlink:href="img/sprite.svg#phone")
+
+								.social__title Позвонить
+
+		// Footer 
+		include ./includes/_footer.pug
+
+		// Popup 
+		include ./includes/_popup.pug
+		
+		// JS 
+		include ./includes/_js.pug

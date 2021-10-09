@@ -1,0 +1,47 @@
+doctype html
+html(lang="ru")
+	head
+		// Meta 
+		- var pageTitle = 'Download Page';
+		include ./includes/_meta.pug
+
+		// CSS 
+		include ./includes/_css.pug
+	
+	body
+		// Preloader 
+		include ./includes/_preloader.pug
+		
+		// Header 
+		include ./includes/_header.pug
+
+		// Mobile Section 
+		section.mobile-section.mobile-section--100vh
+			.container
+				.row
+					.col-12
+						.logo.mobile-section__logo
+							a.logo__link(href="#")
+								img.logo__img(src="img/logo.svg" alt="logo")
+								.logo__title MultiOil
+									span АЗС в смартфоне
+
+						.mobile-section__slogan Посилання на скачування
+
+						.download.mobile-section__download
+							ul.download__list
+								li.download__item
+									a.download__link(href="#")
+										img.download__img(src="img/GooglePlay-ru.svg" alt="alt")
+								li.download__item
+									a.download__link(href="#")
+										img.download__img(src="img/AppStore-ru.svg" alt="alt")
+
+						.mobile-section__home
+							a.mobile-section__home-link(href="#") На сайт компанії
+
+		// Popup 
+		include ./includes/_popup.pug
+		
+		// JS 
+		include ./includes/_js.pug

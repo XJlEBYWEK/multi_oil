@@ -1,0 +1,92 @@
+#partner-popup.popup
+
+	h2.popup__title Стать партнером
+
+	form.form.popup__form(data-toggle="validator" data-focus="false" role="form")
+		.form__group.form-group.has-feedback
+			label.form__label Название компании
+			input.form__input.form-control(type="text" name="inputCompany" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required)
+			label.form__help.help-block.with-errors
+
+		.form__group.form-group.has-feedback
+			label.form__label ИПН
+			input.form__input.form-control(type="text" name="inputIpn" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required)
+			label.form__help.help-block.with-errors
+
+		.form__group.form-group.has-feedback
+			label.form__label Контактное лицо
+			input.form__input.form-control(type="text" name="inputName" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required)
+			label.form__help.help-block.with-errors
+
+		.form__group.form-group.has-feedback
+			label.form__label Номер телефона
+			input.form__input.phone-mask.form-control(type="text" name="inputPhone" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required)
+			label.form__help.help-block.with-errors
+
+		.form__group.form-group.has-feedback
+			label.form__label Email
+			input.form__input.form-control(type="email" name="inputEmail" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required)
+			label.form__help.help-block.with-errors
+
+		.form__group.form-group.has-feedback
+			label.form__label Текстовое сообщение
+			textarea.form__input.form-control(name="textarea" rows="8" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required)
+			label.form__help.help-block.with-errors
+
+		.form__button-group
+			button.button.form__button Отправить
+
+
+
+#success-popup.popup.popup--success
+
+	h2.popup__title Сообщение отправлено
+	p.popup__descr В ближайшее время мы с Вами свяжемся
+
+
+
+#price-popup.popup.popup--price
+
+	h2.popup__title Цены на топливо АЗС "STELS"
+
+	.price-table
+		.price-table__header
+			.row.align-items-end
+				.col-3
+					.price-table__title Вид топлива
+				.col-3
+					.price-table__title Цена топлива
+				.col-3
+					.price-table__title Цена MultiOil
+				.col-3
+					.price-table__title Экономияя с MultiOil
+
+		.price-table__row
+			.row.align-items-center
+				.col-3.price-table__col А-95
+				.col-3.price-table__col 25.00
+				.col-3.price-table__col 21.00
+				.col-3.price-table__col 4.00
+
+		.price-table__row
+			.row.align-items-center
+				.col-3.price-table__col А-92
+				.col-3.price-table__col 25.00
+				.col-3.price-table__col 21.00
+				.col-3.price-table__col 4.00
+
+		.price-table__row
+			.row.align-items-center
+				.col-3.price-table__col Diesel VIP
+				.col-3.price-table__col 25.00
+				.col-3.price-table__col 21.00
+				.col-3.price-table__col 4.00
+
+		.price-table__row
+			.row.align-items-center
+				.col-3.price-table__col Diesel
+				.col-3.price-table__col 25.00
+				.col-3.price-table__col 21.00
+				.col-3.price-table__col 4.00
+
+	button.button.popup__close(type="button") Закрыть

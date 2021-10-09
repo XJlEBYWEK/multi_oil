@@ -1,0 +1,68 @@
+footer.footer
+	.container
+		.row
+			.col-lg-6.col-md-4.footer__col
+				.logo.footer__logo
+					a.logo__link(href="#")
+						img.logo__img(src="img/logo.svg" alt="logo")
+						.logo__title MultiOil
+
+				.footer-phone
+					svg.footer-phone__icon
+						use(xlink:href="img/sprite.svg#footer-phone")
+
+					a.footer-phone__link(href="tel:+38066432021") (380) 66-432-021
+
+				ul.social.footer__social
+					li.social__item
+						a.social__link(href="#")
+							svg.social__icon
+								use(xlink:href="img/sprite.svg#telegram")
+					li.social__item
+						a.social__link(href="#")
+							svg.social__icon
+								use(xlink:href="img/sprite.svg#viber")
+					li.social__item
+						a.social__link(href="#")
+							svg.social__icon
+								use(xlink:href="img/sprite.svg#phone")
+
+			.col-lg-2.col-md-3.footer__col.footer__col--hidden-mobile
+				.footer-block
+					.footer-block__title Навигация
+
+					nav.footer-menu
+						ul.footer-menu__list
+							li.footer-menu__item
+								a.footer-menu__link(href="faq.html") FAQ
+							li.footer-menu__item
+								a.footer-menu__link(href="#") Контакты
+							li.footer-menu__item
+								a.footer-menu__link(href="javascript:;" data-fancybox data-src="#partner-popup") Стать партнером
+
+			.col-lg-4.col-md-5.footer__col
+				.footer-block
+					.footer-block__title Приложение
+
+					.download.footer__download
+						.download__title Скачивай приложение для покупки топлива в сети
+
+						ul.download__list
+							li.download__item
+								a.download__link(href="#")
+									img.download__img(src="img/GooglePlay-ru.svg" alt="alt")
+							li.download__item
+								a.download__link(href="#")
+									img.download__img(src="img/AppStore-ru.svg" alt="alt")
+
+		.row
+			.col-12
+				.footer__bottom
+					.copyright ©MultiOil 2021
+
+					nav.footer-links
+						ul.footer-links__list
+							li.footer-links__item
+								a.footer-links__link(href="privacy-policy.html") Политика конфиденциальности
+							li.footer-links__item
+								a.footer-links__link(href="terms.html") Условия использования

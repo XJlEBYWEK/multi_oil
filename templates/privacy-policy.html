@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <!--base(href="/")-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Title -->
+    <title>Політика конфіденційності</title>
+    <!-- SEO Meta -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Favicon -->
+    <meta property="og:image" content="img/image.jpg">
+    <link rel="apple-touch-icon" sizes="57x57" href=" {% static 'img/favicon/apple-icon-57x57.png' %}" >
+    <link rel="apple-touch-icon" sizes="60x60" href=" {% static 'img/favicon/apple-icon-60x60.png' %}" >
+    <link rel="apple-touch-icon" sizes="72x72" href=" {% static 'img/favicon/apple-icon-72x72.png' %}" >
+    <link rel="apple-touch-icon" sizes="76x76" href=" {% static 'img/favicon/apple-icon-76x76.png' %}" >
+    <link rel="apple-touch-icon" sizes="114x114" href=" {% static 'img/favicon/apple-icon-114x114.png' %}" >
+    <link rel="apple-touch-icon" sizes="120x120" href=" {% static 'img/favicon/apple-icon-120x120.png' %}" >
+    <link rel="apple-touch-icon" sizes="144x144" href=" {% static 'img/favicon/apple-icon-144x144.png' %}" >
+    <link rel="apple-touch-icon" sizes="152x152" href=" {% static 'img/favicon/apple-icon-152x152.png' %}" >
+    <link rel="apple-touch-icon" sizes="180x180" href=" {% static 'img/favicon/apple-icon-180x180.png' %}" >
+    <link rel="icon" type="image/png" sizes="192x192" href=" {% static 'img/favicon/android-icon-192x192.png' %}" >
+    <link rel="icon" type="image/png" sizes="32x32" href=" {% static 'img/favicon/favicon-32x32.png' %}" >
+    <link rel="icon" type="image/png" sizes="96x96" href=" {% static 'img/favicon/favicon-96x96.png' %}" >
+    <link rel="icon" type="image/png" sizes="16x16" href=" {% static 'img/favicon/favicon-16x16.png' %}" >
+    <link rel="manifest" href=" {% static 'img/favicon/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'img/favicon/ms-icon-144x144.png' %}" >
+    <meta name="theme-color" content="#ffffff">
+    <!-- CSS -->
+    <!-- build:css css/all.min.css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+        <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4TQPW6816W');
+    </script>
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '736444530392641');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader"><img class="preloader__img"
+                                               src="{% static 'img/logo.svg' %}" alt="logo"></div>
+    <!-- Header -->
+   <!--     Header-->
+  <header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 header__col">
+                <div class="logo header__logo header_logo_main"><a class="logo__link"
+                                                                   href="{% url 'multi_oil:home-page' %}"><img
+                        class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
+                    <div class="logo__title">MultiOil</div>
+                </a></div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__link"
+                                                  href="javascript:;" data-fancybox
+                                                  data-src="#contact-popup">Контакти</a></li>
+                        <li class="menu__item"><a class="menu__link" href="javascript:;" data-fancybox
+                                                  data-src="#partner-popup">Стати партнером</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:stocks' %}">Акції</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:multioil-for-azs' %}">MultiOil для АЗС</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:business' %}">MultiOil Business для АЗС</a></li>
+                    </ul>
+                </nav>
+                <div class="toggle menu-toggle">
+                    <div class="toggle__1"></div>
+                    <div class="toggle__2"></div>
+                    <div class="toggle__3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- Terms Article -->
+    <article class="terms-article">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-11 offset-lg-1">
+            <h1 class="terms-article__title">Політика конфіденційності при використанні мобільного додатка MULTIOIL</h1>
+            <div class="terms-article__descr">
+              <p>Чинна політика регламентує порядок збору та обробки персональних та інших конфіденційних даних користувачів мобільного додатка MULTIOIL</p>
+            </div>
+            <div class="terms-article__text">
+              <h2>Загальні положення</h2>
+              <p>1. У межах чинної політики використовуються такі терміни:</p>
+              <p>1.1. Персональні дані - будь-яка інформація, що стосується прямо або опосередковано певної або визначеної фізичної особи (суб'єкта персональних даних).</p>
+              <p>1.2. Мобільний додаток - програма, розроблена для мобільних пристроїв, користування якою здійснюється відповідно до Умов використання мобільного додатку MULTIOIL.</p>
+              <p>1.3. Правовласник - особа, якій належить право на використання і розповсюдження мобільного додатка, яка здійснює відпрацювання персональних даних Користувачів.</p>
+              <p>1.4. Користувач - особа, яка здійснює використання мобільного додатку на умовах простої (не виключно) ліцензії та надає Правовласнику свої персональні дані.</p>
+              <p>1.5. Обробка персональних даних - будь-яка дія (операція) або сукупність дій (операцій), що здійснюються з використанням засобів автоматизації або без використання таких засобів, з персональними даними, включаючи збір, запис, систематизацію, накопичення, зберігання, уточнення (оновлення, зміну), отримання, використання, передачу (поширення, надання, доступ), знеособлення, блокування, видалення, знищення персональних даних.</p>
+              <p>1.6. Автоматизована обробка персональних даних - обробка персональних даних за допомогою засобів обчислювальної техніки.</p>
+              <p>1.7. Надання персональних даних - дії, спрямовані на розкриття персональних даних певній особі або певному колу осіб.</p>
+              <p>1.8. Блокування персональних даних - тимчасове припинення обробки персональних даних (за винятком випадків, якщо обробка необхідна для уточнення персональних даних).</p>
+              <p>1.9. Знищення персональних даних - дії, в результаті яких стає неможливим відновити зміст персональних даних у інформаційній системі персональних даних і/або в результаті яких знищуються матеріальні носії персональних даних.</p>
+              <p>1.10. Інформаційна система персональних даних – сукупність персональних даних, що містяться у базах даних та інформаційних технологій і технічних засобів, що забезпечують їх обробку.</p>
+              <p>1.11. Файли cookie - фрагменти даних, які відправлені сайтом і зберігається на комп'ютері, мобільному телефоні або іншому пристрої, з якого Користувач відвідує сайт, що застосовуються для збереження даних про дії Користувача на сайті.</p>
+              <p>1.12. Банк-еквайр - банк, який здійснює списання, зарахування і повернення грошових коштів платіжних операцій через систему електронних платежів на підставі укладеного з Оператором договору.</p>
+              <p>2. Встановлення Користувачем на свій пристрій мобільного додатку або використання мобільного додатку будь-яким іншим способом, а також реєстрація в додатку означає згоду Користувача з умовами цієї політики, у тому числі згоду Користувача на обробку Правовласником його персональних даних, у випадках, коли положеннями чинного законодавства потрібна така згода.</p><br><br>
+              <h2>ПЕРСОНАЛЬНІ  ДАНІ</h2>
+              <p>3. У процесі обробки персональних даних Користувач має право:</p>
+              <p>3.1. На отримання інформації, що стосується обробки його персональних даних, у тому числі тієї, що містить:</p>
+              <p>3.1.1. Підтвердження факту обробки персональних даних.</p>
+              <p>3.1.2. Правові підстави і мету обробки персональних даних.</p>
+              <p>3.1.3. Мету і способи обробки персональних даних, що застосовуються.</p>
+              <p>3.1.4. Відомості про найменування та місцезнаходження особи, яка здійснює обробку персональних даних, відомості про осіб (за винятком працівників Правовласника), які мають доступ до персональних даних або яким можуть бути розкриті персональні дані на підставі договору з Правовласником або на підставі чинного законодавства.</p>
+              <p>3.1.5. Персональні дані, що обробляються, які стосуються відповідного суб'єкта персональних даних, джерело їх отримання, якщо інший порядок представлення таких даних не передбачено чинним законодавством.</p>
+              <p>3.1.6. Терміни обробки персональних даних, у тому числі терміни їх зберігання.</p>
+              <p>3.1.7. Порядок здійснення Користувачем прав, передбачених чинним законодавством.</p>
+              <p>3.1.8. Інформацію щодо транскордонної передачі даних, яка здійснилася або передбачається.</p>
+              <p>3.1.9. Найменування або прізвище, ім'я, по батькові та адресу особи, яка здійснює обробку персональних даних за дорученням Правовласника, якщо обробку доручено або буде доручено такій особі.</p>
+              <p>3.1.10. Інші відомості, передбачені чинним законодавством.</p>
+              <p>3.2. Вимагати від Правовласника уточнення його персональних даних, їх блокування або знищення у разі, якщо персональні дані є неповними, застарілими, неточними, незаконно отриманими або не є необхідними для заявленої мети обробки, а також вживати передбачених законом заходів для захисту своїх прав.</p>
+              <p>3.3. Оскаржити дії або бездіяльність Правовласника в уповноважений орган із захисту прав суб'єктів персональних даних або у судовому порядку, якщо Користувач вважає, що Правовласник здійснює обробку його персональних даних з порушенням вимог чинного законодавства або іншим чином порушує його права і свободи.</p>
+              <p>3.4. На захист своїх прав і законних інтересів, у тому числі на відшкодування збитків та/або компенсацію моральної шкоди у судовому порядку.</p>
+              <p>4. У процесі обробки персональних даних Правовласник зобов'язаний:</p>
+              <p>4.1. Надати Користувачу на його прохання наступну інформацію:</p>
+              <p>4.1.1. Підтвердження факту обробки персональних даних.</p>
+              <p>4.1.2. Правові підстави і мету обробки персональних даних.</p>
+              <p>4.1.3. Мету і способи обробки персональних даних, що застосовуються.</p>
+              <p>4.1.4. Своє найменування і місце знаходження, відомості про осіб (за винятком працівників), які мають доступ до персональних даних або яким можуть бути розкриті персональні дані на підставі договору або на підставі чинного законодавства.</p>
+              <p>4.1.5. Персональні дані Користувача, що обробляються, джерело їх отримання, якщо інший порядок представлення таких даних не передбачено чинним законодавством;</p>
+              <p>4.1.6. Терміни обробки персональних даних, в тому числі терміни їх зберігання.</p>
+              <p>4.1.7. Порядок здійснення Користувачем прав, передбачених чинним законодавством./p>
+              <p>4.1.8. Інформацію щодо транскордонної передачі даних, яка здійснилася або передбачається.</p>
+              <p>4.1.9. Найменування або прізвище, ім'я, по батькові та адресу особи, яка здійснює обробку персональних даних за дорученням Правовласника, якщо обробку доручено або буде доручено такій особі.</p>
+              <p>4.1.10. Інші відомості, передбачені чинним законодавством.</p>
+              <p>4.2. Забезпечити вжиття заходів щодо запобігання несанкціонованому доступу до персональних даних Користувача.</p>
+              <p>4.3. Опублікувати чи іншим чином забезпечити необмежений доступ до документа, який визначає політику щодо обробки персональних даних, а також до відомостей про вимоги до захисту персональних даних, що реалізуються.</p>
+              <p>5. Метою збору і обробки персональних даних Користувача є укладення договору на надання Користувачеві права на використання мобільного додатку. При збиранні та обробці персональних даних Правовласник не переслідує інших цілей, окрім цілей виконання зазначеного договору.</p>
+              <p>6. Персональні дані Користувача зберігаються на електронних носіях і обробляються з використанням автоматизованих систем обробки персональних даних.</p>
+              <p>7. Правовласник збирає і обробляє наступні персональні дані Користувача:</p>
+              <p>7.1. Абонентський телефонний номер.</p>
+              <p>8. Знищення персональних даних Користувача здійснюється без можливості їх подальшого відновлення.</p>
+              <p>9. Правовласник не використовує і не зберігає дані про Користувача, які не є персональними даними і дозволяють ідентифікувати Користувача.</p>
+              <p>10. Доступ до персональних даних Користувача мають тільки працівники Правовласника. Правовласник не розповсюджує персональні дані Користувача, а також не надає до них доступ третім особам без попередньо згоди Користувача, за винятком випадків надання персональних даних за запитами уповноважених державних органів відповідно до чинного законодавства.</p>
+              <p>11. Правовласник вживає наступних заходів щодо запобігання несанкціонованому доступу до персональних даних Користувача:</p>
+              <p>11.1.Призначає працівників, відповідальних за організацію обробки персональних даних.</p>
+              <p>11.2.Застосовує організаційні і технічні заходи щодо забезпечення безпеки персональних даних Користувача, а саме:</p>
+              <p>11.2.1.Визначає загрози безпеки персональним даним під час їх обробки у інформаційних системах персональних даних.</p>
+              <p>11.2.2.Організовує режим забезпечення безпеки приміщень, у яких розміщено інформаційну систему, що перешкоджає можливості неконтрольованого проникнення або перебування у цих приміщеннях осіб, які не мають права доступу до цих приміщень.</p>
+              <p>11.2.3. Забезпечує збереження носіїв персональних даних.</p>
+              <p>11.2.4. Затверджує перелік осіб, які мають доступ до персональних даних, необхідний для виконання ними службових (трудових) обов'язків.</p>
+              <p>11.2.5. Використовує засоби захисту інформації, необхідні для запобігання несанкціонованого доступу до персональних даних.</p>
+              <p>11.2.6. Оцінює ефективність вжитих заходів щодо забезпечення безпеки персональних даних.</p>
+              <p>11.2.7. Забезпечує виявлення фактів несанкціонованого доступу до персональних даних та вжиття заходів.</p>
+              <p>11.2.8. Відновлює персональні дані, модифіковані або знищені внаслідок несанкціонованого доступу до них (за наявності технічної можливості такого відновлення).</p>
+              <p>11.2.9. Встановлює правила доступу до персональних даних, що обробляються у інформаційній системі персональних даних.</p>
+              <p>11.2.10. Здійснює контроль за заходами щодо забезпечення безпеки персональних даних, що вживаються, і рівнем захищеності інформаційних систем персональних даних.</p>
+              <p>12. Користувач має право вимагати від Правовласника уточнення (актуалізації) його персональних даних, їх блокування або знищення у разі, якщо персональні дані є неповними, застарілими, неточними, незаконно отриманими або не є необхідними для заявленої мети обробки, а також відкликати свою згоду на обробку персональних даних шляхом направлення Правовласнику відповідного запиту і/або вимоги у письмовій формі рекомендованим поштовим відправленням з повідомленням про вручення або його особистого надання за місцем знаходження Правовласника.</p><br><br>
+              <h2>ГЕОЛОКАЦІЙНІ ДАНІ</h2>
+              <p>13. Правовласник отримує за допомогою мобільного додатку дані про місце знаходження Користувача (геолокаційні дані). Геолокаційні дані передаються Правовласнику постійно, тільки під час використання мобільного додатку. Користувач на свій розсуд може заборонити передачу геолокаційних даних шляхом зміни відповідних налаштувань свого мобільного пристрою, однак це може спричинити некоректну роботу мобільного додатку або певних його функцій.</p><br><br>
+              <h2>ПЛАТІЖНІ ДАНІ</h2>
+              <p>14. Для отримання можливості оплати безготівковим платежем з використанням банківських карток Користувач самостійно у мобільному додатку зазначає наступні дані:</p>
+              <p>14.1.Номер банківської картки.</p>
+              <p>14.2.Термін дії банківської картки.</p>
+              <p>14.3.Прізвище та ім'я власника банківської картки.</p>
+              <p>14.4.Захисний код банківської картки.</p>
+              <p>15. Оплата безготівковим платежем з використанням банківських карток здійснюється відповідно до правил міжнародних платіжних систем на принципах дотримання конфіденційності і безпеки здійснення платежу. Безпека наданих Користувачем даних забезпечується відповідністю процедур вимогам стандарту безпеки даних індустрії платіжних карток (Payment Card Industry Data Security Standard) і ніхто, включаючи Правовласника, не може їх отримати. Введення даних банківської картки здійснюється на захищеній платіжній сторінці банку-еквайра, що забезпечує можливість безготівкової оплати послуг.</p>
+              <p>16. Надані Користувачем з метою здійснення оплати дані не дозволяють Правовласнику проводити ніякі операції, окрім операцій із зарахування коштів на банківський рахунок Користувача</p><br><br>
+              <h2>Повернення товару та коштів</h2>
+              <p>17. При отриманні товару неналежної якості користувач має право на захист своїх інтересів відповідно до Закону України «Про захист прав споживачів». Грошові кошти повертаються користувачу у разі придбання ним товару неналежної якості, що підтверджено висновком експертизи. Експертиза якості товару проводиться згідно Наказу Державного комітету України з питань технічного регулювання та споживчої політики, Міністерством палива та енергетики  України від 04.06.2007 № 271/121. Повернення грошових коштів провадиться електронною платіжною системою через яку було зараховано оплату за вирахуванням комісії у розмірі 5% від суми операції, яка утримується фінансовою установою надавачем таких фінансових послуг. Термін повернення коштів складає до 10 робочих днів від дня отримання висновку експертизи.</p>
+              <p>18.Повернення коштів при не отриманому товарі відбувається відповідно до Закону України «Про захист прав споживачів» шляхом подання відповідної заяви <a href=" {% static 'img/pay/return_request.pdf' %}">(зразок якої наведено на сайті ТОВ “МУЛЬТИ ОІЛ”)</a> на електронну адресу <a href="mailto:info@multioil.com.ua<"> info@multioil.com.ua</a> з прикріпленням документів у сканованому вигляді належної якості: копія 1, 2, 3 та 11 сторінки паспорту та ідентифікаційного коду отримувача. Повернення грошових коштів провадиться електронною платіжною системою через яку було зараховано оплату за вирахуванням комісії у розмірі 5% від суми операції яка утримується фінансовою установою надавачем таких фінансових послуг. Термін повернення коштів складає до 10 робочих днів від дня отримання заяви.</p>
+              <p>19.Відміна транзакцій провадиться шляхом подання відповідної заяви <a href=" {% static 'img/pay/return_request.pdf' %}">(зразок якої наведено на сайті ТОВ “МУЛЬТИ ОІЛ”)</a> на електронну адресу <a href="mailto:info@multioil.com.ua<"> info@multioil.com.ua</a> з прикріпленням документів у сканованому вигляді належної якості: копія 1, 2, 3 та 11 сторінки паспорту та ідентифікаційного коду отримувача.</p><br><br>
+              <h2>Використання QR коду та штрих коду</h2>
+              <p>20.При формуванні замовлення Користувачем, мобільний додаток формує матричний код - QR код, штрих код, що містить дані придбаного замовлення. Даний QR код, штрих код використовується Користувачем виключно в мобільному додатку. У випадку пересилання чи передавання QR коду, штрих коду (скріншот, фото тощо) поза мобільним додатком Правовласник знімає з себе всю відповідальність за подальше його використання чи збереження.</p><br><br>
+              <h2>ФАЙЛИ COOKIE</h2>
+              <p>21. Правовласником можуть використовуватися різноманітні типи файлів cookie.</p>
+              <p>22. Заблокувати або видалити файли cookie, а також обмежити їхню дію можна у налаштуваннях браузера, який використовується Користувачем.</p><br><br>
+              <h2>ІСТОРІЯ ЗАМОВЛЕНЬ</h2>
+              <p>23. Правовласник зберігає історію виконаних Користувачем дій при користуванні Додатком.</p>
+              <p>24. Метою збору інформації про історію замовлень є поліпшення якості послуг та роботи додатку.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+   <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 footer__col">
+            <div class="logo footer__logo"><a class="logo__link" href="{%  url 'multi_oil:home-page' %}">
+              <img class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
+                <div class="logo__title">MultiOil</div></a></div>
+            <div class="footer-phone">
+              <svg class="footer-phone__icon">
+                <use xlink:href="#footer-phone"></use>
+              </svg><a class="footer-phone__link" href="tel:0800354958">0 800 354 958</a>
+            </div>
+            <ul class="social footer__social">
+              <li class="social__item"><a class="social__link" href="https://t.me/multioil">
+                  <svg class="social__icon">
+                    <use
+                            xlink:href="#telegram"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="viber://chat?number=+380631018197">
+                  <svg class="social__icon">
+                    <use xlink:href="#viber"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="tel:0800354958">
+                  <svg class="social__icon">
+                    <use xlink:href="#phone"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-2 desktop--hidden">
+            <div class="footer-block">
+<!--               <div class="footer-block__title"><a class="footer-links__link" href="javascript:;" data-fancybox data-src="#return-popup">
+  Повернення та обмін</a></div> -->
+               <div class="footer-block__title"><a class="footer-links__link" href="javascript:;"
+                       data-fancybox data-src="#contact-popup">Контакти</a></div>
+              <div class="footer-block__title"><a class="footer-links__link" href="{%  url 'multi_oil:terms-page' %}">
+                Умови використання</a></div>
+              <div class="footer-block__title"><a class="footer-links__link" href="{%  url 'multi_oil:policy-page' %}">
+                Політика конфіденційності</a></div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 footer__col footer__col--hidden-mobile">
+            <div class="footer-block">
+              <div class="footer-block__title">Навігація</div>
+              <nav class="footer-menu">
+                <ul class="footer-menu__list">
+                 <!--  <li class="footer-menu__item"><a class="footer-menu__link" href="{%  url 'multi_oil:faq-page' %}">Про нас</a></li> -->
+                  <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="javascript:;"
+                       data-fancybox data-src="#contact-popup">Контакти</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="javascript:;"
+                       data-fancybox data-src="#partner-popup">Стати партнером</a></li>
+                     <li class="footer-menu__item"><a class="footer-menu__link" href="{% url 'multi_oil:stocks' %}">Акції</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="footer-bg desktop--hidden"></div>
+          <div class="col-lg-3 col-md-4 footer__col">
+            <div class="footer-block">
+              <div class="footer-block__title">ВАРІАНТИ ОПЛАТИ</div>
+              <nav class="footer-menu">
+                <ul class="footer-menu__list">
+                <!--   <li class="footer-menu__item">Оплата готівкою кур’єру</li> -->
+                  <li class="footer-menu__item">Оплата платіжними картами</li>
+                  <div class="footer_image">
+                    <img src="{% static 'img/pay/visa.svg' %}" alt="visa">
+                    <img src="{% static 'img/pay/master.svg' %}" alt="mastercard">
+                    <img src="{% static 'img/pay/way.png' %}" alt="WAYFORPAY">
+                  </div>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="footer-bg-download desktop--hidden"></div>
+          <div class="col-lg-4 col-md-3 footer__col">
+            <div class="footer-block">
+              <div class="footer-block__title footer__col--hidden-mobile">Завантажуй додаток</div>
+              <div class="download footer__download">
+                <div class="download__title">Завантажуй додаток для купівлі пального в мережах партнерів</div>
+                <ul class="download__list">
+                  <li class="download__item"><a class="download__link" href="https://play.google.com/store/apps/details?id=com.multioilinua.app"><img class="download__img" src="{% static 'img/GooglePlay-ru.svg' %}" alt="alt"></a></li>
+                  <li class="download__item"><a class="download__link" href="https://apps.apple.com/ua/app/multioil-%D0%B0%D0%B7%D1%81-%D0%B2-%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D1%96/id1554826015?l=ru"><img class="download__img" src="{% static 'img/AppStore-ru.svg' %}" alt="alt"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="footer__bottom">
+              <div class="copyright">©MultiOil 2021</div>
+              <nav class="footer-links footer__col--hidden-mobile">
+                <ul class="footer-links__list">
+                  <li class="footer-links__item">
+<!--                     <a class="footer-links__link" href="javascript:;" data-fancybox data-src="#return-popup">
+  Повернення та обмін</a></li> -->
+                  <li class="footer-links__item"><a class="footer-links__link" href="{%  url 'multi_oil:terms-page' %}">Умови використання</a></li>
+                  <li class="footer-links__item"><a class="footer-links__link" href="{%  url 'multi_oil:policy-page' %}">Політика конфіденційності</a></li>
+{#                    <li class="footer-links__item"><a class="footer-links__link" href="javascript:;" data-fancybox data-src="#waiting-popup">Політика конфіденційності</a></li>#}
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Popup -->
+    <div class="popup" id="partner-popup">
+      <h2 class="popup__title">Стати партнером</h2>
+      <div class="partner-text">
+             Запрошуємо до співпраці мережі АЗС. Якщо Ваша мережа налічує 3 і більше АЗС, Ви хочете розвиватися і бути попереду конкурентів, зробіть перший крок - заповніть анкету нижче і ми зв’яжемось із Вами найближчим часом
+         </div>
+      <form class="form popup__form form-partner-text"  name="form_data_input" data-toggle="validator" data-focus="false" role="form">
+               {% csrf_token %}
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Назва компанії</label>
+          <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">ЄДРПОУ/ІПН</label>
+          <input class="form__input form-control" type="text" name="inputIpn" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Контактна особа</label>
+          <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Номер телефону</label>
+          <input class="form__input phone-mask form-control" type="text" name="inputPhone" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Email</label>
+          <input class="form__input form-control" type="email" name="inputEmail" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Текстове повідомлення</label>
+          <textarea class="form__input form-control" name="textarea" rows="8" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required></textarea>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__button-group">
+          <button type='submit' class="button form__button">Надіслати</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup popup--contact" id="contact-popup">
+      <h2 class="popup__title_contact">Контактна інформація:</h2>
+      <form class="form popup__form" data-toggle="validator" data-focus="false" role="form">
+               {% csrf_token %}
+        <div class="form_info">ТОВ «МУЛЬТИ ОІЛ»</div>
+        <div class="form_number">ЄДРПОУ 43710549</div>
+        <div class="popup_border"></div>
+        <div class="form_flex">
+          <img src="{% static 'img/mask.png' %}" alt="mask">
+          <div class="contact_info">Україна, 04053, м. Київ, вул. Січових стрільців, будинок 21, приміщення 501-Б</div>
+        </div>
+        <div class="form_flex">
+          <img src="{% static 'img/mail.png' %}" alt="mail">
+          <div class="contact_info">
+            <a href="mailto:info@multioil.com.ua">info@multioil.com.ua</a>
+          </div>
+        </div>
+        <div class="form_flex">
+          <img src="{% static 'img/phone.png' %}" alt="phone">
+          <div class="contact_info">
+            <a href="tel:0800354958" class="popup_phone">0 800 354 958</a>
+          </div>
+        </div>
+        <div class="form__button-group-contact">
+          <button class="button popup__close" type="button">Закрити</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup popup--waiting" id="waiting-popup">
+      <h2 class="popup__title_waiting">Реліз додатку запланований на 27 березня</h2>
+         <h3 class="popup__title_waiting">Для того щоб не пропустити реліз залиште свій номер телефону</h3>
+      <form class="form phone-form form_waiting" name="form_phone_input" data-toggle="validator" data-focus="false" role="form" >
+                  {% csrf_token %}
+          <div class="form__group phone-form__group form-group has-feedback ">
+              <input class="form__input phone-form__input_waiting phone-mask" type="text" name="inputPhone" placeholder="+38 (000) 00 00 000" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+              <label class="form__help help-block with-errors"></label>
+              <button type='submit' class="button button-waiting">Відправити посилання</button>
+          </div>
+        <div class="form__button-group-contact">
+          <button class="popup__close button-close-waiting" type="button">Закрити</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup popup--return" id="return-popup">
+      <h2 class="popup__title_contact popup__title_return">Повернення та
+        обмін</h2>
+      <form class="form popup__form" data-toggle="validator" data-focus="false" role="form">
+               {% csrf_token %}
+        <div class="form-return_text">Згідно із Законом України «Про захист прав споживачів» покупець має право обміняти товар на аналогічний протягом 14 днів, якщо куплений товар не підійшов за формою, габаритами, фасоном, кольором, розміром або з інших причин, і якщо збережено товарний вигляд, ярлики і розрахунковий документ, виданий продавцем разом із товаром. Виняток становлять товари, які не підлягають поверненню за Законом, їх перелік ви можете переглянути за
+          <a class="return_link" href="javascript:;" data-fancybox
+             data-src="#return-form-popup">
+            посиланням.</a></div>
+        <div class="form__button-group-contact-return">
+          <button class="button popup__close" type="button">Закрыть</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup popup-return-form" id="return-form-popup">
+      <h2 class="popup__title popup__title_return">Повернення коштів</h2>
+      <form class="form popup__form"  name="form_return_input" data-toggle="validator" data-focus="false" role="form">
+               {% csrf_token %}
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Прізвище Імя Побатькові</label>
+          <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <h3 class="popup__title popup__title_return">Паспортні дані</h3>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">(Серія та/або номер)</label>
+          <input class="form__input form-control" type="text"
+                 name="inputSeries"
+                 placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Дата видачі</label>
+          <input class="form__input form-control" type="text" name="dataD" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback padding-form">
+          <label class="form__label">Ким видано</label>
+          <input class="form__input form-control" type="text" name="issuedBy" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">ID транзакції</label>
+          <input class="form__input form-control" type="text" name="idTranz" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Сума до повернення</label>
+          <input class="form__input form-control" type="text" name="BeforeTurning" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Номер телефона</label>
+          <input class="form__input phone-mask form-control" type="text"
+                 name="inputPhone" placeholder="+380" autocomplete="off"
+                 data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Email</label>
+          <input class="form__input form-control" type="email" name="inputEmail" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__group form-group has-feedback">
+          <label class="form__label">Причина повернення</label>
+          <textarea class="form__input form-control" name="textarea" rows="8" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required></textarea>
+          <label class="form__help help-block with-errors"></label>
+        </div>
+        <div class="form__button-group">
+          <button type='submit' class="button form__button">Відправити запит</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popup popup--success" id="success-popup">
+      <h2 class="popup__title">Повідомлення надіслано</h2>
+      <p class="popup__descr">Найближчим часом Ви отримаєте посилання на скачування додатку</p>
+    </div>
+       <div class="popup popup--success" id="success-popup-partner">
+      <h2 class="popup__title">Дякуємо, що заповнили анкету!</h2>
+      <p class="popup__descr">Найближчим часом наш менеджер зв’яжеться з Вами</p>
+    </div>
+    <div class="popup popup--price" id="price-popup">
+      <h2 class="popup__title">Ціна на пальне АЗС "STELS"</h2>
+      <div class="price-table">
+        <div class="price-table__header">
+          <div class="row align-items-end">
+            <div class="col-3">
+              <div class="price-table__title">Вид пального</div>
+            </div>
+            <div class="col-3">
+              <div class="price-table__title">Ціна на АЗС</div>
+            </div>
+            <div class="col-3">
+              <div class="price-table__title">Ціна MultiOil</div>
+            </div>
+            <div class="col-3">
+              <div class="price-table__title">Економія з MultiOil</div>
+            </div>
+          </div>
+        </div>
+        <div class="price-table__row">
+          <div class="row align-items-center">
+            <div class="col-3 price-table__col">А-95</div>
+            <div class="col-3 price-table__col">25.00</div>
+            <div class="col-3 price-table__col">21.00</div>
+            <div class="col-3 price-table__col">4.00</div>
+          </div>
+        </div>
+        <div class="price-table__row">
+          <div class="row align-items-center">
+            <div class="col-3 price-table__col">А-92</div>
+            <div class="col-3 price-table__col">25.00</div>
+            <div class="col-3 price-table__col">21.00</div>
+            <div class="col-3 price-table__col">4.00</div>
+          </div>
+        </div>
+        <div class="price-table__row">
+          <div class="row align-items-center">
+            <div class="col-3 price-table__col">Diesel VIP</div>
+            <div class="col-3 price-table__col">25.00</div>
+            <div class="col-3 price-table__col">21.00</div>
+            <div class="col-3 price-table__col">4.00</div>
+          </div>
+        </div>
+        <div class="price-table__row">
+          <div class="row align-items-center">
+            <div class="col-3 price-table__col">Diesel</div>
+            <div class="col-3 price-table__col">25.00</div>
+            <div class="col-3 price-table__col">21.00</div>
+            <div class="col-3 price-table__col">4.00</div>
+          </div>
+        </div>
+      </div>
+      <button class="button popup__close" type="button">Закрити</button>
+    </div>
+    <!-- JS -->
+<!-- build:js js/all.min.js -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
+    <script src="{% static 'js/jquery.mask.min.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="{% static 'js/validator.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/common.js' %}"></script>
+    <!-- endbuild -->
+    <div style="display:none;">
+
+    {% include "sprite.svg" %}
+
+    </div>
+  </body>
+</html>

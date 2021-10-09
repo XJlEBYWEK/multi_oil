@@ -1,0 +1,174 @@
+html
+    position: relative
+    min-height: 100%
+    // overflow-x: hidden
+
+body
+    font-size: 16px
+    line-height: 1.5
+    font-family: $font-regular
+    font-weight: 500
+    overflow-x: hidden
+    color: #fff
+    background: #000
+    backface-visibility: hidden
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+.hidden
+    display: none
+
+a
+    outline: none !important
+    color: $green
+    text-decoration: underline
+
+    &:hover
+        color: $green
+        text-decoration: none
+
+strong
+    font-family: $font-regular
+    font-weight: 700
+
+.br
+    display: block
+
+.button
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    font-weight: 700
+    text-align: center
+    user-select: none
+    border: 0
+    padding: 5px 25px
+    height: 50px
+    width: auto
+    font-size: 16px
+    line-height: 1
+    border-radius: 5px
+    background: $green
+    box-shadow: none
+    color: #fff
+    transition: all .5s ease
+    cursor: pointer
+    outline: none
+    position: relative
+    text-decoration: none
+
+    &:hover, &:active, &:focus:hover
+        outline: none
+        color: #000
+        background: #fff
+            
+    &:focus
+        color: #fff
+        background: $green
+        outline: none
+
+.swiper-wrapper
+    box-sizing: border-box !important
+
+::selection
+    background: $green
+    color: #fff
+
+
+
+.section-title
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    font-weight: 700
+    color: #fff
+    font-size: 54px
+    line-height: 1.2
+
+    span
+        margin: 0 20px
+        display: block
+
+    &__line
+        position: relative
+        width: 92px
+        height: 2px
+        background: #fff
+        border-radius: 1px
+        margin-right: 12px
+
+        &:first-child
+            margin-right: 0
+            margin-left: 12px
+
+            &:before
+                right: auto
+                left: -12px
+
+            &:after
+                right: auto
+                left: -6px
+
+        &:before
+            position: absolute
+            top: 0
+            right: -12px
+            width: 4px
+            height: 2px
+            border-radius: 1px
+            background: #fff
+            content: ""
+
+        &:after
+            position: absolute
+            top: 0
+            right: -6px
+            width: 4px
+            height: 2px
+            border-radius: 1px
+            background: #fff
+            content: ""
+
+
+
+
+.social
+    padding-left: 0
+    list-style: none
+    display: flex
+    align-items: center
+    justify-content: center
+    line-height: 1
+
+    &__item
+        margin-right: 100px
+        line-height: 1
+        text-align: center
+
+        &:last-child
+            margin-right: 0
+
+    &__link
+        text-decoration: none
+        line-height: 1
+
+        &:hover
+
+            .social__icon
+                fill: #fff
+
+    &__icon
+        width: 120px
+        height: 120px
+        fill: $green
+        transition: all .5s ease
+
+    &__title
+        font-size: 24px
+        line-height: 1
+        font-weight: 700
+        margin: 25px 0 0
+        color: #fff

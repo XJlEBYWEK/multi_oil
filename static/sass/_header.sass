@@ -1,0 +1,169 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    transform: translate3d(0,0,0)
+    transition: all .5s ease
+    z-index: 100
+
+    &.is-scroll
+        background: #151515
+
+        .header__col
+            padding: 15px
+
+    &__col
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 25px 15px
+        transition: all .5s ease
+
+
+
+// Logo
+.logo
+    line-height: 1
+
+    &__link
+        text-decoration: none
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+    &__img
+        width: 30px
+        height: auto
+        margin-right: 12px
+
+    &__title
+        font-size: 34px
+        font-weight: 700
+        line-height: 1
+        color: #fff
+
+
+
+
+// Top Menu
+.menu
+    line-height: 1
+    margin: 0 0 0 auto
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    &__list
+        padding-left: 0
+        list-style: none
+        margin: 0
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        line-height: 1
+
+    &__item
+        line-height: 1.2
+        margin-right: 45px
+        position: relative
+
+        &:last-child
+            margin-right: 0
+
+        &.is-active
+            .top-menu__link
+                color: $green
+
+    &__link
+        position: relative
+        display: block
+        font-size: 14px
+        font-weight: 500
+        color: #888
+        text-decoration: none
+        transition: all .5s ease
+
+        &:hover
+            color: $green
+
+        
+
+// Toggle
+.toggle
+    position: relative
+    cursor: pointer
+    width: 17px
+    margin: 0
+
+    div
+        width: 17px
+        height: 2px
+        background: #fff
+        margin: 5px 0 5px auto
+        transition: all 0.3s
+        backface-visibility: hidden
+        border-radius: 2px
+
+        &:nth-child(2)
+            width: 12px
+
+    &.on
+
+        .toggle__1
+            transform: rotate(45deg) translate(4px, 4px)
+        .toggle__2
+            opacity: 0
+        .toggle__3
+            transform: rotate(-45deg) translate(6px, -6px)
+
+
+
+.menu-toggle
+    display: none
+    margin-left: auto
+
+
+
+
+// Language
+.language
+    position: relative
+    text-align: center
+    cursor: pointer
+    margin-left: 155px
+
+    &:hover
+        .language__list
+            opacity: 1
+            visibility: visible
+
+    &__current
+        font-size: 14px
+        font-weight: 500
+        color: $green
+        border-bottom: 1px solid $green
+        line-height: 1.2
+
+    &__list
+        position: absolute
+        top: 100%
+        left: 0
+        padding-left: 0
+        list-style: none
+        margin: 0
+        opacity: 0
+        visibility: hidden
+        transition: all .5s ease
+
+    &__item
+
+    &__link
+        font-size: 14px
+        font-weight: 500
+        color: #888
+        text-decoration: none
+        transition: all .5s ease
+
+        &:hover
+            color: $green
