@@ -26,7 +26,6 @@ urlpatterns = [
     path('multioil-for-azs', views.ForAzsPageView.as_view(), name='multioil-for-azs'),
     path('multioil-business', views.MultiBuisinnessPageView.as_view(), name='multioil-business'),
 
-    
     path('stock/just_install', views.stocksJustInstallView.as_view(), name='stock-install'),
     path('stock/test_for_benifit', views.stocksTestForBenefitView.as_view(), name='stock-test'),
     path('policy', views.PolicyPageView.as_view(), name='policy-page'),
@@ -34,4 +33,11 @@ urlpatterns = [
     path('set_form', views.set_message),
     path('set_phone_form', views.set_phone_form),
     path('set_return_form', views.set_return_form),
+
+    path('news', views.GetNewsPageView.as_view(), name="get-news-page"),
+    path("news/<int:pk>", views.GetNewsView.as_view(), name="get-news"),
+    path('api/news', views.GetNewsListView.as_view(), name="get-news-list"),
+
+    path('stocks_test', views.GetStocksPageView.as_view(), name="get-stocks-page"),
+
 ]
