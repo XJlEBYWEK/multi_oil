@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from .models import News, Stocks
-from .serializers import NewsSerializer
+from .serializers import NewsSerializer, StocksSerializer
 import json
 import requests
 
@@ -171,10 +171,11 @@ class GetNewsView(TemplateView):
 class GetStocksPageView(TemplateView):
     """Страница со всеми акциями"""
 
-    template_name = "_stocks_page.html"
+    template_name = "stocks.html"
 
     def get_context_data(self, **kwargs):
         new = Stocks.objects.all()[:2]
         context = super().get_context_data(**kwargs)
-        context["stocks"] = NewsSerializer(new, many=True).data
+        context["stocks"] = StocksSerializer(new, many=True).data
+        print(context)
         return context

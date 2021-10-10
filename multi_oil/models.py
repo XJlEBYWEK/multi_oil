@@ -20,12 +20,14 @@ class News(models.Model):
 
 class Stocks(models.Model):
     name = models.TextField(max_length=100, verbose_name="Название акции")
+    name_url = models.CharField(max_length=100,verbose_name="URL",unique=True,)
     head_img = models.ImageField(verbose_name='Изображение', upload_to="head_imgs", default=None, null=True,blank=True)
     body = RichTextField(verbose_name='Акция', null=True, blank=True, default="")
+    date_work = models.TextField(verbose_name='Время работы',max_length=100, default="" )
     date_add = models.DateTimeField(verbose_name="Дата создания",auto_now=True)
 
     def get_absolute_url(self):
-        return reverse('multi_oil:get-new', args=[str(self.id)])
+        return reverse('multi_oil:get-news', args=[str(self.id)])
 
     def __str__(self):
         return self.name
