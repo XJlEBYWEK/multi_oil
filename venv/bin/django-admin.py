@@ -1,4 +1,4 @@
-#!/home/spains/Projects/work/multi_oil/venv/bin/python
+#!/Users/total/Documents/Private/GitHub/multioil/venv/bin/python
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

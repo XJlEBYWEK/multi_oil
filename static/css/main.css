@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 100;
     font-display: swap;
-    src: url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Thin/SFProDisplay-Thin.eot?") format("eot"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Thin/SFProDisplay-Thin.woff2") format("woff2"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Thin/SFProDisplay-Thin.woff") format("woff"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Thin/SFProDisplay-Thin.ttf") format("truetype");
+    src: url("../fonts/SFProDisplay-Thin/SFProDisplay-Thin.eot?") format("eot"), url("../fonts/SFProDisplay-Thin/SFProDisplay-Thin.woff2") format("woff2"), url("../fonts/SFProDisplay-Thin/SFProDisplay-Thin.woff") format("woff"), url("../fonts/SFProDisplay-Thin/SFProDisplay-Thin.ttf") format("truetype");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Light/SFProDisplay-Light.eot?") format("eot"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Light/SFProDisplay-Light.woff2") format("woff2"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Light/SFProDisplay-Light.woff") format("woff"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Light/SFProDisplay-Light.ttf") format("truetype");
+    src: url("../fonts/SFProDisplay-Light/SFProDisplay-Light.eot?") format("eot"), url("../fonts/SFProDisplay-Light/SFProDisplay-Light.woff2") format("woff2"), url("../fonts/SFProDisplay-Light/SFProDisplay-Light.woff") format("woff"), url("../fonts/SFProDisplay-Light/SFProDisplay-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Regular/SFProDisplay-Regular.eot?") format("eot"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff2") format("woff2"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff") format("woff"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Regular/SFProDisplay-Regular.ttf") format("truetype");
+    src: url("../fonts/SFProDisplay-Regular/SFProDisplay-Regular.eot?") format("eot"), url("../fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff2") format("woff2"), url("../fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff") format("woff"), url("../fonts/SFProDisplay-Regular/SFProDisplay-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Medium/SFProDisplay-Medium.eot?") format("eot"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff2") format("woff2"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff") format("woff"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Medium/SFProDisplay-Medium.ttf") format("truetype");
+    src: url("../fonts/SFProDisplay-Medium/SFProDisplay-Medium.eot?") format("eot"), url("../fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff") format("woff"), url("../fonts/SFProDisplay-Medium/SFProDisplay-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -35,7 +35,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.eot?") format("eot"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.woff2") format("woff2"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.woff") format("woff"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.ttf") format("truetype");
+    src: url("../fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.eot?") format("eot"), url("../fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.woff2") format("woff2"), url("../fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.woff") format("woff"), url("../fonts/SFProDisplay-Semibold/SFProDisplay-Semibold.ttf") format("truetype");
 }
 
 @font-face {
@@ -43,7 +43,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Bold/SFProDisplay-Bold.eot?") format("eot"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Bold/SFProDisplay-Bold.woff2") format("woff2"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Bold/SFProDisplay-Bold.woff") format("woff"), url("../../../../../Downloads/multioil/static/fonts/SFProDisplay-Bold/SFProDisplay-Bold.ttf") format("truetype");
+    src: url("../fonts/SFProDisplay-Bold/SFProDisplay-Bold.eot?") format("eot"), url("../fonts/SFProDisplay-Bold/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/SFProDisplay-Bold/SFProDisplay-Bold.woff") format("woff"), url("../fonts/SFProDisplay-Bold/SFProDisplay-Bold.ttf") format("truetype");
 }
 
 html {
