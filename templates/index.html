@@ -88,11 +88,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 header__col">
-                <div class="logo header__logo header_logo_main"><a class="logo__link"
-                                                                   href="{% url 'multi_oil:home-page' %}"><img
-                        class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
-                    <div class="logo__title">MultiOil</div>
-                </a></div>
+                <div class="logo header__logo header_logo_main">
+                    <a class="logo__link" href="{% url 'multi_oil:home-page' %}">
+                        <img class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
+                        <div class="logo__title">MultiOil</div>
+                    </a>
+                </div>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item"><a class="menu__link"
@@ -101,8 +102,10 @@
                         <li class="menu__item"><a class="menu__link" href="javascript:;" data-fancybox
                                                   data-src="#partner-popup">Стати партнером</a></li>
                         <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:stocks' %}">Акції</a></li>
-                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:multioil-for-azs' %}">MultiOil для АЗС</a></li>
-                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:business' %}">MultiOil Business для АЗС</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:multioil-for-azs' %}">MultiOil
+                            для АЗС</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:business' %}">MultiOil
+                            Business для АЗС</a></li>
                     </ul>
                 </nav>
                 <div class="toggle menu-toggle">
@@ -120,11 +123,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="logo mobile-section__logo"><a class="logo__link"
-                                                          href="{% url 'multi_oil:home-page' %}"><img
-                        class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
-                    <div class="logo__title">MultiOil<span>АЗС в смартфоні</span></div>
-                </a></div>
+                <!--                <div class="logo mobile-section__logo"><a class="logo__link"-->
+                <!--                                                          href="{% url 'multi_oil:home-page' %}"><img-->
+                <!--                        class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">-->
+                <!--                    <div class="logo__title">MultiOil<span>АЗС в смартфоні</span></div>-->
+                <!--                </a></div>-->
                 <div class="mobile-section__slogan">Швидко. Зручно. Дешево</div>
                 <div class="download mobile-section__download">
                     <ul class="download__list">
@@ -299,8 +302,9 @@
                 <picture class="partner-section__picture"><img class="partner-section__img"
                                                                src="{% static 'img/stels-logo.svg' %}" alt="alt">
                 </picture>
-                <a class="button partner-section__button" href="javascript:;" data-fancybox data-src="#price-popup">Дізнатися
-                    більше</a>
+                <a class="button partner-section__button" href="javascript:;" data-fancybox data-src="#price-popup">
+                    Ціни на АЗС
+                </a>
             </div>
         </div>
     </div>
@@ -386,7 +390,7 @@
 <section class="acc-section-desktop">
     <div class="container">
         <div class="row">
-                <h2 class="desktop--hidden col-12 acc-title">ЗМІ про нас</h2>
+            <h2 class="desktop--hidden col-12 acc-title">ЗМІ про нас</h2>
             <div class="acc-box desktop--hidden">
                 <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">
                     <h2 class="mobile--hidden">ЗМІ про нас</h2>
@@ -397,10 +401,10 @@
                     <div class="acc-date">31 Бер 2021</div>
                 </a>
             </div>
-{#            <div class="col-12 col-md-6 acc-img">#}
-{#                <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918"><img#}
-{#                        src="{% static 'img/acc.png' %}" alt="acc"></a>#}
-{#            </div>#}
+            <!--            <div class="col-12 col-md-6 acc-img">-->
+            <!--                <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">-->
+            <!--                    <img src="{% static 'img/acc.png' %}" alt="acc"></a>-->
+            <!--            </div>-->
         </div>
     </div>
 </section>
@@ -412,12 +416,13 @@
                 <h2 class="section-title contacts-section__title">Виникли питання? <br>Звертайтеся в службу
                     техпідтримки.</h2>
                 <ul class="social contacts-section__social">
-                    <li class="social__item"><a class="social__link" href="https://t.me/multioil">
-                        <svg class="social__icon">
-                            <use
+                    <li class="social__item">
+                        <a class="social__link" href="https://t.me/multioil">
+                            <svg class="social__icon">
+                                <use
                                     xlink:href="#telegram"></use>
-                        </svg>
-                    </a>
+                            </svg>
+                        </a>
                         <div class="social__title">Telegram</div>
                     </li>
                     <li class="social__item"><a class="social__link" href="viber://chat?number=%2B380631018197">
@@ -444,17 +449,19 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-3 footer__col">
+            <div class="col-lg-2 col-md-2 footer__col">
                 <div class="logo footer__logo"><a class="logo__link" href="{% url 'multi_oil:home-page' %}">
                     <img class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
                     <div class="logo__title">MultiOil</div>
                 </a></div>
+                <div class="footer-phone__descr desktop--hidden">безкоштовно</div>
                 <div class="footer-phone">
                     <svg class="footer-phone__icon">
                         <use xlink:href="#footer-phone"></use>
                     </svg>
                     <a class="footer-phone__link" href="tel:0800354958">0 800 354 958</a>
                 </div>
+                <div class="footer-phone__descr__desktop mobile--hidden">безкоштовно</div>
                 <ul class="social footer__social">
                     <li class="social__item"><a class="social__link" href="https://t.me/multioil">
                         <svg class="social__icon">
@@ -474,7 +481,8 @@
                     </a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-2 desktop--hidden">
+
+            <div class="col-lg-2 col-md-2 desktop--hidden">
                 <div class="footer-block">
 
                     <div class="footer-block__title"><a class="footer-links__link" href="javascript:;"
@@ -506,24 +514,58 @@
                 </div>
             </div>
             <div class="footer-bg desktop--hidden"></div>
-            <div class="col-lg-3 col-md-4 footer__col">
+            <div class="col-lg-3 col-md-3 footer__col">
                 <div class="footer-block">
                     <div class="footer-block__title">ВАРІАНТИ ОПЛАТИ</div>
                     <nav class="footer-menu">
                         <ul class="footer-menu__list">
-                            <!--   <li class="footer-menu__item">Оплата готівкою кур’єру</li> -->
                             <li class="footer-menu__item">Оплата платіжними картами</li>
                             <div class="footer_image">
                                 <img src="{% static 'img/pay/visa.svg' %}" alt="visa">
                                 <img src="{% static 'img/pay/master.svg' %}" alt="mastercard">
                                 <img src="{% static 'img/pay/way.png' %}" alt="WAYFORPAY">
                             </div>
+                            <div class="footer_image__pay">
+                                <img src="{% static 'img/pay/applepay.svg' %}" alt="Apple Pay">
+                                <img src="{% static 'img/pay/googlepay.svg' %}" alt="Google Pay">
+                                <img class="easy_pay" src="{% static 'img/pay/easypay.png' %}" alt="EasyPay">
+                            </div>
                         </ul>
                     </nav>
                 </div>
             </div>
+            <div class="col-lg-2 col-md-2 footer__col">
+                <div class="footer-block">
+                    <div class="footer-block__title">Ми в соцмережах</div>
+                    <nav class="footer-menu">
+                        <ul class="social footer__social">
+                     <li class="social__item">
+                         <a class="social__link" href="tel:0800354958">
+                            <svg class="social__icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                     </li>
+                     <li class="social__item">
+                         <a class="social__link" href="tel:0800354958">
+                          <svg class="social__icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                     </li>
+                     <li class="social__item">
+                         <a class="social__link" href="tel:0800354958">
+                            <svg class="social__icon">
+                                <use xlink:href="#youtube"></use>
+                            </svg>
+                        </a>
+                     </li>
+                </ul>
+                    </nav>
+                </div>
+            </div>
             <div class="footer-bg-download desktop--hidden"></div>
-            <div class="col-lg-4 col-md-3 footer__col">
+            <div class="col-lg-3 col-md-2 footer__col">
                 <div class="footer-block">
                     <div class="footer-block__title footer__col--hidden-mobile">Завантажуй додаток</div>
                     <div class="download footer__download">
@@ -547,15 +589,15 @@
                     <nav class="footer-links footer__col--hidden-mobile">
                         <ul class="footer-links__list">
                             <li class="footer-links__item">
-                                <!--                     <a class="footer-links__link" href="javascript:;" data-fancybox data-src="#return-popup">
-                                  Повернення та обмін</a></li> -->
                             <li class="footer-links__item"><a class="footer-links__link"
                                                               href="{% url 'multi_oil:terms-page' %}">Умови
                                 використання</a></li>
                             <li class="footer-links__item"><a class="footer-links__link"
                                                               href="{% url 'multi_oil:policy-page' %}">Політика
                                 конфіденційності</a></li>
-                            {#                    <li class="footer-links__item"><a class="footer-links__link" href="javascript:;" data-fancybox data-src="#waiting-popup">Політика конфіденційності</a></li>#}
+                            <li class="footer-links__item"><a class="footer-links__link" href="javascript:;"
+                                                              data-fancybox data-src="#waiting-popup">Політика
+                                конфіденційності</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -775,7 +817,7 @@
                 <div class="col-3">
                     <div class="price-table__title">Ціна MultiOil</div>
                 </div>
-                 <div class="col-3">
+                <div class="col-3">
                     <div class="price-table__title">Кешбек від MultiOil</div>
                 </div>
             </div>
@@ -785,7 +827,7 @@
                 <div class="col-3 price-table__col">А-92</div>
                 <div class="col-3 price-table__col">29,50</div>
                 <div class="col-3 price-table__col">28,90</div>
-                 <div class="col-3 price-table__col">-</div>
+                <div class="col-3 price-table__col">-</div>
             </div>
         </div>
         <div class="price-table__row">
@@ -836,7 +878,6 @@
 <div style="display:none;">
 
     {% include "sprite.svg" %}
-
 </div>
 
 </body>
