@@ -96,6 +96,7 @@
                 </div>
                 <nav class="menu">
                     <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
                         <li class="menu__item"><a class="menu__link"
                                                   href="javascript:;" data-fancybox
                                                   data-src="#contact-popup">Контакти</a></li>
@@ -149,17 +150,43 @@
 <section class="main-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-5">
-                <picture class="main-section__picture"><img class="main-section__img"
-                                                            src="{% static 'img/main-phone.png' %}" alt="alt"></picture>
-            </div>
-            <div class="col-lg-6 col-md-7">
+            <div class="col-lg-4 col-md-4">
                 <div class="main-section__descr">
                     <h1 class="main-section__title">MultiOil <span>АЗС в смартфоні</span></h1>
                     <div class="main-section__text">
                         <p>Додаток для придбання пального від наших партнерів за вигідними цінами.</p>
                     </div>
-                    <!-- <div class="main-section__price">Ціна на будь-яке пальне: <strong>{{ price }}</strong> грн/л</div> -->
+                    <form class="form phone-form" name="form_phone_input" data-toggle="validator" data-focus="false"
+                          role="form">
+                        {% csrf_token %}
+                        <div class="form__group phone-form__group form-group has-feedback">
+                            <input class="form__input phone-form__input phone-mask" type="text" name="inputPhone"
+                                   placeholder="+38 (000) 00 00 000" autocomplete="off"
+                                   data-error="Поле обязательное для заполнения" required>
+                            <label class="form__help help-block with-errors"></label>
+                            <button type='submit' class="button phone-form__button">Отримати посилання</button>
+                        </div>
+                        <div class="phone-form__info">
+                            <p>Залиште номер Вашого телефону і ми надішлемо</p>
+                            <p>СМС з посиланням на скачування додатка.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <picture class="main-section__picture"><img class="main-section__img"
+                                                            src="{% static 'img/main-phone.png' %}" alt="alt"></picture>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <picture class="main-section__picture"><img class="main-section__img"
+                                                            src="{% static 'img/main-phone.png' %}" alt="alt"></picture>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="main-section__descr">
+                    <h1 class="main-section__title">MultiOil <span>АЗС в смартфоні</span></h1>
+                    <div class="main-section__text">
+                        <p>Додаток для придбання пального від наших партнерів за вигідними цінами.</p>
+                    </div>
                     <form class="form phone-form" name="form_phone_input" data-toggle="validator" data-focus="false"
                           role="form">
                         {% csrf_token %}
@@ -297,14 +324,61 @@
 <section class="partner-section">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12">
                 <h2 class="section-title partner-section__title">Наші партнери</h2>
-                <picture class="partner-section__picture"><img class="partner-section__img"
-                                                               src="{% static 'img/stels-logo.svg' %}" alt="alt">
-                </picture>
-                <a class="button partner-section__button" href="javascript:;" data-fancybox data-src="#price-popup">
-                    Ціни на АЗС
-                </a>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper mySwiper col-xl-12">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture class="partner-section__picture">
+                                <img class="partner-section__img" src="{% static 'img/stels-logo.svg' %}" alt="alt">
+                            </picture>
+                            <a class="button partner-section__button" href="javascript:;" data-fancybox
+                               data-src="#price-popup">
+                                Ціни на АЗС
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="partner-section__picture">
+                                <img class="partner-section__img" src="{% static 'img/pp-oil-logo.jpg' %}" alt="alt">
+                            </picture>
+                            <a class="button partner-section__button" href="javascript:;" data-fancybox
+                               data-src="#price-popup">
+                                Ціни на АЗС
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="partner-section__picture">
+                                <img class="partner-section__img" src="{% static 'img/stels-logo.svg' %}" alt="alt">
+                            </picture>
+                            <a class="button partner-section__button" href="javascript:;" data-fancybox
+                               data-src="#price-popup">
+                                Ціни на АЗС
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="partner-section__picture">
+                                <img class="partner-section__img" src="{% static 'img/pp-oil-logo.jpg' %}" alt="alt">
+                            </picture>
+                            <a class="button partner-section__button" href="javascript:;" data-fancybox
+                               data-src="#price-popup">
+                                Ціни на АЗС
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="partner-section__picture">
+                                <img class="partner-section__img" src="{% static 'img/stels-logo.svg' %}" alt="alt">
+                            </picture>
+                            <a class="button partner-section__button" href="javascript:;" data-fancybox
+                               data-src="#price-popup">
+                                Ціни на АЗС
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -390,10 +464,10 @@
 <section class="acc-section-desktop">
     <div class="container">
         <div class="row">
-            <h2 class="desktop--hidden col-12 acc-title">ЗМІ про нас</h2>
-            <div class="acc-box desktop--hidden">
+            <h2 class="col-12 acc-title">ЗМІ про нас</h2>
+            <div class="blog-news">
+                <div class="col-xl-4 col-lg-12 acc-box">
                 <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">
-                    <h2 class="mobile--hidden">ЗМІ про нас</h2>
                     <div class="quotes">''</div>
                     <div class="acc-text">
                         «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»
@@ -401,10 +475,25 @@
                     <div class="acc-date">31 Бер 2021</div>
                 </a>
             </div>
-            <!--            <div class="col-12 col-md-6 acc-img">-->
-            <!--                <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">-->
-            <!--                    <img src="{% static 'img/acc.png' %}" alt="acc"></a>-->
-            <!--            </div>-->
+            <div class="col-xl-4 col-lg-12 acc-box">
+                <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">
+                    <div class="quotes">''</div>
+                    <div class="acc-text">
+                        «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»
+                    </div>
+                    <div class="acc-date">31 Бер 2021</div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-lg-12 acc-box">
+                <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">
+                    <div class="quotes">''</div>
+                    <div class="acc-text">
+                        «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»
+                    </div>
+                    <div class="acc-date">31 Бер 2021</div>
+                </a>
+            </div>
+            </div>
         </div>
     </div>
 </section>
@@ -420,7 +509,7 @@
                         <a class="social__link" href="https://t.me/multioil">
                             <svg class="social__icon">
                                 <use
-                                    xlink:href="#telegram"></use>
+                                        xlink:href="#telegram"></use>
                             </svg>
                         </a>
                         <div class="social__title">Telegram</div>
@@ -449,19 +538,19 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-2 footer__col">
+            <div class="col-xl-2 footer__col">
                 <div class="logo footer__logo"><a class="logo__link" href="{% url 'multi_oil:home-page' %}">
                     <img class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
                     <div class="logo__title">MultiOil</div>
                 </a></div>
-                <div class="footer-phone__descr desktop--hidden">безкоштовно</div>
+                <div class="footer-phone__descr desktop--hidden__footer">безкоштовно</div>
                 <div class="footer-phone">
                     <svg class="footer-phone__icon">
                         <use xlink:href="#footer-phone"></use>
                     </svg>
                     <a class="footer-phone__link" href="tel:0800354958">0 800 354 958</a>
                 </div>
-                <div class="footer-phone__descr__desktop mobile--hidden">безкоштовно</div>
+                <div class="footer-phone__descr__desktop mobile--hidden__footer">безкоштовно</div>
                 <ul class="social footer__social">
                     <li class="social__item"><a class="social__link" href="https://t.me/multioil">
                         <svg class="social__icon">
@@ -482,7 +571,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-2 col-md-2 desktop--hidden">
+            <div class="col-xl-2 desktop--hidden__footer">
                 <div class="footer-block">
 
                     <div class="footer-block__title"><a class="footer-links__link" href="javascript:;"
@@ -495,7 +584,7 @@
                         Політика конфіденційності</a></div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-2 footer__col footer__col--hidden-mobile">
+            <div class="col-xl-2 footer__col footer__col--hidden-mobile">
                 <div class="footer-block">
                     <div class="footer-block__title">Навігація</div>
                     <nav class="footer-menu">
@@ -513,8 +602,7 @@
                     </nav>
                 </div>
             </div>
-            <div class="footer-bg desktop--hidden"></div>
-            <div class="col-lg-3 col-md-3 footer__col">
+            <div class="col-xl-3 footer__col">
                 <div class="footer-block">
                     <div class="footer-block__title">ВАРІАНТИ ОПЛАТИ</div>
                     <nav class="footer-menu">
@@ -534,38 +622,37 @@
                     </nav>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-2 footer__col">
+            <div class="col-xl-2 footer__col">
                 <div class="footer-block">
                     <div class="footer-block__title">Ми в соцмережах</div>
                     <nav class="footer-menu">
                         <ul class="social footer__social">
-                     <li class="social__item">
-                         <a class="social__link" href="tel:0800354958">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                     </li>
-                     <li class="social__item">
-                         <a class="social__link" href="tel:0800354958">
-                          <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                     </li>
-                     <li class="social__item">
-                         <a class="social__link" href="tel:0800354958">
-                            <svg class="social__icon">
-                                <use xlink:href="#youtube"></use>
-                            </svg>
-                        </a>
-                     </li>
-                </ul>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="tel:0800354958">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="tel:0800354958">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>
-            <div class="footer-bg-download desktop--hidden"></div>
-            <div class="col-lg-3 col-md-2 footer__col">
+            <div class="col-xl-3 footer__col">
                 <div class="footer-block">
                     <div class="footer-block__title footer__col--hidden-mobile">Завантажуй додаток</div>
                     <div class="download footer__download">
@@ -620,37 +707,19 @@
         <div class="form__group form-group has-feedback">
             <label class="form__label">Назва компанії</label>
             <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
-            <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-            <label class="form__label">ЄДРПОУ/ІПН</label>
-            <input class="form__input form-control" type="text" name="inputIpn" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
+                   data-error="Поле обязательное для заполнения" maxlength="30" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Контактна особа</label>
             <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
+                   data-error="Поле обязательное для заполнения" maxlength="25" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Номер телефону</label>
             <input class="form__input phone-mask form-control" type="text" name="inputPhone" placeholder=""
-                   autocomplete="off" data-error="Поле обязательное для заполнения" required>
-            <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-            <label class="form__label">Email</label>
-            <input class="form__input form-control" type="email" name="inputEmail" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
-            <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-            <label class="form__label">Текстове повідомлення</label>
-            <textarea class="form__input form-control" name="textarea" rows="8" placeholder="" autocomplete="off"
-                      data-error="Поле обязательное для заполнения" required></textarea>
+                   autocomplete="off" data-mindata-error="Поле обязательное для заполнения" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__button-group">
@@ -688,13 +757,15 @@
                 <use xlink:href="#viber"></use>
             </svg>
             <div class="contact_info">
-                <a href="tel:0800354958" class="popup_phone">0 800 354 958</a>
+                <a href="viber://chat?number=%2B380631018197" class="popup_phone">Viber</a>
             </div>
         </div>
         <div class="form_flex">
-            <img src="{% static 'img/phone.png' %}" alt="phone">
+            <svg class="social__icon__contact">
+                <use xlink:href="#telegram"></use>
+            </svg>
             <div class="contact_info">
-                <a href="tel:0800354958" class="popup_phone">0 800 354 958</a>
+                <a href="https://t.me/multioil" class="popup_phone">Telegram</a>
             </div>
         </div>
         <div class="form__button-group-contact">

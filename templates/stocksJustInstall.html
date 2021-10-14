@@ -183,17 +183,19 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-3 footer__col">
+            <div class="col-xl-2 footer__col">
                 <div class="logo footer__logo"><a class="logo__link" href="{% url 'multi_oil:home-page' %}">
                     <img class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
                     <div class="logo__title">MultiOil</div>
                 </a></div>
+                <div class="footer-phone__descr desktop--hidden__footer">безкоштовно</div>
                 <div class="footer-phone">
                     <svg class="footer-phone__icon">
                         <use xlink:href="#footer-phone"></use>
                     </svg>
                     <a class="footer-phone__link" href="tel:0800354958">0 800 354 958</a>
                 </div>
+                <div class="footer-phone__descr__desktop mobile--hidden__footer">безкоштовно</div>
                 <ul class="social footer__social">
                     <li class="social__item"><a class="social__link" href="https://t.me/multioil">
                         <svg class="social__icon">
@@ -201,7 +203,7 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
                                     xlink:href="#telegram"></use>
                         </svg>
                     </a></li>
-                    <li class="social__item"><a class="social__link" href="viber://chat?number=+380631018197">
+                    <li class="social__item"><a class="social__link" href="viber://chat?number=%2B380631018197">
                         <svg class="social__icon">
                             <use xlink:href="#viber"></use>
                         </svg>
@@ -213,10 +215,10 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
                     </a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-2 desktop--hidden">
+
+            <div class="col-xl-2 desktop--hidden__footer">
                 <div class="footer-block">
-                    <!--               <div class="footer-block__title"><a class="footer-links__link" href="javascript:;" data-fancybox data-src="#return-popup">
-                      Повернення та обмін</a></div> -->
+
                     <div class="footer-block__title"><a class="footer-links__link" href="javascript:;"
                                                         data-fancybox data-src="#contact-popup">Контакти</a></div>
                     <div class="footer-block__title"><a class="footer-links__link"
@@ -227,12 +229,12 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
                         Політика конфіденційності</a></div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-2 footer__col footer__col--hidden-mobile">
+            <div class="col-xl-2 footer__col footer__col--hidden-mobile">
                 <div class="footer-block">
                     <div class="footer-block__title">Навігація</div>
                     <nav class="footer-menu">
                         <ul class="footer-menu__list">
-                            <!--  <li class="footer-menu__item"><a class="footer-menu__link" href="{%  url 'multi_oil:faq-page' %}">Про нас</a></li> -->
+
                             <li class="footer-menu__item">
                                 <a class="footer-menu__link" href="javascript:;"
                                    data-fancybox data-src="#contact-popup">Контакти</a></li>
@@ -245,25 +247,57 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
                     </nav>
                 </div>
             </div>
-            <div class="footer-bg desktop--hidden"></div>
-            <div class="col-lg-3 col-md-4 footer__col">
+            <div class="col-xl-3 footer__col">
                 <div class="footer-block">
                     <div class="footer-block__title">ВАРІАНТИ ОПЛАТИ</div>
                     <nav class="footer-menu">
                         <ul class="footer-menu__list">
-                            <!--   <li class="footer-menu__item">Оплата готівкою кур’єру</li> -->
                             <li class="footer-menu__item">Оплата платіжними картами</li>
                             <div class="footer_image">
                                 <img src="{% static 'img/pay/visa.svg' %}" alt="visa">
                                 <img src="{% static 'img/pay/master.svg' %}" alt="mastercard">
                                 <img src="{% static 'img/pay/way.png' %}" alt="WAYFORPAY">
                             </div>
+                            <div class="footer_image__pay">
+                                <img src="{% static 'img/pay/applepay.svg' %}" alt="Apple Pay">
+                                <img src="{% static 'img/pay/googlepay.svg' %}" alt="Google Pay">
+                                <img class="easy_pay" src="{% static 'img/pay/easypay.png' %}" alt="EasyPay">
+                            </div>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="footer-bg-download desktop--hidden"></div>
-            <div class="col-lg-4 col-md-3 footer__col">
+            <div class="col-xl-2 footer__col">
+                <div class="footer-block">
+                    <div class="footer-block__title">Ми в соцмережах</div>
+                    <nav class="footer-menu">
+                        <ul class="social footer__social">
+                     <li class="social__item">
+                         <a class="social__link" href="#">
+                            <svg class="social__icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                     </li>
+                     <li class="social__item">
+                         <a class="social__link" href="tel:0800354958">
+                          <svg class="social__icon">
+                                <use xlink:href="#instagram"></use>
+                            </svg>
+                        </a>
+                     </li>
+                     <li class="social__item">
+                         <a class="social__link" href="tel:0800354958">
+                            <svg class="social__icon">
+                                <use xlink:href="#youtube"></use>
+                            </svg>
+                        </a>
+                     </li>
+                </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xl-3 footer__col">
                 <div class="footer-block">
                     <div class="footer-block__title footer__col--hidden-mobile">Завантажуй додаток</div>
                     <div class="download footer__download">
@@ -287,15 +321,15 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
                     <nav class="footer-links footer__col--hidden-mobile">
                         <ul class="footer-links__list">
                             <li class="footer-links__item">
-                                <!--                     <a class="footer-links__link" href="javascript:;" data-fancybox data-src="#return-popup">
-                                  Повернення та обмін</a></li> -->
                             <li class="footer-links__item"><a class="footer-links__link"
                                                               href="{% url 'multi_oil:terms-page' %}">Умови
                                 використання</a></li>
                             <li class="footer-links__item"><a class="footer-links__link"
                                                               href="{% url 'multi_oil:policy-page' %}">Політика
                                 конфіденційності</a></li>
-                            {#                    <li class="footer-links__item"><a class="footer-links__link" href="javascript:;" data-fancybox data-src="#waiting-popup">Політика конфіденційності</a></li>#}
+                            <li class="footer-links__item"><a class="footer-links__link" href="javascript:;"
+                                                              data-fancybox data-src="#waiting-popup">Політика
+                                конфіденційності</a></li>
                         </ul>
                     </nav>
                 </div>

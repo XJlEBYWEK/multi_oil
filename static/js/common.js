@@ -45,9 +45,7 @@ $(document).ready(function () {
         }
 
     });
-
-
-    // Phone mask
+    //Phone mask
     $('.phone-mask').mask('+38 (000) 000 00 00');
 
 
@@ -100,16 +98,30 @@ $(document).ready(function () {
     });
 
 
-
-
     // Slider
+    let swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        autoplay: {
+            delay: 4000,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+            }
+        }
+    });
+
     let stepsSlider = new Swiper('.steps-slider', {
         spaceBetween: 0,
         slidesPerView: 1,
         loop: false,
         autoplay: {
             delay: 3000,
-                        },
+        },
         breakpoints: {
             0: {
                 spaceBetween: 15,
@@ -184,8 +196,7 @@ $(document).ready(function () {
     });
 
 
-
-        $("[name = 'form_return_input']").submit(function (e) {
+    $("[name = 'form_return_input']").submit(function (e) {
         if (!this.checkValidity()) {
             e.preventDefault();
         } else {
@@ -208,4 +219,5 @@ $(document).ready(function () {
     });
 
 
-});
+})
+;
