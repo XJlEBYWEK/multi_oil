@@ -17,18 +17,17 @@ bot = telebot.TeleBot(TOKEN)
 class HomePageView(TemplateView):
     template_name = "index.html"
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     response = json.loads(requests.get("https://s54.kiev.ua/stels/prices.json").text)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        response = json.loads(requests.get("https://app.multioil.in.ua/gas/api/v1/pricelist/stels").text)
+        for azs in response:
+            name = azs['fuelName']
+            azs.pop('fuelName')
+            name = name.replace(" ", "_")
+            name = name.replace("-", "_")
 
-    #     context['price'] = response['networks'][0]['systemPrice']
-
-    #     for i in response['networks'][0]['prices']:
-    #         station = i["station"]
-    #         system = i["system"]
-    #         name = "name_" + i["systemName"].replace("+", "_")
-    #         context[name] = {"station": station, "system": system}
-    #     return context
+            context[name] = azs
+        return context
 
 
 class TermsPageView(TemplateView):
@@ -144,31 +143,26 @@ class GetNewsPageView(TemplateView):
 
     template_name = "news.html"
 
-    # def get_context_data(self, **kwargs):
-    #     new = News.objects.all()[:2]
-    #     context = super().get_context_data(**kwargs)
-    #     context["news"] = NewsSerializer(new, many=True).data
-    #     return context
+    def get_context_data(self, **kwargs):
+        new = News.objects.all()[:2]
+        context = super().get_context_data(**kwargs)
+        context["news"] = NewsSerializer(new, many=True).data
+        return context
 
 
-#     return context
+class GetNewsView(TemplateView):
+    """Страница новости"""
 
+    # template_name = "news.html"
 
+    def get_context_data(self, **kwargs):
+        new = News.objects.get(pk=self.kwargs['pk'])
+        data = NewsSerializer(new).data
+        context = super().get_context_data(**kwargs)
 
-# class GetNewsView(TemplateView):
-#     """Страница новости"""
-#
-#     template_name = "_news_page_c.html"
-#
-#     def get_context_data(self, **kwargs):
-#         new = News.objects.get(pk=self.kwargs['pk'])
-#         data = NewsSerializer(new).data
-#         context = super().get_context_data(**kwargs)
-#
-#         for value in data:
-#             context[value] = data[value]
-#         return context
-
+        for value in data:
+            context[value] = data[value]
+        return context
 
 # ----------- STOKS -------------
 
@@ -178,8 +172,23 @@ class GetStocksPageView(TemplateView):
     template_name = "stocks.html"
 
     def get_context_data(self, **kwargs):
-        new = Stocks.objects.all()[:2]
+        new = Stocks.objects.all()
         context = super().get_context_data(**kwargs)
         context["stocks"] = StocksSerializer(new, many=True).data
+        return context
+
+
+class GetStocksView(TemplateView):
+    """Страница акции"""
+
+    template_name = "example_head.html"
+
+    def get_context_data(self, **kwargs):
+        new = Stocks.objects.get(name_url=self.kwargs['name_url'])
+        data = StocksSerializer(new).data
+        context = super().get_context_data(**kwargs)
+
+        for value in data:
+            context[value] = data[value]
         print(context)
         return context
