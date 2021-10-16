@@ -1422,12 +1422,29 @@ strong {
     background: #252525;
 }
 
-.stocks-article__title {
-    font-size: 75px;
-    line-height: 64px;
+.stocks img {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.stocks h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+    color: #FFFFFF;
     text-align: center;
-    font-weight: 600;
-    margin-bottom: 120px;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+.stocks .stocks-article {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 1px;
 }
 
 .stocks-box {
@@ -1441,6 +1458,7 @@ strong {
     max-width: 1170px;
     height: 64px;
 }
+
 
 
 .stocks-box .text-upper {
@@ -1466,7 +1484,7 @@ strong {
     background: #252525;
 }
 
-.stocks-install .li-mt {
+.stocks .li-mt {
     margin-top: 15px;
 }
 
@@ -1491,41 +1509,43 @@ h3.stocks-article__install {
     color: #FFFFFF;
 }
 
-.text-article-install {
+.text-article {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: 1px;
+    margin-top: 1.5rem;
 }
 
-.text-article-install.mt-60 {
-    margin-top: 60px;
-}
-
-.text-article-install.mt-32 {
+.link-article {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 1px;
     margin-top: 32px;
 }
 
-.text-article-install .text-color {
+.stocks .text-color {
     color: #4CE188;
 }
 
-.text-article-install a {
+.stocks a {
     text-decoration: none;
 }
 
-div.text-article-install.mt-60 ul {
+.stocks ul {
     font-weight: bold;
     color: #4CE188;
 }
 
-.text-article-install .pt-18 {
+.stocks .address {
     display: block;
     margin: 18px 0 6px 0;
 }
 
-div.text-article-install.mt-60 ul > li {
+.stocks ul > li {
     list-style: none;
     font-style: normal;
     font-weight: normal;
@@ -1533,7 +1553,7 @@ div.text-article-install.mt-60 ul > li {
     color: #FFFFFF;
 }
 
-div.text-article-install.mt-60 ul > li.color-li {
+.stocks .color-li {
     color: #c3c3c3;
 }
 
