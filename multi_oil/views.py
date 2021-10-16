@@ -151,6 +151,10 @@ class GetNewsPageView(TemplateView):
     #     return context
 
 
+#     return context
+
+
+
 # class GetNewsView(TemplateView):
 #     """Страница новости"""
 #
