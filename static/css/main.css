@@ -1439,6 +1439,15 @@ strong {
     margin-top: 1rem;
 }
 
+.stocks-article__title {
+    font-size: 75px;
+    line-height: 64px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 80px;
+}
+
+
 .stocks .stocks-article {
     font-style: normal;
     font-weight: normal;
@@ -1458,7 +1467,6 @@ strong {
     max-width: 1170px;
     height: 64px;
 }
-
 
 
 .stocks-box .text-upper {
@@ -2142,6 +2150,7 @@ h3.popup__title_waiting {
     background: linear-gradient(180deg, #000000 0%, #204A4E 100%);
     position: relative;
 }
+
 .button-business {
     background: #309CA5;
 }
@@ -2750,6 +2759,48 @@ h3.popup__title_waiting {
     mix-blend-mode: normal;
     opacity: 0.5;
 }
+/*==========  News  ==========*/
+
+.news {
+    min-height: 80vh;
+    padding: 210px 0 120px;
+    background: #252525;
+}
+
+.box-news {
+    background: #3D3D3D;
+    border-radius: 10px;
+}
+
+.box-news a {
+    text-decoration: none;
+}
+
+.box-news__img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    padding: 20px 0 0 0;
+}
+
+.box-news__descr {
+    text-align: left;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 30px;
+}
+
+.news-section__button {
+    display: flex;
+    margin: 40px auto 0 auto;
+    max-width: 270px;
+}
+
+
 
 /*==========  Desktop First  ==========*/
 @media (max-width: 1300px) {
@@ -3068,13 +3119,16 @@ h3.popup__title_waiting {
         padding: 10px 15px;
         text-align: right;
     }
+
     .mobile--hidden-log {
         display: none;
     }
+
     .menu-log {
         color: #309CA5;
         text-align: center;
     }
+
     .advantages-sell__left:before {
         bottom: -440px;
         right: 0;
@@ -3275,6 +3329,9 @@ h3.popup__title_waiting {
     .partner-section__img {
         width: 220px;
         height: 270px;
+    }
+    .box-news__img {
+        width: auto;
     }
 
     .desktop--hidden {
@@ -3835,7 +3892,7 @@ h3.popup__title_waiting {
         font-size: 14px;
     }
 
-    .stocks {
+    .stocks, .news {
         padding: 170px 0 70px;
     }
 
@@ -3887,7 +3944,7 @@ h3.popup__title_waiting {
         line-height: 30px;
     }
 
-    .text-article-install {
+    .stocks .stocks-article {
         font-weight: lighter;
         font-size: 18px;
         line-height: 26px;
@@ -3909,10 +3966,16 @@ h3.popup__title_waiting {
         text-decoration: none;
     }
 
-    div.text-article-install.mt-60 ul {
+    .stocks ul {
         font-weight: bold;
         color: #4CE188;
         padding-left: 0;
+    }
+
+    .text-article, .link-article {
+        font-weight: lighter;
+        font-size: 18px;
+        line-height: 26px;
     }
 
     .text-article-install .pt-18 {
@@ -3920,7 +3983,7 @@ h3.popup__title_waiting {
         margin: 18px 0 6px 0;
     }
 
-    div.text-article-install.mt-60 ul > li {
+    .stocks ul > li {
         font-weight: lighter;
         font-size: 18px;
         line-height: 30px;
@@ -4156,16 +4219,19 @@ h3.popup__title_waiting {
         background-position-y: center;
         background-image: url(../img/business/azs-bg-mobile.png);
     }
-     .partner-section__img {
+
+    .partner-section__img {
         width: 200px;
         height: 250px;
     }
-     .partner-section__button {
-         max-width: 220px;
-     }
-     .acc-box {
-         max-width: 280px;
-     }
+
+    .partner-section__button {
+        max-width: 220px;
+    }
+
+    .acc-box {
+        max-width: 280px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -4199,6 +4265,7 @@ h3.popup__title_waiting {
     .main-section__img {
         height: 670px;
     }
+
     .business-section {
         padding-top: 270px;
     }

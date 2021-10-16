@@ -124,21 +124,6 @@
             <div class="col-lg-12">
                 <h1 class="stocks-article__title">Акції</h1>
 
-{#                <div class="stocks-box">#}
-{#                    <a href="{% url 'multi_oil:stock-install' %}" class="stocks-link">#}
-{#                        <div class="text-upper">АКЦІЯ «ПРОСТО ВСТАНОВИ»</div>#}
-{#                    </a>#}
-{#                    <div class="text-upper text-small">Термін дії: з 27 березня 2021р. по 15 травня 2021р.</div>#}
-{#                </div>#}
-{##}
-{#                <div class="stocks-box">#}
-{#                    <a href="{% url 'multi_oil:stock-test' %}" class="stocks-link">#}
-{#                        <div class="text-upper">АКЦІЯ «ТЕСТУЙ З КОРИСТЮ»</div>#}
-{#                    </a>#}
-{#                    <div class="text-upper text-small mr-12">Термін дії: з 15 березня 2021р. по 26 березня 2021р.</div>#}
-{#                </div>#}
-{##}
-
                 {% for stock in stocks %}
                     <div class="stocks-box">
                         <a  href="{{ stock.url }}" class="stocks-link">
