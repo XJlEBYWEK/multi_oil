@@ -124,32 +124,29 @@
             <div class="col-lg-12">
                 <h1 class="stocks-article__title">Акції</h1>
 
-                <div class="stocks-box">
-                    <a href="{% url 'multi_oil:stock-install' %}" class="stocks-link">
-                        <div class="text-upper">АКЦІЯ «ПРОСТО ВСТАНОВИ»</div>
-                    </a>
-                    <div class="text-upper text-small">Термін дії: з 27 березня 2021р. по 15 травня 2021р.</div>
-                </div>
-
-                <div class="stocks-box">
-                    <a href="{% url 'multi_oil:stock-test' %}" class="stocks-link">
-                        <div class="text-upper">АКЦІЯ «ТЕСТУЙ З КОРИСТЮ»</div>
-                    </a>
-                    <div class="text-upper text-small mr-12">Термін дії: з 15 березня 2021р. по 26 березня 2021р.</div>
-                </div>
+{#                <div class="stocks-box">#}
+{#                    <a href="{% url 'multi_oil:stock-install' %}" class="stocks-link">#}
+{#                        <div class="text-upper">АКЦІЯ «ПРОСТО ВСТАНОВИ»</div>#}
+{#                    </a>#}
+{#                    <div class="text-upper text-small">Термін дії: з 27 березня 2021р. по 15 травня 2021р.</div>#}
+{#                </div>#}
+{##}
+{#                <div class="stocks-box">#}
+{#                    <a href="{% url 'multi_oil:stock-test' %}" class="stocks-link">#}
+{#                        <div class="text-upper">АКЦІЯ «ТЕСТУЙ З КОРИСТЮ»</div>#}
+{#                    </a>#}
+{#                    <div class="text-upper text-small mr-12">Термін дії: з 15 березня 2021р. по 26 березня 2021р.</div>#}
+{#                </div>#}
+{##}
 
                 {% for stock in stocks %}
                     <div class="stocks-box">
-                        <a  href="#" class="stocks-link">
+                        <a  href="{{ stock.url }}" class="stocks-link">
                             <div class="text-upper">{{ stock.name }}</div>
                         </a>
                         <div class="text-upper text-small mr-12">{{ stock.date_work }}
                         </div>
                     </div>
-
-
-
-
                 {% endfor %}
 
             </div>
@@ -507,10 +504,12 @@
     <h2 class="popup__title">Повідомлення надіслано</h2>
     <p class="popup__descr">Найближчим часом Ви отримаєте посилання на скачування додатку</p>
 </div>
+
 <div class="popup popup--success" id="success-popup-partner">
     <h2 class="popup__title">Дякуємо, що заповнили анкету!</h2>
     <p class="popup__descr">Найближчим часом наш менеджер зв’яжеться з Вами</p>
 </div>
+
 <div class="popup popup--price" id="price-popup">
     <h2 class="popup__title">Ціна на пальне АЗС "STELS"</h2>
     <div class="price-table">

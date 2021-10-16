@@ -9,7 +9,7 @@ class News(models.Model):
     date_add = models.DateTimeField(verbose_name="Дата создания",auto_now=True)
 
     def get_absolute_url(self):
-        return reverse('multi_oil:get-new', args=[str(self.id)])
+        return reverse('multi_oil:get-news', args=[str(self.id)])
 
     def __str__(self):
         return self.name
@@ -27,7 +27,7 @@ class Stocks(models.Model):
     date_add = models.DateTimeField(verbose_name="Дата создания",auto_now=True)
 
     def get_absolute_url(self):
-        return reverse('multi_oil:get-news', args=[str(self.id)])
+        return reverse('multi_oil:get-stocks', args=[str(self.name_url)])
 
     def __str__(self):
         return self.name

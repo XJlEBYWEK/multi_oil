@@ -21,9 +21,7 @@ app_name = "multi_oil"
 urlpatterns = [
     path('', views.HomePageView.as_view(), name='home-page'),
     path('faq', views.FaqPageView.as_view(), name='faq-page'),
-    path('stocks', views.GetStocksPageView.as_view(), name='stocks'),
 
-    # path('stocks', views.StocksView.as_view(), name='stocks'),
     path('business', views.BuisinnessPageView.as_view(), name='business'),
     path('multioil-for-azs', views.ForAzsPageView.as_view(), name='multioil-for-azs'),
     path('multioil-business', views.MultiBuisinnessPageView.as_view(), name='multioil-business'),
@@ -36,9 +34,12 @@ urlpatterns = [
     path('set_phone_form', views.set_phone_form),
     path('set_return_form', views.set_return_form),
 
+    path('stocks', views.GetStocksPageView.as_view(), name='stocks'),
+    path('stocks/<str:name_url>', views.GetStocksView.as_view(), name='get-stocks'),
+
     path('news', views.GetNewsPageView.as_view(), name="get-news-page"),
-    # path("news/<int:pk>", views.GetNewsView.as_view(), name="get-news"),
-    path('api/news', views.GetNewsListView.as_view(), name="get-news-list"),
-    # path('stocks_test', views.GetStocksPageView.as_view(), name="get-stocks-page"),
+    path("news/<int:pk>", views.GetNewsView.as_view(), name="get-news"),
+
+    # path('api/news', views.GetNewsListView.as_view(), name="get-news-list"),
 
 ]
