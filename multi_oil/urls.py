@@ -37,7 +37,7 @@ urlpatterns = [
     path('set_return_form', views.set_return_form),
 
     path('news', views.GetNewsPageView.as_view(), name="get-news-page"),
-    path("news/<int:pk>", views.GetNewsView.as_view(), name="get-news"),
+    # path("news/<int:pk>", views.GetNewsView.as_view(), name="get-news"),
     path('api/news', views.GetNewsListView.as_view(), name="get-news-list"),
 
     # path('stocks_test', views.GetStocksPageView.as_view(), name="get-stocks-page"),

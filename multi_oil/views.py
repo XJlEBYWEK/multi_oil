@@ -142,28 +142,28 @@ class GetNewsListView(ListAPIView):
 class GetNewsPageView(TemplateView):
     """Страница со всеми новостями"""
 
-    template_name = "_news_page.html"
+    template_name = "news.html"
 
-    def get_context_data(self, **kwargs):
-        new = News.objects.all()[:2]
-        context = super().get_context_data(**kwargs)
-        context["news"] = NewsSerializer(new, many=True).data
-        return context
+    # def get_context_data(self, **kwargs):
+    #     new = News.objects.all()[:2]
+    #     context = super().get_context_data(**kwargs)
+    #     context["news"] = NewsSerializer(new, many=True).data
+    #     return context
 
 
-class GetNewsView(TemplateView):
-    """Страница новости"""
-
-    template_name = "_news_page_c.html"
-
-    def get_context_data(self, **kwargs):
-        new = News.objects.get(pk=self.kwargs['pk'])
-        data = NewsSerializer(new).data
-        context = super().get_context_data(**kwargs)
-
-        for value in data:
-            context[value] = data[value]
-        return context
+# class GetNewsView(TemplateView):
+#     """Страница новости"""
+#
+#     template_name = "_news_page_c.html"
+#
+#     def get_context_data(self, **kwargs):
+#         new = News.objects.get(pk=self.kwargs['pk'])
+#         data = NewsSerializer(new).data
+#         context = super().get_context_data(**kwargs)
+#
+#         for value in data:
+#             context[value] = data[value]
+#         return context
 
 
 # ----------- STOKS -------------
