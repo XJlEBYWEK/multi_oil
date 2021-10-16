@@ -1,88 +1,11 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="ru">
+<html lang="en">
 <head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <!--base(href="/")-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <!-- Title -->
-    <title>Акції</title>
-    <!-- SEO Meta -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- Favicon -->
-    <meta property="og:image" content="{% static 'img/image.jpg' %}">
-    <link rel="apple-touch-icon" sizes="57x57" href=" {% static 'img/favicon/apple-icon-57x57.png' %}">
-    <link rel="apple-touch-icon" sizes="60x60" href=" {% static 'img/favicon/apple-icon-60x60.png' %}">
-    <link rel="apple-touch-icon" sizes="72x72" href=" {% static 'img/favicon/apple-icon-72x72.png' %}">
-    <link rel="apple-touch-icon" sizes="76x76" href=" {% static 'img/favicon/apple-icon-76x76.png' %}">
-    <link rel="apple-touch-icon" sizes="114x114" href=" {% static 'img/favicon/apple-icon-114x114.png' %}">
-    <link rel="apple-touch-icon" sizes="120x120" href=" {% static 'img/favicon/apple-icon-120x120.png' %}">
-    <link rel="apple-touch-icon" sizes="144x144" href=" {% static 'img/favicon/apple-icon-144x144.png' %}">
-    <link rel="apple-touch-icon" sizes="152x152" href=" {% static 'img/favicon/apple-icon-152x152.png' %}">
-    <link rel="apple-touch-icon" sizes="180x180" href=" {% static 'img/favicon/apple-icon-180x180.png' %}">
-    <link rel="icon" type="image/png" sizes="192x192" href=" {% static 'img/favicon/android-icon-192x192.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href=" {% static 'img/favicon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="96x96" href=" {% static 'img/favicon/favicon-96x96.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href=" {% static 'img/favicon/favicon-16x16.png' %}">
-    <link rel="manifest" href=" {% static 'img/favicon/manifest.json' %}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content=" {% static 'img/favicon/ms-icon-144x144.png' %}">
-    <meta name="theme-color" content="#ffffff">
-    <!-- CSS -->
-    <!-- build:css css/all.min.css -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <!-- endbuild -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-4TQPW6816W');
-    </script>
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '736444530392641');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-<!--     Preloader-->
-<div class="preloader" id="preloader"><img class="preloader__img" src="{% static 'img/logo.svg' %}" alt="logo"></div>
-<!--     Header-->
-<header class="header">
+    <header class="header">
     <div class="container">
         <div class="row">
             <div class="col-12 header__col">
@@ -117,47 +40,7 @@
     </div>
 </header>
 
-<!-- Stocks -->
-<div class="stocks">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="stocks-article__title">Акції</h1>
 
-                <div class="stocks-box">
-                    <a href="{% url 'multi_oil:stock-install' %}" class="stocks-link">
-                        <div class="text-upper">АКЦІЯ «ПРОСТО ВСТАНОВИ»</div>
-                    </a>
-                    <div class="text-upper text-small">Термін дії: з 27 березня 2021р. по 15 травня 2021р.</div>
-                </div>
-
-                <div class="stocks-box">
-                    <a href="{% url 'multi_oil:stock-test' %}" class="stocks-link">
-                        <div class="text-upper">АКЦІЯ «ТЕСТУЙ З КОРИСТЮ»</div>
-                    </a>
-                    <div class="text-upper text-small mr-12">Термін дії: з 15 березня 2021р. по 26 березня 2021р.</div>
-                </div>
-
-                {% for stock in stocks %}
-                    <div class="stocks-box">
-                        <a  href="#" class="stocks-link">
-                            <div class="text-upper">{{ stock.name }}</div>
-                        </a>
-                        <div class="text-upper text-small mr-12">{{ stock.date_work }}
-                        </div>
-                    </div>
-
-
-
-
-                {% endfor %}
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Footer -->
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
@@ -329,37 +212,19 @@
         <div class="form__group form-group has-feedback">
             <label class="form__label">Назва компанії</label>
             <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
-            <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-            <label class="form__label">ЄДРПОУ/ІПН</label>
-            <input class="form__input form-control" type="text" name="inputIpn" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
+                   data-error="Поле обязательное для заполнения" maxlength="30" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Контактна особа</label>
             <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
+                   data-error="Поле обязательное для заполнения" maxlength="25" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Номер телефону</label>
             <input class="form__input phone-mask form-control" type="text" name="inputPhone" placeholder=""
-                   autocomplete="off" data-error="Поле обязательное для заполнения" required>
-            <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-            <label class="form__label">Email</label>
-            <input class="form__input form-control" type="email" name="inputEmail" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" required>
-            <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-            <label class="form__label">Текстове повідомлення</label>
-            <textarea class="form__input form-control" name="textarea" rows="8" placeholder="" autocomplete="off"
-                      data-error="Поле обязательное для заполнения" required></textarea>
+                   autocomplete="off" data-mindata-error="Поле обязательное для заполнения" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__button-group">
@@ -390,6 +255,22 @@
             <img src="{% static 'img/phone.png' %}" alt="phone">
             <div class="contact_info">
                 <a href="tel:0800354958" class="popup_phone">0 800 354 958</a>
+            </div>
+        </div>
+        <div class="form_flex">
+            <svg class="social__icon__contact">
+                <use xlink:href="#viber"></use>
+            </svg>
+            <div class="contact_info">
+                <a href="viber://chat?number=%2B380631018197" class="popup_phone">Viber</a>
+            </div>
+        </div>
+        <div class="form_flex">
+            <svg class="social__icon__contact">
+                <use xlink:href="#telegram"></use>
+            </svg>
+            <div class="contact_info">
+                <a href="https://t.me/multioil" class="popup_phone">Telegram</a>
             </div>
         </div>
         <div class="form__button-group-contact">
@@ -511,6 +392,7 @@
     <h2 class="popup__title">Дякуємо, що заповнили анкету!</h2>
     <p class="popup__descr">Найближчим часом наш менеджер зв’яжеться з Вами</p>
 </div>
+
 <div class="popup popup--price" id="price-popup">
     <h2 class="popup__title">Ціна на пальне АЗС "STELS"</h2>
     <div class="price-table">
@@ -526,59 +408,52 @@
                     <div class="price-table__title">Ціна MultiOil</div>
                 </div>
                 <div class="col-3">
-                    <div class="price-table__title">Економія з MultiOil</div>
+                    <div class="price-table__title">Кешбек від MultiOil</div>
                 </div>
             </div>
         </div>
         <div class="price-table__row">
             <div class="row align-items-center">
-                <div class="col-3 price-table__col">А-95</div>
-                <div class="col-3 price-table__col">25.00</div>
-                <div class="col-3 price-table__col">21.00</div>
-                <div class="col-3 price-table__col">4.00</div>
-            </div>
-        </div>
-        <div class="price-table__row">
-            <div class="row align-items-center">
                 <div class="col-3 price-table__col">А-92</div>
-                <div class="col-3 price-table__col">25.00</div>
-                <div class="col-3 price-table__col">21.00</div>
-                <div class="col-3 price-table__col">4.00</div>
+                <div class="col-3 price-table__col">29,50</div>
+                <div class="col-3 price-table__col">28,90</div>
+                <div class="col-3 price-table__col">-</div>
             </div>
         </div>
         <div class="price-table__row">
             <div class="row align-items-center">
-                <div class="col-3 price-table__col">Diesel VIP</div>
-                <div class="col-3 price-table__col">25.00</div>
-                <div class="col-3 price-table__col">21.00</div>
-                <div class="col-3 price-table__col">4.00</div>
+                <div class="col-3 price-table__col">А-95</div>
+                <div class="col-3 price-table__col">30,50</div>
+                <div class="col-3 price-table__col">29,90</div>
+                <div class="col-3 price-table__col">-</div>
+            </div>
+        </div>
+        <div class="price-table__row">
+            <div class="row align-items-center">
+                <div class="col-3 price-table__col">А-95 VIP</div>
+                <div class="col-3 price-table__col">31,50</div>
+                <div class="col-3 price-table__col">30,90</div>
+                <div class="col-3 price-table__col">-</div>
             </div>
         </div>
         <div class="price-table__row">
             <div class="row align-items-center">
                 <div class="col-3 price-table__col">Diesel</div>
-                <div class="col-3 price-table__col">25.00</div>
-                <div class="col-3 price-table__col">21.00</div>
-                <div class="col-3 price-table__col">4.00</div>
+                <div class="col-3 price-table__col">28,50</div>
+                <div class="col-3 price-table__col">26,90</div>
+                <div class="col-3 price-table__col">-</div>
+            </div>
+        </div>
+        <div class="price-table__row">
+            <div class="row align-items-center">
+                <div class="col-3 price-table__col">Diesel VIP</div>
+                <div class="col-3 price-table__col">29,50</div>
+                <div class="col-3 price-table__col">27,90</div>
+                <div class="col-3 price-table__col">-</div>
             </div>
         </div>
     </div>
     <button class="button popup__close" type="button">Закрити</button>
-</div>
-<!-- JS -->
-<!-- build:js js/all.min.js -->
-<script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'js/SmoothScroll.js' %}"></script>
-<script src="{% static 'js/jquery.mask.min.js' %}"></script>
-<script src="{% static 'js/swiper.min.js' %}"></script>
-<script src="{% static 'js/validator.min.js' %}"></script>
-<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
-<script src="{% static 'js/common.js' %}"></script>
-<!-- endbuild -->
-<div style="display:none;">
-
-    {% include "sprite.svg" %}
-
 </div>
 </body>
 </html>
