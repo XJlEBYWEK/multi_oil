@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'multi_oil.apps.MultiOilConfig',
     "rest_framework",
     "ckeditor",

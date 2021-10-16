@@ -15,18 +15,16 @@ bot = telebot.TeleBot(TOKEN)
 
 
 class HomePageView(TemplateView):
+    """Цена АЗС"""
+
     template_name = "index.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        response = json.loads(requests.get("https://app.multioil.in.ua/gas/api/v1/pricelist/stels").text)
-        for azs in response:
-            name = azs['fuelName']
-            azs.pop('fuelName')
-            name = name.replace(" ", "_")
-            name = name.replace("-", "_")
-
-            context[name] = azs
+        stels = json.loads(requests.get("https://app.multioil.in.ua/gas/api/v1/pricelist/stels").text)
+        pp_oil = json.loads(requests.get("https://app.multioil.in.ua/gas/api/v1/pricelist/ppoil").text)
+        context["stels"] = stels
+        context["pp_oil"] = pp_oil
         return context
 
 
