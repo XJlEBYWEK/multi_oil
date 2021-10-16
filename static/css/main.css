@@ -4179,6 +4179,9 @@ h3.popup__title_waiting {
     .main-section__img {
         height: 670px;
     }
+    .business-section {
+        padding-top: 270px;
+    }
 
     .steps-slider__img {
         height: 670px;
