@@ -742,8 +742,7 @@ strong {
 }
 
 .main-section__img {
-    max-width: 150px;
-    height: 370px;
+    height: 490px;
 }
 
 .main-section__descr {
@@ -889,7 +888,7 @@ strong {
 }
 
 .acc-box .mobile--hidden {
-    padding: 91px 0 0 86px;
+    padding: 91px 0 0 20px;
     font-style: normal;
     font-weight: bold;
     font-size: 60px;
@@ -897,7 +896,7 @@ strong {
 }
 
 .acc-box .quotes {
-    padding: 39px 0 0 86px;
+    padding: 39px 0 0 20px;
     font-family: Source Sans Pro, sans-serif;
     color: #4CC266;
     font-style: normal;
@@ -909,7 +908,7 @@ strong {
 
 .acc-box .acc-text {
     margin-top: -20px;
-    padding: 0 0 0 86px;
+    padding: 0 0 0 20px;
     font-style: normal;
     font-weight: lighter;
     font-size: 24px;
@@ -918,7 +917,7 @@ strong {
 }
 
 .acc-box .acc-date {
-    padding: 15px 0 0 86px;
+    padding: 15px 0 0 20px;
     font-style: normal;
     font-weight: lighter;
     font-size: 18px;
@@ -954,7 +953,7 @@ strong {
 
 .steps-slider__img {
     max-width: 100%;
-    height: 570px;
+    height: 540px;
 }
 
 .steps-slider__title {
@@ -2123,6 +2122,9 @@ h3.popup__title_waiting {
     background: linear-gradient(180deg, #000000 0%, #204A4E 100%);
     position: relative;
 }
+.button-business {
+    background: #309CA5;
+}
 
 .business-section:before {
     content: '';
@@ -2173,10 +2175,6 @@ h3.popup__title_waiting {
     text-transform: capitalize;
     color: #FFFFFF;
     background: #309CA5;
-}
-
-.business-section__picture {
-    padding-top: 51px;
 }
 
 .business-section__picture img {
@@ -3004,6 +3002,59 @@ h3.popup__title_waiting {
 
 
 @media (max-width: 992px) {
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        max-width: 100%;
+        background: #151515;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        z-index: 100;
+        width: 220px;
+        padding: 15px 0;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+    .menu.is-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu__list {
+        display: block;
+        width: 100%;
+    }
+
+    .menu__item {
+        margin: 0;
+    }
+
+    .menu__link {
+        display: block;
+        padding: 10px 15px;
+        text-align: right;
+    }
+    .mobile--hidden-log {
+        display: none;
+    }
+    .menu-log {
+        color: #309CA5;
+        text-align: center;
+    }
     .advantages-sell__left:before {
         bottom: -440px;
         right: 0;
@@ -3259,55 +3310,8 @@ h3.popup__title_waiting {
         display: block;
     }
 
-    .header_logo_main {
-        /*display: none;*/
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        max-width: 100%;
-        background: #151515;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        z-index: 100;
-        width: 220px;
-        padding: 15px 0;
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transition: all .5s ease;
-        -o-transition: all .5s ease;
-        transition: all .5s ease;
-    }
-
-    .menu__list {
-        display: block;
-        width: 100%;
-    }
-
-    .menu__item {
-        margin: 0;
-    }
-
-    .menu__link {
-        display: block;
-        padding: 10px 15px;
-        text-align: right;
-    }
-
-    .menu.is-visible {
-        opacity: 1;
-        visibility: visible;
+    .header_logo_main__screen {
+        display: none;
     }
 
     .language {
@@ -3630,7 +3634,6 @@ h3.popup__title_waiting {
     }
 
     .footer__download .download__title {
-        margin-top: 25px;
         font-size: 12px;
         text-align: center;
         max-width: 100%;
@@ -3908,6 +3911,7 @@ h3.popup__title_waiting {
     .business-section__picture img {
         width: 220px !important;
         height: auto;
+        margin-top: 51px;
     }
 
     .business-section__descr {
@@ -4201,7 +4205,7 @@ h3.popup__title_waiting {
     }
 }
 
-@media (min-height: 750px) and (max-height: 770px) {
+@media (min-height: 750px) and (min-width: 1000px) {
     .advantages-sell {
         padding: 50px 0 145px 0;
     }

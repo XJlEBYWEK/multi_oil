@@ -76,21 +76,25 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
     <div class="container">
         <div class="row">
             <div class="col-12 header__col">
-                <div class="logo header__logo header_logo_main"><a class="logo__link"
-                                                                   href="{% url 'multi_oil:home-page' %}"><img
-                        class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
-                    <div class="logo__title">MultiOil</div>
-                </a></div>
+                <div class="logo header__logo">
+                    <a class="logo__link" href="{% url 'multi_oil:home-page' %}">
+                        <img class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
+                        <div class="logo__title">MultiOil</div>
+                    </a>
+                </div>
                 <nav class="menu">
                     <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
                         <li class="menu__item"><a class="menu__link"
                                                   href="javascript:;" data-fancybox
                                                   data-src="#contact-popup">Контакти</a></li>
                         <li class="menu__item"><a class="menu__link" href="javascript:;" data-fancybox
                                                   data-src="#partner-popup">Стати партнером</a></li>
                         <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:stocks' %}">Акції</a></li>
-                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:multioil-for-azs' %}">MultiOil для АЗС</a></li>
-                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:business' %}">MultiOil Business для АЗС</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:multioil-for-azs' %}">MultiOil
+                            для АЗС</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:business' %}">MultiOil
+                            Business для АЗС</a></li>
                     </ul>
                 </nav>
                 <div class="toggle menu-toggle">
@@ -179,6 +183,7 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
     </div>
 </div>
 
+<!-- Footer -->
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
@@ -272,28 +277,28 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
                     <div class="footer-block__title">Ми в соцмережах</div>
                     <nav class="footer-menu">
                         <ul class="social footer__social">
-                     <li class="social__item">
-                         <a class="social__link" href="#">
-                            <svg class="social__icon">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
-                        </a>
-                     </li>
-                     <li class="social__item">
-                         <a class="social__link" href="tel:0800354958">
-                          <svg class="social__icon">
-                                <use xlink:href="#instagram"></use>
-                            </svg>
-                        </a>
-                     </li>
-                     <li class="social__item">
-                         <a class="social__link" href="tel:0800354958">
-                            <svg class="social__icon">
-                                <use xlink:href="#youtube"></use>
-                            </svg>
-                        </a>
-                     </li>
-                </ul>
+                            <li class="social__item">
+                                <a class="social__link" href="#">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="tel:0800354958">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="tel:0800354958">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>

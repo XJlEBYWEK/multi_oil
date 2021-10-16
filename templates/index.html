@@ -88,7 +88,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 header__col">
-                <div class="logo header__logo header_logo_main">
+                <div class="logo header__logo header_logo_main__screen">
                     <a class="logo__link" href="{% url 'multi_oil:home-page' %}">
                         <img class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
                         <div class="logo__title">MultiOil</div>
@@ -124,11 +124,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <!--                <div class="logo mobile-section__logo"><a class="logo__link"-->
-                <!--                                                          href="{% url 'multi_oil:home-page' %}"><img-->
-                <!--                        class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">-->
-                <!--                    <div class="logo__title">MultiOil<span>АЗС в смартфоні</span></div>-->
-                <!--                </a></div>-->
+                <div class="logo mobile-section__logo"><a class="logo__link"
+                                                          href="{% url 'multi_oil:home-page' %}"><img
+                        class="logo__img" src="{% static 'img/logo.svg' %}" alt="logo">
+                    <div class="logo__title">MultiOil<span>АЗС в смартфоні</span></div>
+                </a></div>
                 <div class="mobile-section__slogan">Швидко. Зручно. Дешево</div>
                 <div class="download mobile-section__download">
                     <ul class="download__list">
@@ -150,38 +150,11 @@
 <section class="main-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <div class="main-section__descr">
-                    <h1 class="main-section__title">MultiOil <span>АЗС в смартфоні</span></h1>
-                    <div class="main-section__text">
-                        <p>Додаток для придбання пального від наших партнерів за вигідними цінами.</p>
-                    </div>
-                    <form class="form phone-form" name="form_phone_input" data-toggle="validator" data-focus="false"
-                          role="form">
-                        {% csrf_token %}
-                        <div class="form__group phone-form__group form-group has-feedback">
-                            <input class="form__input phone-form__input phone-mask" type="text" name="inputPhone"
-                                   placeholder="+38 (000) 00 00 000" autocomplete="off"
-                                   data-error="Поле обязательное для заполнения" required>
-                            <label class="form__help help-block with-errors"></label>
-                            <button type='submit' class="button phone-form__button">Отримати посилання</button>
-                        </div>
-                        <div class="phone-form__info">
-                            <p>Залиште номер Вашого телефону і ми надішлемо</p>
-                            <p>СМС з посиланням на скачування додатка.</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2">
+            <div class="col-lg-6 col-md-5">
                 <picture class="main-section__picture"><img class="main-section__img"
                                                             src="{% static 'img/main-phone.png' %}" alt="alt"></picture>
             </div>
-            <div class="col-lg-2 col-md-2">
-                <picture class="main-section__picture"><img class="main-section__img"
-                                                            src="{% static 'img/main-phone.png' %}" alt="alt"></picture>
-            </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-6 col-md-7">
                 <div class="main-section__descr">
                     <h1 class="main-section__title">MultiOil <span>АЗС в смартфоні</span></h1>
                     <div class="main-section__text">
