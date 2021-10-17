@@ -174,24 +174,27 @@ $(document).ready(function () {
 
 
     $("[name = 'form_phone_input']").submit(function (e) {
-        if (!this.checkValidity()) {
-            e.preventDefault();
-        } else {
+        e.preventDefault();
+        phoneElement = $("#inputPhone");
+        if (phoneElement.val().length <19){
+            return NaN}
 
-            $.ajax({
-                type: "POST",
-                url: "/set_phone_form",
-                data: $(this).serialize()
-            }).done(function () {
+        if (this.checkValidity()){
 
-                $.fancybox.close();
-                $.fancybox.open($('#success-popup'))
+        $.ajax({
+            type: "POST",
+            url: "/set_phone_form",
+            data: $(this).serialize()
+        }).done(function () {
 
-                setTimeout(function () {
-                    $(".form").trigger("reset");
-                }, 2000);
-            });
-            return false;
+            $.fancybox.close();
+            $.fancybox.open($('#success-popup'))
+
+            setTimeout(function () {
+                $(".form").trigger("reset");
+            }, 2000);
+        });
+        return false;
         }
     });
 

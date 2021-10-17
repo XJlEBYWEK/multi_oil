@@ -8,6 +8,7 @@ class NewsAdmin(admin.ModelAdmin):
 
 class StocksAdmin(admin.ModelAdmin):
     list_display = ('name', 'date_add', 'name_url', 'date_work','date_add')
+    fields = ['name', 'head_img', 'date_work', 'body', 'name_url']
 
 
 admin.site.register(models.News, NewsAdmin)
