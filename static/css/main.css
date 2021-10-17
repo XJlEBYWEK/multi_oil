@@ -1711,7 +1711,7 @@ h3.stocks-article__install {
     line-height: 1.2;
     position: relative;
     margin-bottom: 15px;
-    /*padding-left: 15px;*/
+    padding-left: 15px;
 }
 
 .footer-menu__item:before {

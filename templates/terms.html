@@ -79,7 +79,11 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
                 </div>
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+                         <li class="menu__item">
+                            <a class="menu__link" href="{% url 'multi_oil:get-news-page' %}">
+                                Блог
+                            </a>
+                        </li>
                         <li class="menu__item"><a class="menu__link"
                                                   href="javascript:;" data-fancybox
                                                   data-src="#contact-popup">Контакти</a></li>
@@ -361,231 +365,273 @@ src="https://www.facebook.com/tr?id=736444530392641&ev=PageView&noscript=1"
         </div>
     </div>
 </footer>  <!-- Popup -->
-     <div class="popup" id="partner-popup">
-      <h2 class="popup__title">Стати партнером</h2>
-      <div class="partner-text">
-             Запрошуємо до співпраці мережі АЗС. Якщо Ваша мережа налічує 3 і більше АЗС, Ви хочете розвиватися і бути попереду конкурентів, зробіть перший крок - заповніть анкету нижче і ми зв’яжемось із Вами найближчим часом
-         </div>
-      <form class="form popup__form form-partner-text"  name="form_data_input" data-toggle="validator" data-focus="false" role="form">
-               {% csrf_token %}
+    <div class="popup" id="partner-popup">
+    <h2 class="popup__title">Стати партнером</h2>
+    <div class="partner-text">
+        Запрошуємо до співпраці мережі АЗС. Якщо Ваша мережа налічує 3 і більше АЗС, Ви хочете розвиватися і бути
+        попереду конкурентів, зробіть перший крок - заповніть анкету нижче і ми зв’яжемось із Вами найближчим часом
+    </div>
+    <form class="form popup__form form-partner-text" name="form_data_input" data-toggle="validator" data-focus="false"
+          role="form">
+        {% csrf_token %}
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Назва компанії</label>
-          <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Назва компанії</label>
+            <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" maxlength="30" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">ЄДРПОУ/ІПН</label>
-          <input class="form__input form-control" type="text" name="inputIpn" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Контактна особа</label>
+            <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" maxlength="25" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Контактна особа</label>
-          <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-          <label class="form__label">Номер телефону</label>
-          <input class="form__input phone-mask form-control" type="text" name="inputPhone" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-          <label class="form__label">Email</label>
-          <input class="form__input form-control" type="email" name="inputEmail" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
-        </div>
-        <div class="form__group form-group has-feedback">
-          <label class="form__label">Текстове повідомлення</label>
-          <textarea class="form__input form-control" name="textarea" rows="8" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required></textarea>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Номер телефону</label>
+            <input class="form__input phone-mask form-control" type="text" name="inputPhone" id="inputPhonePartner"
+                   placeholder=""
+                   data-minlength="19"
+                   autocomplete="off"
+                   data-error="Введите правильный номер" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__button-group">
-          <button type='submit' class="button form__button">Надіслати</button>
+            <button type='submit' class="button form__button">Надіслати</button>
         </div>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <div class="popup popup--contact" id="contact-popup">
-      <h2 class="popup__title_contact">Контактна інформація:</h2>
-      <form class="form popup__form" data-toggle="validator" data-focus="false" role="form">
-               {% csrf_token %}
+<div class="popup popup--contact" id="contact-popup">
+    <h2 class="popup__title_contact">Контактна інформація:</h2>
+    <form class="form popup__form" data-toggle="validator" data-focus="false" role="form">
+        {% csrf_token %}
         <div class="form_info">ТОВ «МУЛЬТИ ОІЛ»</div>
         <div class="form_number">ЄДРПОУ 43710549</div>
         <div class="popup_border"></div>
         <div class="form_flex">
-          <img src="{% static 'img/mask.png' %}" alt="mask">
-          <div class="contact_info">Україна, 04053, м. Київ, вул. Січових стрільців, будинок 21, приміщення 501-Б</div>
+            <img src="{% static 'img/mask.png' %}" alt="mask">
+            <div class="contact_info">Україна, 04053, м. Київ, вул. Січових стрільців, будинок 21, приміщення 501-Б
+            </div>
         </div>
         <div class="form_flex">
-          <img src="{% static 'img/mail.png' %}" alt="mail">
-          <div class="contact_info">
-            <a href="mailto:info@multioil.com.ua">info@multioil.com.ua</a>
-          </div>
+            <img src="{% static 'img/mail.png' %}" alt="mail">
+            <div class="contact_info">
+                <a href="mailto:info@multioil.com.ua">info@multioil.com.ua</a>
+            </div>
         </div>
         <div class="form_flex">
-          <img src="{% static 'img/phone.png' %}" alt="phone">
-          <div class="contact_info">
-            <a href="tel:0800354958" class="popup_phone">0 800 354 958</a>
-          </div>
+            <img src="{% static 'img/phone.png' %}" alt="phone">
+            <div class="contact_info">
+                <a href="tel:0800354958" class="popup_phone">0 800 354 958</a>
+            </div>
+        </div>
+        <div class="form_flex">
+            <svg class="social__icon__contact">
+                <use xlink:href="#viber"></use>
+            </svg>
+            <div class="contact_info">
+                <a href="viber://chat?number=%2B380631018197" class="popup_phone">Viber</a>
+            </div>
+        </div>
+        <div class="form_flex">
+            <svg class="social__icon__contact">
+                <use xlink:href="#telegram"></use>
+            </svg>
+            <div class="contact_info">
+                <a href="https://t.me/multioil" class="popup_phone">Telegram</a>
+            </div>
         </div>
         <div class="form__button-group-contact">
-          <button class="button popup__close" type="button">Закрити</button>
+            <button class="button popup__close" type="button">Закрити</button>
         </div>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <div class="popup popup--waiting" id="waiting-popup">
-      <h2 class="popup__title_waiting">Реліз Додатка запланований на 27 березня</h2>
-         <h3 class="popup__title_waiting">Для того щоб не пропустити реліз залиште свій номер телефону</h3>
-      <form class="form phone-form form_waiting" name="form_phone_input" data-toggle="validator" data-focus="false" role="form" >
-                  {% csrf_token %}
-          <div class="form__group phone-form__group form-group has-feedback ">
-              <input class="form__input phone-form__input_waiting phone-mask" type="text" name="inputPhone" placeholder="+38 (000) 00 00 000" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-              <label class="form__help help-block with-errors"></label>
-              <button type='submit' class="button button-waiting">Відправити посилання</button>
-          </div>
+<div class="popup popup--waiting" id="waiting-popup">
+    <h2 class="popup__title_waiting">Реліз додатку запланований на 27 березня</h2>
+    <h3 class="popup__title_waiting">Для того щоб не пропустити реліз залиште свій номер телефону</h3>
+    <form class="form phone-form form_waiting" name="form_phone_input" data-toggle="validator" data-focus="false"
+          role="form">
+        {% csrf_token %}
+        <div class="form__group phone-form__group form-group has-feedback ">
+            <input class="form__input phone-form__input_waiting phone-mask" type="text" name="inputPhone"
+                   placeholder="+38 (000) 00 00 000" autocomplete="off" data-error="Поле обязательное для заполнения"
+                   data-minlength="19"
+                   required>
+            <label class="form__help help-block with-errors"></label>
+            <button type='submit' class="button button-waiting">Відправити посилання</button>
+        </div>
         <div class="form__button-group-contact">
-          <button class="popup__close button-close-waiting" type="button">Закрити</button>
+            <button class="popup__close button-close-waiting" type="button">Закрити</button>
         </div>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <div class="popup popup--return" id="return-popup">
-      <h2 class="popup__title_contact popup__title_return">Повернення та
+<div class="popup popup--return" id="return-popup">
+    <h2 class="popup__title_contact popup__title_return">Повернення та
         обмін</h2>
-      <form class="form popup__form" data-toggle="validator" data-focus="false" role="form">
-               {% csrf_token %}
-        <div class="form-return_text">Згідно із Законом України «Про захист прав споживачів» покупець має право обміняти товар на аналогічний протягом 14 днів, якщо куплений товар не підійшов за формою, габаритами, фасоном, кольором, розміром або з інших причин, і якщо збережено товарний вигляд, ярлики і розрахунковий документ, виданий продавцем разом із товаром. Виняток становлять товари, які не підлягають поверненню за Законом, їх перелік ви можете переглянути за
-          <a class="return_link" href="javascript:;" data-fancybox
-             data-src="#return-form-popup">
-            посиланням.</a></div>
+    <form class="form popup__form" data-toggle="validator" data-focus="false" role="form">
+        {% csrf_token %}
+        <div class="form-return_text">Згідно із Законом України «Про захист прав споживачів» покупець має право обміняти
+            товар на аналогічний протягом 14 днів, якщо куплений товар не підійшов за формою, габаритами, фасоном,
+            кольором, розміром або з інших причин, і якщо збережено товарний вигляд, ярлики і розрахунковий документ,
+            виданий продавцем разом із товаром. Виняток становлять товари, які не підлягають поверненню за Законом, їх
+            перелік ви можете переглянути за
+            <a class="return_link" href="javascript:;" data-fancybox
+               data-src="#return-form-popup">
+                посиланням.</a></div>
         <div class="form__button-group-contact-return">
-          <button class="button popup__close" type="button">Закрыть</button>
+            <button class="button popup__close" type="button">Закрыть</button>
         </div>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <div class="popup popup-return-form" id="return-form-popup">
-      <h2 class="popup__title popup__title_return">Повернення коштів</h2>
-      <form class="form popup__form"  name="form_return_input" data-toggle="validator" data-focus="false" role="form">
-               {% csrf_token %}
+<div class="popup popup-return-form" id="return-form-popup">
+    <h2 class="popup__title popup__title_return">Повернення коштів</h2>
+    <form class="form popup__form" name="form_return_input" data-toggle="validator" data-focus="false" role="form">
+        {% csrf_token %}
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Прізвище Імя Побатькові</label>
-          <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Прізвище Імя Побатькові</label>
+            <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <h3 class="popup__title popup__title_return">Паспортні дані</h3>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">(Серія та/або номер)</label>
-          <input class="form__input form-control" type="text"
-                 name="inputSeries"
-                 placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">(Серія та/або номер)</label>
+            <input class="form__input form-control" type="text"
+                   name="inputSeries"
+                   placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Дата видачі</label>
-          <input class="form__input form-control" type="text" name="dataD" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Дата видачі</label>
+            <input class="form__input form-control" type="text" name="dataD" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback padding-form">
-          <label class="form__label">Ким видано</label>
-          <input class="form__input form-control" type="text" name="issuedBy" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Ким видано</label>
+            <input class="form__input form-control" type="text" name="issuedBy" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">ID транзакції</label>
-          <input class="form__input form-control" type="text" name="idTranz" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">ID транзакції</label>
+            <input class="form__input form-control" type="text" name="idTranz" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Сума до повернення</label>
-          <input class="form__input form-control" type="text" name="BeforeTurning" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Сума до повернення</label>
+            <input class="form__input form-control" type="text" name="BeforeTurning" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Номер телефона</label>
-          <input class="form__input phone-mask form-control" type="text"
-                 name="inputPhone" placeholder="+380" autocomplete="off"
-                 data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Номер телефона</label>
+            <input class="form__input phone-mask form-control" type="text"
+                   name="inputPhone" placeholder="+380" autocomplete="off"
+
+                   data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Email</label>
-          <input class="form__input form-control" type="email" name="inputEmail" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Email</label>
+            <input class="form__input form-control" type="email" name="inputEmail" placeholder="" autocomplete="off"
+                   data-error="Поле обязательное для заполнения" required>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
-          <label class="form__label">Причина повернення</label>
-          <textarea class="form__input form-control" name="textarea" rows="8" placeholder="" autocomplete="off" data-error="Поле обязательное для заполнения" required></textarea>
-          <label class="form__help help-block with-errors"></label>
+            <label class="form__label">Причина повернення</label>
+            <textarea class="form__input form-control" name="textarea" rows="8" placeholder="" autocomplete="off"
+                      data-error="Поле обязательное для заполнения" required></textarea>
+            <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__button-group">
-          <button type='submit' class="button form__button">Відправити запит</button>
+            <button type='submit' class="button form__button">Відправити запит</button>
         </div>
-      </form>
-    </div>
+    </form>
+</div>
 
-    <div class="popup popup--success" id="success-popup">
-      <h2 class="popup__title">Повідомлення надіслано</h2>
-      <p class="popup__descr">Найближчим часом Ви отримаєте посилання на скачування Додатка</p>
-    </div>
-       <div class="popup popup--success" id="success-popup-partner">
-      <h2 class="popup__title">Дякуємо, що заповнили анкету!</h2>
-      <p class="popup__descr">Найближчим часом наш менеджер зв’яжеться з Вами</p>
-    </div>
-    <div class="popup popup--price" id="price-popup">
-      <h2 class="popup__title">Ціна на пальне АЗС "STELS"</h2>
-      <div class="price-table">
+<div class="popup popup--success" id="success-popup">
+    <h2 class="popup__title">Повідомлення надіслано</h2>
+    <p class="popup__descr">Найближчим часом Ви отримаєте посилання на скачування додатку</p>
+</div>
+
+<div class="popup popup--success" id="success-popup-partner">
+    <h2 class="popup__title">Дякуємо, що заповнили анкету!</h2>
+    <p class="popup__descr">Найближчим часом наш менеджер зв’яжеться з Вами</p>
+</div>
+
+<div class="popup popup--price" id="price-stels-popup">
+    <h2 class="popup__title">Ціна на пальне АЗС "STELS"</h2>
+    <div class="price-table">
         <div class="price-table__header">
-          <div class="row align-items-end">
-            <div class="col-3">
-              <div class="price-table__title">Вид пального</div>
+            <div class="row align-items-end">
+                <div class="col-3">
+                    <div class="price-table__title">Вид пального</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Ціна на АЗС</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Ціна MultiOil</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Кешбек від MultiOil</div>
+                </div>
             </div>
-            <div class="col-3">
-              <div class="price-table__title">Ціна на АЗС</div>
+        </div>
+
+        {% for azs in stels %}
+            <div class="price-table__row">
+                <div class="row align-items-center">
+                    <div class="col-3 price-table__col">{{ azs.fuelName }}</div>
+                    <div class="col-3 price-table__col">{{ azs.price }}</div>
+                    <div class="col-3 price-table__col">{{ azs.systemPrice }}</div>
+                    <div class="col-3 price-table__col">{{ azs.cashback }}</div>
+                </div>
             </div>
-            <div class="col-3">
-              <div class="price-table__title">Ціна MultiOil</div>
-            </div>
-            <div class="col-3">
-              <div class="price-table__title">Економія з MultiOil</div>
-            </div>
-          </div>
-        </div>
-        <div class="price-table__row">
-          <div class="row align-items-center">
-            <div class="col-3 price-table__col">А-95</div>
-            <div class="col-3 price-table__col">25.00</div>
-            <div class="col-3 price-table__col">21.00</div>
-            <div class="col-3 price-table__col">4.00</div>
-          </div>
-        </div>
-        <div class="price-table__row">
-          <div class="row align-items-center">
-            <div class="col-3 price-table__col">А-92</div>
-            <div class="col-3 price-table__col">25.00</div>
-            <div class="col-3 price-table__col">21.00</div>
-            <div class="col-3 price-table__col">4.00</div>
-          </div>
-        </div>
-        <div class="price-table__row">
-          <div class="row align-items-center">
-            <div class="col-3 price-table__col">Diesel VIP</div>
-            <div class="col-3 price-table__col">25.00</div>
-            <div class="col-3 price-table__col">21.00</div>
-            <div class="col-3 price-table__col">4.00</div>
-          </div>
-        </div>
-        <div class="price-table__row">
-          <div class="row align-items-center">
-            <div class="col-3 price-table__col">Diesel</div>
-            <div class="col-3 price-table__col">25.00</div>
-            <div class="col-3 price-table__col">21.00</div>
-            <div class="col-3 price-table__col">4.00</div>
-          </div>
-        </div>
-      </div>
-      <button class="button popup__close" type="button">Закрити</button>
+        {% endfor %}
     </div>
+    <button class="button popup__close" type="button">Закрити</button>
+</div>
+
+<div class="popup popup--price" id="price-ppoil-popup">
+    <h2 class="popup__title">Ціна на пальне АЗС "PP oil"</h2>
+    <div class="price-table">
+        <div class="price-table__header">
+            <div class="row align-items-end">
+                <div class="col-3">
+                    <div class="price-table__title">Вид пального</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Ціна на АЗС</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Ціна MultiOil</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Кешбек від MultiOil</div>
+                </div>
+            </div>
+        </div>
+
+        {% for azs in pp_oil %}
+            <div class="price-table__row">
+                <div class="row align-items-center">
+                    <div class="col-3 price-table__col">{{ azs.fuelName }}</div>
+                    <div class="col-3 price-table__col">{{ azs.price }}</div>
+                    <div class="col-3 price-table__col">{{ azs.systemPrice }}</div>
+                    <div class="col-3 price-table__col">{{ azs.cashback }}</div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+    <button class="button popup__close" type="button">Закрити</button>
+</div>
     <!-- JS -->
 <!-- build:js js/all.min.js -->
     <script src="{% static 'js/jquery.min.js' %}"></script>

@@ -120,18 +120,14 @@
 <div class="preloader" id="preloader"><img class="preloader__img" src="{% static 'img/logo.svg' %}" alt="logo"></div>
 
 <!-- Тело новости -->
-<div class="stocks-install">
+<div class="stocks">
     <div class="container">
         <div class="row">
-            <ul>
-                <li>название акции -> {{ name |safe }}  </li>
-                <li>время работы ->  {{ date_work |safe }}   </li>
-                <li>дата создания ->  {{ date_add |safe }}   </li>
-                <li>url  -> {{ name_url |safe }}   </li>
-                <li>img_url  ->  {{ img |safe }}   </li>
-                <li>тело акции  -> {{ body |safe }}   </li>
-            </ul>
-
+            <div class="col-lg-12">
+                <img src="{{ img |safe }}" alt="stocks">
+                <h3>{{ date_work |safe }}</h3>
+                 <div class="stocks-article">{{ body |safe }}</div>
+            </div>
         </div>
     </div>
 </div>
@@ -318,8 +314,11 @@
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Номер телефону</label>
-            <input class="form__input phone-mask form-control" type="text" name="inputPhone" placeholder=""
-                   autocomplete="off" data-mindata-error="Поле обязательное для заполнения" required>
+            <input class="form__input phone-mask form-control" type="text" name="inputPhone" id="inputPhonePartner"
+                   placeholder=""
+                   data-minlength="19"
+                   autocomplete="off"
+                   data-error="Введите правильный номер" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__button-group">
@@ -327,7 +326,6 @@
         </div>
     </form>
 </div>
-
 
 <div class="popup popup--contact" id="contact-popup">
     <h2 class="popup__title_contact">Контактна інформація:</h2>
@@ -384,6 +382,7 @@
         <div class="form__group phone-form__group form-group has-feedback ">
             <input class="form__input phone-form__input_waiting phone-mask" type="text" name="inputPhone"
                    placeholder="+38 (000) 00 00 000" autocomplete="off" data-error="Поле обязательное для заполнения"
+                   data-minlength="19"
                    required>
             <label class="form__help help-block with-errors"></label>
             <button type='submit' class="button button-waiting">Відправити посилання</button>
@@ -459,6 +458,7 @@
             <label class="form__label">Номер телефона</label>
             <input class="form__input phone-mask form-control" type="text"
                    name="inputPhone" placeholder="+380" autocomplete="off"
+
                    data-error="Поле обязательное для заполнения" required>
             <label class="form__help help-block with-errors"></label>
         </div>
@@ -490,7 +490,7 @@
     <p class="popup__descr">Найближчим часом наш менеджер зв’яжеться з Вами</p>
 </div>
 
-<div class="popup popup--price" id="price-popup">
+<div class="popup popup--price" id="price-stels-popup">
     <h2 class="popup__title">Ціна на пальне АЗС "STELS"</h2>
     <div class="price-table">
         <div class="price-table__header">
@@ -509,46 +509,52 @@
                 </div>
             </div>
         </div>
-        <div class="price-table__row">
-            <div class="row align-items-center">
-                <div class="col-3 price-table__col">А-92</div>
-                <div class="col-3 price-table__col">29,50</div>
-                <div class="col-3 price-table__col">28,90</div>
-                <div class="col-3 price-table__col">-</div>
+
+        {% for azs in stels %}
+            <div class="price-table__row">
+                <div class="row align-items-center">
+                    <div class="col-3 price-table__col">{{ azs.fuelName }}</div>
+                    <div class="col-3 price-table__col">{{ azs.price }}</div>
+                    <div class="col-3 price-table__col">{{ azs.systemPrice }}</div>
+                    <div class="col-3 price-table__col">{{ azs.cashback }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <button class="button popup__close" type="button">Закрити</button>
+</div>
+
+<div class="popup popup--price" id="price-ppoil-popup">
+    <h2 class="popup__title">Ціна на пальне АЗС "PP oil"</h2>
+    <div class="price-table">
+        <div class="price-table__header">
+            <div class="row align-items-end">
+                <div class="col-3">
+                    <div class="price-table__title">Вид пального</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Ціна на АЗС</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Ціна MultiOil</div>
+                </div>
+                <div class="col-3">
+                    <div class="price-table__title">Кешбек від MultiOil</div>
+                </div>
             </div>
         </div>
-        <div class="price-table__row">
-            <div class="row align-items-center">
-                <div class="col-3 price-table__col">А-95</div>
-                <div class="col-3 price-table__col">30,50</div>
-                <div class="col-3 price-table__col">29,90</div>
-                <div class="col-3 price-table__col">-</div>
+
+        {% for azs in pp_oil %}
+            <div class="price-table__row">
+                <div class="row align-items-center">
+                    <div class="col-3 price-table__col">{{ azs.fuelName }}</div>
+                    <div class="col-3 price-table__col">{{ azs.price }}</div>
+                    <div class="col-3 price-table__col">{{ azs.systemPrice }}</div>
+                    <div class="col-3 price-table__col">{{ azs.cashback }}</div>
+                </div>
             </div>
-        </div>
-        <div class="price-table__row">
-            <div class="row align-items-center">
-                <div class="col-3 price-table__col">А-95 VIP</div>
-                <div class="col-3 price-table__col">31,50</div>
-                <div class="col-3 price-table__col">30,90</div>
-                <div class="col-3 price-table__col">-</div>
-            </div>
-        </div>
-        <div class="price-table__row">
-            <div class="row align-items-center">
-                <div class="col-3 price-table__col">Diesel</div>
-                <div class="col-3 price-table__col">28,50</div>
-                <div class="col-3 price-table__col">26,90</div>
-                <div class="col-3 price-table__col">-</div>
-            </div>
-        </div>
-        <div class="price-table__row">
-            <div class="row align-items-center">
-                <div class="col-3 price-table__col">Diesel VIP</div>
-                <div class="col-3 price-table__col">29,50</div>
-                <div class="col-3 price-table__col">27,90</div>
-                <div class="col-3 price-table__col">-</div>
-            </div>
-        </div>
+        {% endfor %}
+
     </div>
     <button class="button popup__close" type="button">Закрити</button>
 </div>

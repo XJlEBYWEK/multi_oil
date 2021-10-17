@@ -169,7 +169,7 @@
                                    name="inputPhone"
                                    placeholder="+38 (000) 00 00 000" autocomplete="off"
                                    data-minlength="19"
-                                   data-error="Поле обязательное для заполнения" required>
+                                   data-error="Введите правильный номер" required>
                             <label class="form__help help-block with-errors"></label>
                             <button type='submit' class="button phone-form__button">Отримати посилання</button>
                         </div>
@@ -672,9 +672,9 @@
                             <li class="footer-links__item"><a class="footer-links__link"
                                                               href="{% url 'multi_oil:policy-page' %}">Політика
                                 конфіденційності</a></li>
-                            <li class="footer-links__item"><a class="footer-links__link" href="javascript:;"
-                                                              data-fancybox data-src="#waiting-popup">Політика
-                                конфіденційності</a></li>
+{#                            <li class="footer-links__item"><a class="footer-links__link" href="javascript:;"#}
+{#                                                              data-fancybox data-src="#waiting-popup">Політика#}
+{#                                конфіденційності</a></li>#}
                         </ul>
                     </nav>
                 </div>
@@ -711,7 +711,8 @@
             <input class="form__input phone-mask form-control" type="text" name="inputPhone" id="inputPhonePartner"
                    placeholder=""
                    data-minlength="19"
-                   autocomplete="off" data-mindata-error="Поле обязательное для заполнения" required>
+                   autocomplete="off"
+                   data-error="Введите правильный номер" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__button-group">
