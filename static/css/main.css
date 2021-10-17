@@ -1439,6 +1439,31 @@ strong {
     margin-top: 1rem;
 }
 
+.news img {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+.news h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+    color: #FFFFFF;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+.news h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 38px;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 .stocks-article__title {
     font-size: 75px;
     line-height: 64px;
@@ -2759,6 +2784,7 @@ h3.popup__title_waiting {
     mix-blend-mode: normal;
     opacity: 0.5;
 }
+
 /*==========  News  ==========*/
 
 .news {
@@ -2799,7 +2825,6 @@ h3.popup__title_waiting {
     margin: 40px auto 0 auto;
     max-width: 270px;
 }
-
 
 
 /*==========  Desktop First  ==========*/
@@ -3330,6 +3355,7 @@ h3.popup__title_waiting {
         width: 220px;
         height: 270px;
     }
+
     .box-news__img {
         width: auto;
     }

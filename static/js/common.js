@@ -178,7 +178,6 @@ $(document).ready(function () {
         phoneElement = $("#inputPhone");
         if (phoneElement.val().length <19){
             return NaN}
-
         if (this.checkValidity()){
 
         $.ajax({
