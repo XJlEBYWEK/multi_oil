@@ -151,10 +151,10 @@ class GetNewsPageView(TemplateView):
 class GetNewsView(TemplateView):
     """Страница новости"""
 
-    # template_name = "news.html"
+    template_name = "templalet_news.html"
 
     def get_context_data(self, **kwargs):
-        new = News.objects.get(pk=self.kwargs['pk'])
+        new = News.objects.get(name_url=self.kwargs['name_url'])
         data = NewsSerializer(new).data
         context = super().get_context_data(**kwargs)
 
@@ -188,5 +188,4 @@ class GetStocksView(TemplateView):
 
         for value in data:
             context[value] = data[value]
-        print(context)
         return context
