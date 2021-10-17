@@ -8,7 +8,8 @@ class News(models.Model):
     name_url = models.CharField(max_length=100,verbose_name="URL",unique=True,default="",validators=[MinLengthValidator(3)])
     img = models.ImageField(verbose_name='Изображение', upload_to="img", default="img/default.jpg")
     body = RichTextField(verbose_name='Новость', null=True, blank=True, default="")
-    date_add = models.DateTimeField(verbose_name="Дата создания",auto_now=True)
+    data = models.TextField(max_length=100, verbose_name="Дата",default="",blank=True)
+    date_add = models.DateTimeField(verbose_name="Дата создания",auto_now_add=True,)
 
     def get_absolute_url(self):
         return reverse('multi_oil:get-news', args=[str(self.name_url)])

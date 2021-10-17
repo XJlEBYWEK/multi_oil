@@ -25,6 +25,10 @@ class HomePageView(TemplateView):
         pp_oil = json.loads(requests.get("https://app.multioil.in.ua/gas/api/v1/pricelist/ppoil").text)
         context["stels"] = stels
         context["pp_oil"] = pp_oil
+
+        new = News.objects.all().order_by('-date_add')
+        data = NewsSerializer(new, many=True).data
+        context["news"] = data[:3]
         return context
 
 

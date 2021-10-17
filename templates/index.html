@@ -165,7 +165,8 @@
                           role="form">
                         {% csrf_token %}
                         <div class="form__group phone-form__group form-group has-feedback">
-                            <input class="form__input phone-form__input phone-mask" id="inputPhone" type="text" name="inputPhone"
+                            <input class="form__input phone-form__input phone-mask" id="inputPhone" type="text"
+                                   name="inputPhone"
                                    placeholder="+38 (000) 00 00 000" autocomplete="off"
                                    data-minlength="19"
                                    data-error="Поле обязательное для заполнения" required>
@@ -441,33 +442,47 @@
         <div class="row">
             <h2 class="col-12 acc-title">ЗМІ про нас</h2>
             <div class="blog-news">
-                <div class="col-xl-4 col-lg-12 acc-box">
-                    <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">
-                        <div class="quotes">''</div>
-                        <div class="acc-text">
-                            «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»
-                        </div>
-                        <div class="acc-date">31 Бер 2021</div>
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-12 acc-box">
-                    <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">
-                        <div class="quotes">''</div>
-                        <div class="acc-text">
-                            «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»
-                        </div>
-                        <div class="acc-date">31 Бер 2021</div>
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-12 acc-box">
-                    <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">
-                        <div class="quotes">''</div>
-                        <div class="acc-text">
-                            «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»
-                        </div>
-                        <div class="acc-date">31 Бер 2021</div>
-                    </a>
-                </div>
+                {% for new in news %}
+                    <div class="col-xl-4 col-lg-12 acc-box">
+                        <a href="{{ new.name_url }}">
+                            <div class="quotes">''</div>
+                            <div class="acc-text">
+                                {{ new.name }}
+                            </div>
+                            <div class="acc-date">{{ new.data }}</div>
+                        </a>
+                    </div>
+
+                {% endfor %}
+
+{##}
+{#                <div class="col-xl-4 col-lg-12 acc-box">#}
+{#                    <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">#}
+{#                        <div class="quotes">''</div>#}
+{#                        <div class="acc-text">#}
+{#                            «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»#}
+{#                        </div>#}
+{#                        <div class="acc-date">31 Бер 2021</div>#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-xl-4 col-lg-12 acc-box">#}
+{#                    <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">#}
+{#                        <div class="quotes">''</div>#}
+{#                        <div class="acc-text">#}
+{#                            «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»#}
+{#                        </div>#}
+{#                        <div class="acc-date">31 Бер 2021</div>#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-xl-4 col-lg-12 acc-box">#}
+{#                    <a href="https://acc.cv.ua/news/storystorynka/tehnologichno/revolyuciya-rinku-pochalas-u-chernivcyah-zapustili-dodatok-z-prodazhu-palnogo-70918">#}
+{#                        <div class="quotes">''</div>#}
+{#                        <div class="acc-text">#}
+{#                            «Революція ринку почалась: у Чернівцях запустили додаток з продажу пального»#}
+{#                        </div>#}
+{#                        <div class="acc-date">31 Бер 2021</div>#}
+{#                    </a>#}
+{#                </div>#}
             </div>
         </div>
     </div>
@@ -693,7 +708,8 @@
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Номер телефону</label>
-            <input class="form__input phone-mask form-control" type="text" name="inputPhone" id="inputPhonePartner" placeholder=""
+            <input class="form__input phone-mask form-control" type="text" name="inputPhone" id="inputPhonePartner"
+                   placeholder=""
                    data-minlength="19"
                    autocomplete="off" data-mindata-error="Поле обязательное для заполнения" required>
             <label class="form__help help-block with-errors"></label>
@@ -759,7 +775,7 @@
         <div class="form__group phone-form__group form-group has-feedback ">
             <input class="form__input phone-form__input_waiting phone-mask" type="text" name="inputPhone"
                    placeholder="+38 (000) 00 00 000" autocomplete="off" data-error="Поле обязательное для заполнения"
-                    data-minlength="19"
+                   data-minlength="19"
                    required>
             <label class="form__help help-block with-errors"></label>
             <button type='submit' class="button button-waiting">Відправити посилання</button>
