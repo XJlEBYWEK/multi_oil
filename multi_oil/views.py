@@ -76,21 +76,15 @@ def set_message(request):
     """Отправка собщения из формы стать партнером"""
 
     inputCompany = request.POST.get('inputCompany', False)
-    inputIpn = request.POST.get('inputIpn', False)
     inputName = request.POST.get('inputName', False)
     inputPhone = request.POST.get('inputPhone', False)
-    inputEmail = request.POST.get('inputEmail', False)
-    textarea = request.POST.get('textarea', False)
     path = request.POST.get('path', False)
     text = f"Стать партнёром\n" \
            "--------------------------------------\n"\
             f"URL: {base_path + path}\n" \
             f"Название компании: {inputCompany}\n" \
-            f"ИПН: {inputIpn}\n" \
             f"Контактное лицо: {inputName} \n" \
-            f"Номер телефона: {inputPhone} \n" \
-            f"Email: {inputEmail} \n" \
-            f"Текстовое сообщение: {textarea} \n"
+            f"Номер телефона: {inputPhone} \n"
     print(text)
     # bot.send_message(CHANNEL_NAME_1, text)
     return redirect('/')
