@@ -12,7 +12,7 @@ CHANNEL_NAME_1 = -1001405418274
 CHANNEL_NAME_2 = -1001439028729
 
 bot = telebot.TeleBot(TOKEN)
-
+base_path = "https://multioil.com.ua"
 
 class HomePageView(TemplateView):
     """Цена АЗС"""
@@ -77,16 +77,17 @@ def set_message(request):
     inputPhone = request.POST.get('inputPhone', False)
     inputEmail = request.POST.get('inputEmail', False)
     textarea = request.POST.get('textarea', False)
-
+    path = request.POST.get('path', False)
     text = f"Стать партнёром\n" \
-           "--------------------------------------\n" \
-           f"Название компании: {inputCompany}\n" \
-           f"ИПН: {inputIpn}\n" \
-           f"Контактное лицо: {inputName} \n" \
-           f"Номер телефона: {inputPhone} \n" \
-           f"Email: {inputEmail} \n" \
-           f"Текстовое сообщение: {textarea} \n"
-
+           "--------------------------------------\n"\
+            f"URL: {base_path + path}\n" \
+            f"Название компании: {inputCompany}\n" \
+            f"ИПН: {inputIpn}\n" \
+            f"Контактное лицо: {inputName} \n" \
+            f"Номер телефона: {inputPhone} \n" \
+            f"Email: {inputEmail} \n" \
+            f"Текстовое сообщение: {textarea} \n"
+    print(text)
     # bot.send_message(CHANNEL_NAME_1, text)
     return redirect('/')
 
@@ -95,9 +96,13 @@ def set_phone_form(request):
     """Отправка номера телефона из формы получить ссылку"""
 
     inputPhone = request.POST.get('inputPhone', False)
+    path = request.POST.get('path', False)
+
     text = f"Получить ссылку\n" \
            "--------------------------------------\n" \
+           f"URL: {base_path + path}\n" \
            f"Номер телефона: {inputPhone}\n"
+    print(text)
 
     # bot.send_message(CHANNEL_NAME_2, text)
     return redirect('/')
@@ -115,9 +120,11 @@ def set_return_form(request):
     inputPhone = request.POST.get('inputPhone', False)
     inputEmail = request.POST.get('inputEmail', False)
     textarea = request.POST.get('inputEmail', False)
+    path = request.POST.get('path', False)
 
     text = f"Оформить возврат\n" \
            "--------------------------------------\n" \
+           f"URL: {base_path + path}\n" \
            f"Название компании: {inputCompany}\n" \
            f"Серия и/или номер: {inputSeries}\n" \
            f"Дата выдачи: {dataD} \n" \
@@ -127,7 +134,7 @@ def set_return_form(request):
            f"Контактный телефон: {inputPhone} \n" \
            f"Почта: {inputEmail} \n" \
            f"Текстовое сообщение: {textarea} \n"
-
+    print(text)
     # bot.send_message(CHANNEL_NAME_1, text)
     return redirect('/')
 
@@ -146,9 +153,11 @@ class GetNewsPageView(TemplateView):
     template_name = "news.html"
 
     def get_context_data(self, **kwargs):
-        new = News.objects.all()[:2]
+        new = News.objects.all().order_by('-date_add')
         context = super().get_context_data(**kwargs)
-        context["news"] = NewsSerializer(new, many=True).data
+        data = NewsSerializer(new, many=True).data
+        context["news"] = data[:6]
+        context["paginator"] = True if len(data) > 6 else False
         return context
 
 
@@ -161,10 +170,10 @@ class GetNewsView(TemplateView):
         new = News.objects.get(name_url=self.kwargs['name_url'])
         data = NewsSerializer(new).data
         context = super().get_context_data(**kwargs)
-
         for value in data:
             context[value] = data[value]
         return context
+
 
 # ----------- STOKS -------------
 
@@ -174,7 +183,7 @@ class GetStocksPageView(TemplateView):
     template_name = "stocks.html"
 
     def get_context_data(self, **kwargs):
-        new = Stocks.objects.all()
+        new = Stocks.objects.all().order_by('-date_add')
         context = super().get_context_data(**kwargs)
         context["stocks"] = StocksSerializer(new, many=True).data
         return context

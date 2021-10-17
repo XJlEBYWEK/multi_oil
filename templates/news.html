@@ -121,87 +121,37 @@
 
 <section class="news">
     <div class="container">
-        <div class="row">
+        <div class="row" id="news-row">
             <div class="col-lg-12">
                 <h1 class="stocks-article__title">Новини</h1>
             </div>
-            <div class="col-lg-4">
-                <div class="box-news">
-                    <a href="{% url 'multi_oil:home-page' %}">
-                        <picture class="box-news__picture">
-                            <img src="{% static 'img/news-img-3.jpg' %}" alt="news" class="box-news__img">
-                        </picture>
-                        <div class="box-news__descr">
-                            Швидка реєстрація клієнта
-                        </div>
-                    </a>
+
+            {% for new in news %}
+                <div class="col-lg-4">
+                    <div class="box-news">
+                        <a href="{{ new.url }}">
+                            <picture class="box-news__picture">
+                                <img src="{{ new.img }}" alt="news" class="box-news__img">
+                            </picture>
+                            <div class="box-news__descr">
+                                {{ new.name }}
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="box-news">
-                    <a href="{% url 'multi_oil:home-page' %}">
-                        <picture class="box-news__picture">
-                            <img src="{% static 'img/news-img-3.jpg' %}" alt="news" class="box-news__img">
-                        </picture>
-                        <div class="box-news__descr">
-                            Швидка реєстрація клієнта
-                        </div>
-                    </a>
+            {% endfor %}
+
+            {% if paginator %}
+                <div class="col-lg-12">
+                    <a class="button news-section__button" id="add-news-button">Дивитися ще</a>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="box-news">
-                    <a href="{% url 'multi_oil:home-page' %}">
-                        <picture class="box-news__picture">
-                            <img src="{% static 'img/news-img-3.jpg' %}" alt="news" class="box-news__img">
-                        </picture>
-                        <div class="box-news__descr">
-                            Швидка реєстрація клієнта
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="box-news">
-                    <a href="{% url 'multi_oil:home-page' %}">
-                        <picture class="box-news__picture">
-                            <img src="{% static 'img/news-img-3.jpg' %}" alt="news" class="box-news__img">
-                        </picture>
-                        <div class="box-news__descr">
-                            Швидка реєстрація клієнта
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="box-news">
-                    <a href="{% url 'multi_oil:home-page' %}">
-                        <picture class="box-news__picture">
-                            <img src="{% static 'img/news-img-3.jpg' %}" alt="news" class="box-news__img">
-                        </picture>
-                        <div class="box-news__descr">
-                            Швидка реєстрація клієнта
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="box-news">
-                    <a href="{% url 'multi_oil:home-page' %}">
-                        <picture class="box-news__picture">
-                            <img src="{% static 'img/news-img-3.jpg' %}" alt="news" class="box-news__img">
-                        </picture>
-                        <div class="box-news__descr">
-                            Швидка реєстрація клієнта
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <a class="button news-section__button">Дивитися ще</a>
+            {% endif %}
+
         </div>
+
+
     </div>
 </section>
-
 
 <!-- Footer -->
 <footer class="footer">
@@ -361,7 +311,6 @@
         </div>
     </div>
 </footer>
-
 
 <!-- Popup -->
 <div class="popup" id="partner-popup">
@@ -552,6 +501,7 @@
     <h2 class="popup__title">Повідомлення надіслано</h2>
     <p class="popup__descr">Найближчим часом Ви отримаєте посилання на скачування додатку</p>
 </div>
+
 <div class="popup popup--success" id="success-popup-partner">
     <h2 class="popup__title">Дякуємо, що заповнили анкету!</h2>
     <p class="popup__descr">Найближчим часом наш менеджер зв’яжеться з Вами</p>

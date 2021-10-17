@@ -167,6 +167,7 @@
                         <div class="form__group phone-form__group form-group has-feedback">
                             <input class="form__input phone-form__input phone-mask" id="inputPhone" type="text" name="inputPhone"
                                    placeholder="+38 (000) 00 00 000" autocomplete="off"
+                                   data-minlength="19"
                                    data-error="Поле обязательное для заполнения" required>
                             <label class="form__help help-block with-errors"></label>
                             <button type='submit' class="button phone-form__button">Отримати посилання</button>
@@ -692,8 +693,9 @@
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Номер телефону</label>
-            <input class="form__input phone-mask form-control" type="text" name="inputPhone" placeholder=""
-                   autocomplete="off" data-mindata-error="Введите правильный номер" required>
+            <input class="form__input phone-mask form-control" type="text" name="inputPhone" id="inputPhonePartner" placeholder=""
+                   data-minlength="19"
+                   autocomplete="off" data-mindata-error="Поле обязательное для заполнения" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__button-group">
@@ -757,6 +759,7 @@
         <div class="form__group phone-form__group form-group has-feedback ">
             <input class="form__input phone-form__input_waiting phone-mask" type="text" name="inputPhone"
                    placeholder="+38 (000) 00 00 000" autocomplete="off" data-error="Поле обязательное для заполнения"
+                    data-minlength="19"
                    required>
             <label class="form__help help-block with-errors"></label>
             <button type='submit' class="button button-waiting">Відправити посилання</button>
@@ -832,6 +835,7 @@
             <label class="form__label">Номер телефона</label>
             <input class="form__input phone-mask form-control" type="text"
                    name="inputPhone" placeholder="+380" autocomplete="off"
+
                    data-error="Поле обязательное для заполнения" required>
             <label class="form__help help-block with-errors"></label>
         </div>

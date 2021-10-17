@@ -22,7 +22,6 @@ $(document).ready(function () {
         });
     }, 2000);
 
-
     // Img
     $("img, a").on("dragstart", function (event) {
         event.preventDefault();
@@ -149,18 +148,22 @@ $(document).ready(function () {
 
     // Send Form
     $("[name = 'form_data_input']").submit(function (e) {
-        if (!this.checkValidity()) {
+        e.preventDefault();
+        phoneElement = $("#inputPhonePartner");
+        if (phoneElement.val().length < 19) {
+            return NaN
+        }
+        if (this.checkValidity()) {
+            console.log(1);
 
-            e.preventDefault();
-
-        } else {
-
+            let data = $(this).serialize() + "&path=" + window.location.pathname;
+            console.log(2);
             $.ajax({
                 type: "POST",
                 url: "/set_form",
-                data: $(this).serialize()
+                data: data
             }).done(function () {
-
+                console.log(3);
                 $.fancybox.close();
                 $.fancybox.open($('#success-popup-partner'))
 
@@ -176,37 +179,17 @@ $(document).ready(function () {
     $("[name = 'form_phone_input']").submit(function (e) {
         e.preventDefault();
         phoneElement = $("#inputPhone");
-        if (phoneElement.val().length <19){
-            return NaN}
-        if (this.checkValidity()){
-
-        $.ajax({
-            type: "POST",
-            url: "/set_phone_form",
-            data: $(this).serialize()
-        }).done(function () {
-
-            $.fancybox.close();
-            $.fancybox.open($('#success-popup'))
-
-            setTimeout(function () {
-                $(".form").trigger("reset");
-            }, 2000);
-        });
-        return false;
+        if (phoneElement.val().length < 19) {
+            return NaN
         }
-    });
 
-
-    $("[name = 'form_return_input']").submit(function (e) {
-        if (!this.checkValidity()) {
-            e.preventDefault();
-        } else {
+        if (this.checkValidity()) {
+            let data = $(this).serialize() + "&path=" + window.location.pathname;
 
             $.ajax({
                 type: "POST",
-                url: "/set_return_form",
-                data: $(this).serialize()
+                url: "/set_phone_form",
+                data: data
             }).done(function () {
 
                 $.fancybox.close();
@@ -218,6 +201,61 @@ $(document).ready(function () {
             });
             return false;
         }
+    });
+
+
+    $("[name = 'form_return_input']").submit(function (e) {
+        if (!this.checkValidity()) {
+            e.preventDefault();
+        } else {
+            let data = $(this).serialize() + "&path=" + window.location.pathname;
+
+            $.ajax({
+                type: "POST",
+                url: "/set_return_form",
+                data: data
+            }).done(function () {
+
+                $.fancybox.close();
+                $.fancybox.open($('#success-popup'))
+
+                setTimeout(function () {
+                    $(".form").trigger("reset");
+                }, 2000);
+            });
+            return false;
+        }
+    });
+
+    let limit = 3;
+    let offset = 6;
+
+    $('#add-news-button').click(function () {
+        $.ajax({
+            type: "GET",
+            url: `/api/news?limit=${limit}&offset=${offset}`,
+        }).done(function (data) {
+            let element = $('#news-row');
+            data.results.forEach(news => {
+                let html = `<div class="col-lg-4">
+                                <div class="box-news">
+                                    <a href="${news.url}">
+                                        <picture class="box-news__picture">
+                                            <img src="${news.img}" alt="news" class="box-news__img">
+                                        </picture>
+                                        <div class="box-news__descr">
+                                            ${news.name}
+                                        </div></a></div></div>`
+
+                element.append(html);
+            });
+            if (data.next === null) {
+                $('#add-news-button').hide();
+            }
+            offset += limit;
+        });
+
+
     });
 
 
