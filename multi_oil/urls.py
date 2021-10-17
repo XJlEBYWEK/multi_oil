@@ -40,6 +40,8 @@ urlpatterns = [
     path('news', views.GetNewsPageView.as_view(), name="get-news-page"),
     path("news/<int:pk>", views.GetNewsView.as_view(), name="get-news"),
 
+    path("news/test", views.GetNewsTestView.as_view(), name="get-news-test"),
+
     # path('api/news', views.GetNewsListView.as_view(), name="get-news-list"),
 
 ]

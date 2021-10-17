@@ -48,6 +48,10 @@ class StocksView(TemplateView):
     template_name = "stocks.html"
 
 
+class GetNewsTestView(TemplateView):
+    template_name = "templalet_news.html"
+
+
 class stocksJustInstallView(TemplateView):
     template_name = "stocksJustInstall.html"
 
