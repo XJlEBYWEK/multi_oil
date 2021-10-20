@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <!-- Title -->
-{#    <title>MultiOil Business - оптимізуйте витрати бізнесу на пальне</title>#}
+    {#    <title>MultiOil Business - оптимізуйте витрати бізнесу на пальне</title>#}
     <title>{{ page_title }}</title>
     <!-- SEO Meta -->
     <meta name="description" content="{{ page_description }}">
@@ -121,7 +121,7 @@
 </header>
 
 <!--     Preloader-->
-<div class="preloader" id="preloader"><img class="preloader__img" src="{% static 'img/logo.svg' %}" alt="logo"></div>
+{#<div class="preloader" id="preloader"><img class="preloader__img" src="{% static 'img/logo.svg' %}" alt="logo"></div>#}
 
 <!-- Тело новости -->
 <div class="stocks">
@@ -129,7 +129,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <img src="{{ img }}" alt="{{ img_alt }}" title="{{ img_title }}">
-                <h1>{{ date_work}}</h1>
+                <h1>{{ date_work }}</h1>
                 <div class="stocks-article">{{ body |safe }}</div>
             </div>
             <div class="col-lg-12">
@@ -138,16 +138,17 @@
                         <i class="fas fa-share"></i>
                     </div>
                     <div class="share-link">
-                        <a href="javascript: void(0)" onClick="window.open('https://www.facebook.com/sharer.php?u=https://multioil.com.ua/stocks/just_install','sharer','status=0,toolbar=0,width=650,height=500');">
-                            <i class="fab fa-facebook"></i></a>
+                        <button id="fb-buttton">fb</button>
+                        <button id="inst-buttton">inst</button>
+                        <button id="vb-buttton">vb</button>
+                        <button id="tel-buttton">tel</button>
 
-
+                        <a href><i class="fab fa-facebook"></i></a>
                         <a href=""><i class="fab fa-instagram"></i></a>
                         <a href=""><i class="fab fa-viber"></i></a>
-
-
-                        <a href="javascript: void(0)" class="telegram" rel="nofollow" onClick="window.open('https://telegram.me/share/url?url=https://multioil.com.ua/stocks/just_install','sharer','status=0,toolbar=0,width=650,height=500');"
-><i class="fab fa-telegram"></i></a>
+                        <a href="javascript: void(0)" class="telegram" rel="nofollow"
+                           onClick="window.open('https://telegram.me/share/url?url=https://multioil.com.ua/stocks/just_install','sharer','status=0,toolbar=0,width=650,height=500');"
+                        ><i class="fab fa-telegram"></i></a>
                     </div>
                     <div class="share-text">
                         Поділитися
