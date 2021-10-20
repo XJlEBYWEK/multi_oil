@@ -1667,6 +1667,11 @@ h3.stocks-article__install {
     color: #FFFFFF;
 }
 
+.share-link button {
+    outline: none!important;
+    border: none;
+}
+
 .share-text {
     display: flex;
     justify-content: center;
