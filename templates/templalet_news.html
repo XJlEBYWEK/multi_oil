@@ -128,7 +128,7 @@
                      <img src="{{ img |safe }}" alt="news" class="box-news__img">
                 </picture>
                 <h3>{{ data | safe }}</h3>
-                <h1>{{ name |safe }}</h1>
+                <h1>{{ name | safe }}</h1>
                 <div class="text-article">{{ body |safe }}</div>
             </div>
         </div>
@@ -303,13 +303,13 @@
         <div class="form__group form-group has-feedback">
             <label class="form__label">Назва компанії</label>
             <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" maxlength="30" required>
+                   data-error="Поле обязательное для заполнения" maxlength="40" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Контактна особа</label>
             <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" maxlength="25" required>
+                   data-error="Поле обязательное для заполнения" maxlength="40" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">

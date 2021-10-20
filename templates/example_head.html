@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/multioil-business.css' %}">
     <!-- endbuild -->
@@ -93,7 +95,8 @@
                 </div>
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:get-news-page' %}">Блог</a></li>
+                        <li class="menu__item"><a class="menu__link" href="{% url 'multi_oil:get-news-page' %}">Блог</a>
+                        </li>
                         <li class="menu__item"><a class="menu__link"
                                                   href="javascript:;" data-fancybox
                                                   data-src="#contact-popup">Контакти</a></li>
@@ -124,9 +127,26 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img src="{{ img |safe }}" alt="stocks">
-                <h3>{{ date_work |safe }}</h3>
+                <img src="{{ img | safe }}" alt="stocks">
+                <h1>{{ date_work | safe }}</h1>
                 <div class="stocks-article">{{ body |safe }}</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="share-social">
+                    <div class="share-icon">
+                        <i class="fas fa-share"></i>
+                    </div>
+                    <div class="share-link">
+                        <a href="javascript: void(0)" onClick="window.open('https://www.facebook.com/sharer.php?u=https://multioil.com.ua/stocks/just_install','sharer','status=0,toolbar=0,width=650,height=500');"><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-viber"></i></a>
+                        <a href="javascript: void(0)" class="telegram" rel="nofollow" onClick="window.open('https://telegram.me/share/url?url=https://multioil.com.ua/stocks/just_install','sharer','status=0,toolbar=0,width=650,height=500');"
+><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <div class="share-text">
+                        Поділитися
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -300,13 +320,13 @@
         <div class="form__group form-group has-feedback">
             <label class="form__label">Назва компанії</label>
             <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" maxlength="30" required>
+                   data-error="Поле обязательное для заполнения" maxlength="40" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Контактна особа</label>
             <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" maxlength="25" required>
+                   data-error="Поле обязательное для заполнения" maxlength="40" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">

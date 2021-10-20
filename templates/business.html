@@ -112,7 +112,7 @@
                             <a class="button partner-section__button button-business mobile--hidden-log" href="#">
                                 Вхід до кабінету
                             </a>
-                            <a class="menu__link desktop--hidden menu-log" href="#">
+                            <a class="menu__link desktop--hidden--log menu-log" href="#">
                                 Вхід до кабінету
                             </a>
                         </li>
@@ -132,32 +132,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                    <h1 class="business-section__descr">
-                        MultiOil Business для АЗС
-                    </h1>
-                    <div class="business-section__text">
-                        <p>Збільшуйте прибуток з MultiOil Business</p>
-                    </div>
-                    <a class="button partner-section__button"
-                       href="javascript:;"
-                       data-fancybox=""
-                       data-src="#partner-popup">
-                        Підключити MultiOil Business
-                    </a>
-                    <picture class="business-section__picture">
-                        <img src="{% static 'img/business/macbook.png' %}" alt="macbook photo" class="business-section__img">
-                    </picture>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="business-section desktop--hidden__high">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <picture class="business-section__picture">
-                    <img src="{% static 'img/business/macbook.png' %}" alt="macbook photo" class="business-section__img">
-                </picture>
                 <h1 class="business-section__descr">
                     MultiOil Business для АЗС
                 </h1>
@@ -170,6 +144,61 @@
                    data-src="#partner-popup">
                     Підключити MultiOil Business
                 </a>
+                 <picture class="business-section__picture">
+                    <img src="{% static 'img/business/macbook.png' %}" alt="macbook photo"
+                         class="business-section__img">
+                </picture>
+                <form class="form phone-form" name="form_phone_input" data-toggle="validator" data-focus="false"
+                      role="form">
+                    {% csrf_token %}
+                    <div class="form__group phone-form__group form-group has-feedback">
+                        <input class="form__input phone-form__input phone-mask" id="inputPhone" type="text"
+                               name="inputPhone"
+                               placeholder="+38 (000) 00 00 000" autocomplete="off"
+                               data-minlength="19"
+                               data-error="Введите правильный номер" required>
+                        <label class="form__help help-block with-errors"></label>
+                        <button type='submit' class="button phone-form__button phone-form__business">Отримати посилання</button>
+                    </div>
+                    <div class="phone-form__info">
+                        <p>Залиште номер Вашого телефону і ми надішлемо</p>
+                        <p>СМС з посиланням на скачування додатка.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="business-section desktop--hidden__high">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <picture class="business-section__picture">
+                    <img src="{% static 'img/business/macbook.png' %}" alt="macbook photo"
+                         class="business-section__img">
+                </picture>
+                 <a class="button partner-section__button"
+                   href="javascript:;"
+                   data-fancybox=""
+                   data-src="#partner-popup">
+                    Підключити MultiOil Business
+                </a>
+                <h1 class="business-section__descr">
+                    MultiOil Business для АЗС
+                </h1>
+                <div class="business-section__text">
+                    <p>Збільшуйте прибуток з MultiOil Business</p>
+                </div>
+                <div class="download mobile-section__download">
+                    <ul class="download__list">
+                        <li class="download__item"><a class="download__link"
+                                                      href="#"><img
+                                class="download__img" src="{% static 'img/GooglePlay-ru.svg' %}" alt="alt"></a></li>
+                        <li class="download__item"><a class="download__link"
+                                                      href="#"><img
+                                class="download__img" src="{% static 'img/AppStore-ru.svg' %}" alt="alt"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -195,7 +224,8 @@
             </div>
             <div class="col-lg-6">
                 <picture class="about-business__picture">
-                    <img src="{% static 'img/business/about_business.png' %}" alt="about img" class="about-business__img">
+                    <img src="{% static 'img/business/about_business.png' %}" alt="about img"
+                         class="about-business__img">
                 </picture>
             </div>
         </div>
@@ -213,7 +243,8 @@
                         мережі АЗС заробляти на продажі палива інших АЗС своїм клієнтам.</p>
                 </div>
                 <picture class="about-business__picture">
-                    <img src="{% static 'img/business/about_business.png' %}" alt="about img" class="about-business__img">
+                    <img src="{% static 'img/business/about_business.png' %}" alt="about img"
+                         class="about-business__img">
                 </picture>
                 <div class="about-business__text">
                     <h3 class="about-business__header">
@@ -258,7 +289,8 @@
                 <div class="how-item how-item__moved">
                     <img src="{% static 'img/business/line.svg' %}" alt="line" class="how-item__line">
                     <picture class="how-item__picture">
-                        <img src="{% static 'img/business/how-item-1.png' %}" alt="how it works item" class="how-item__img">
+                        <img src="{% static 'img/business/how-item-1.png' %}" alt="how it works item"
+                             class="how-item__img">
                     </picture>
                     <div class="how-item__descr">
                         В особистому кабінеті MultiOil Business Ви додаєте клієнта якому поповнюєте рахунок.
@@ -268,7 +300,8 @@
             <div class="col-lg-4">
                 <div class="how-item">
                     <picture class="how-item__picture">
-                        <img src="{% static 'img/business/how-item-2.png' %}" alt="how it works item" class="how-item__img">
+                        <img src="{% static 'img/business/how-item-2.png' %}" alt="how it works item"
+                             class="how-item__img">
                     </picture>
                     <div class="how-item__descr">
                         У спеціальній вкладці Ви виставляєте ціни на паливо інших мереж.
@@ -278,7 +311,8 @@
             <div class="col-lg-4">
                 <div class="how-item how-item__moved">
                     <picture class="how-item__picture">
-                        <img src="{% static 'img/business/how-item-3.png' %}" alt="how it works item" class="how-item__img">
+                        <img src="{% static 'img/business/how-item-3.png' %}" alt="how it works item"
+                             class="how-item__img">
                     </picture>
                     <div class="how-item__descr">
                         При заправці клієнта на іншій мережі,
@@ -299,7 +333,8 @@
             <div class="col-lg-6">
                 <div class="other-possibilities__item">
                     <picture class="other-possibilities__picture">
-                        <img src="{% static 'img/business/user.svg' %}" alt="icon user" class="other-possibilities__img">
+                        <img src="{% static 'img/business/user.svg' %}" alt="icon user"
+                             class="other-possibilities__img">
                     </picture>
                     <div class="other-possibilities__descr">
                         Швидка реєстрація клієнта
@@ -309,7 +344,8 @@
             <div class="col-lg-6">
                 <div class="other-possibilities__item">
                     <picture class="other-possibilities__picture">
-                        <img src="{% static 'img/business/chart.svg' %}" alt="icon user" class="other-possibilities__img">
+                        <img src="{% static 'img/business/chart.svg' %}" alt="icon user"
+                             class="other-possibilities__img">
                     </picture>
                     <div class="other-possibilities__descr">
                         Можливість виставлення персональних цін
@@ -319,7 +355,8 @@
             <div class="col-lg-6">
                 <div class="other-possibilities__item">
                     <picture class="other-possibilities__picture">
-                        <img src="{% static 'img/business/wallet.svg' %}" alt="icon user" class="other-possibilities__img">
+                        <img src="{% static 'img/business/wallet.svg' %}" alt="icon user"
+                             class="other-possibilities__img">
                     </picture>
                     <div class="other-possibilities__descr">
                         Можливість поповнення та моніторингу балансів клієнтів
@@ -329,7 +366,8 @@
             <div class="col-lg-6">
                 <div class="other-possibilities__item">
                     <picture class="other-possibilities__picture">
-                        <img src="{% static 'img/business/circle.svg' %}" alt="icon user" class="other-possibilities__img">
+                        <img src="{% static 'img/business/circle.svg' %}" alt="icon user"
+                             class="other-possibilities__img">
                     </picture>
                     <div class="other-possibilities__descr">
                         Швидке завантаження потрібних звітів
@@ -531,13 +569,13 @@
         <div class="form__group form-group has-feedback">
             <label class="form__label">Назва компанії</label>
             <input class="form__input form-control" type="text" name="inputCompany" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" maxlength="30" required>
+                   data-error="Поле обязательное для заполнения" maxlength="40" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
             <label class="form__label">Контактна особа</label>
             <input class="form__input form-control" type="text" name="inputName" placeholder="" autocomplete="off"
-                   data-error="Поле обязательное для заполнения" maxlength="25" required>
+                   data-error="Поле обязательное для заполнения" maxlength="40" required>
             <label class="form__help help-block with-errors"></label>
         </div>
         <div class="form__group form-group has-feedback">
