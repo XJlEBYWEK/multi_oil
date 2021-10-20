@@ -1443,7 +1443,7 @@ strong {
     height: 300px;
 }
 
-.stocks h1 {
+.stocks h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -1565,6 +1565,10 @@ h3.stocks-article__install {
     line-height: 38px;
     letter-spacing: 1px;
     margin-top: 1.5rem;
+}
+
+.news .text-article {
+    margin-bottom: 20px;
 }
 
 .link-article {
@@ -3467,7 +3471,6 @@ h3.popup__title_waiting {
     .footer__social .social__item {
         margin-right: 15px;
     }
-
     .acc-section-desktop .acc-title {
         text-align: center;
         font-size: 24px;
@@ -3475,7 +3478,7 @@ h3.popup__title_waiting {
         font-style: normal;
         font-weight: bold;
     }
-
+    .news
     .acc-box {
         margin: 16px auto 32px auto;
         min-height: 188px;
