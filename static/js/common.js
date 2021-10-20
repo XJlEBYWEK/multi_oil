@@ -254,10 +254,23 @@ $(document).ready(function () {
             }
             offset += limit;
         });
-
-
     });
 
+
+    $('#fb-buttton').click(function () {
+        window.open(`https://www.facebook.com/sharer.php?u=${window.location.href}`, 'sharer', 'status=0,toolbar=0,left=600,top=300,width=650,height=500');
+    });
+    $('#vb-buttton').click(function () {
+        window.open(`viber://forward?text=${window.location.href}`, 'sharer', 'status=0,toolbar=0,left=600,top=300,width=650,height=500');
+    });
+
+    $('#tel-buttton').click(function () {
+        window.open(`https://telegram.me/share/url?url=${window.location.href}`, 'sharer', 'status=0,toolbar=0,left=600,top=300,width=650,height=500');
+    });
+
+    $('#inst-buttton').click(function () {
+        window.open(`https://telegram.me/share/url?url=${window.location.href}`, 'sharer', 'status=0,toolbar=0,left=600,top=300,width=650,height=500');
+    });
 
 })
 ;
