@@ -9,7 +9,7 @@ class NewsAdmin(admin.ModelAdmin):
             'fields': ('name', 'body', 'data')
         }),
         ('Изображение', {
-            'fields': ('img', 'img_alt', 'img_title',)
+            'fields': ('img_blog', 'img_desktop', 'img_mobile', 'img_alt', 'img_title',)
         }),
         ('Страница', {
             'fields': ('name_url', 'page_title', 'page_description', 'page_keywords')
