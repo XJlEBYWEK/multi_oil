@@ -258,7 +258,8 @@ $(document).ready(function () {
 
 
     $('#fb-buttton').click(function () {
-        window.open(`https://www.facebook.com/sharer.php?u=${window.location.href}`, 'sharer', 'status=0,toolbar=0,left=600,top=300,width=650,height=500');
+        console.log('https://multioil.com.ua'+window.location.pathname.slice(0));
+        window.open(`https://www.facebook.com/sharer.php?u=https://multioil.com.ua${window.location.pathname.slice(0)}`, 'sharer', 'status=0,toolbar=0,left=600,top=300,width=650,height=500');
     });
     $('#vb-buttton').click(function () {
         window.open(`viber://forward?text=${window.location.href}`, 'sharer', 'status=0,toolbar=0,left=600,top=300,width=650,height=500');
