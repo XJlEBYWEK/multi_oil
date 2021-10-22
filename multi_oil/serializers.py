@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import News, Stocks
 
-base_url = "https://multioil.com.ua"
+base_url = "http://127.0.0.1:8000"
 
 
 class NewsSerializer(serializers.ModelSerializer):
