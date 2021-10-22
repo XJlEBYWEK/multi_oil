@@ -3,7 +3,6 @@ from .models import News, Stocks
 
 base_url = "http://127.0.0.1:8000"
 
-
 class NewsSerializer(serializers.ModelSerializer):
     url = serializers.SerializerMethodField()
 
