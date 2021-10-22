@@ -710,6 +710,10 @@ strong {
     visibility: visible;
 }
 
+.mobile-new--hidden {
+    display: block;
+}
+
 .language__current {
     font-size: 14px;
     font-weight: 500;
@@ -3446,6 +3450,9 @@ h3.popup__title_waiting {
     .partner-section__img {
         width: 220px;
         height: 270px;
+    }
+    .mobile-new--hidden {
+        display: none;
     }
 
     .business-section {
