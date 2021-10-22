@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/multioil-business.css' %}">
     <!-- endbuild -->
@@ -130,6 +132,21 @@
                 <h3>{{ data | safe }}</h3>
                 <h1>{{ name | safe }}</h1>
                 <div class="text-article">{{ body |safe }}</div>
+            </div>
+            <div class="col-lg-12">
+                <div class="share-social">
+                    <div class="share-icon">
+                        <i class="fas fa-share"></i>
+                    </div>
+                    <div class="share-link">
+                        <i class="fab fa-facebook" id="fb-buttton"></i>
+                        <i class="fab fa-viber" id="vb-buttton"></i>
+                        <i class="fab fa-telegram" id="tel-buttton"></i>
+                    </div>
+                    <div class="share-text">
+                        Поділитися
+                    </div>
+                </div>
             </div>
         </div>
     </div>

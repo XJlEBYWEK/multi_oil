@@ -148,7 +148,7 @@
                     <img src="{% static 'img/business/macbook.png' %}" alt="macbook photo"
                          class="business-section__img">
                 </picture>
-                <form class="form phone-form" name="form_phone_input" data-toggle="validator" data-focus="false"
+                <form class="form phone-form" data-toggle="validator" data-focus="false"
                       role="form">
                     {% csrf_token %}
                     <div class="form__group phone-form__group form-group has-feedback">
@@ -158,7 +158,7 @@
                                data-minlength="19"
                                data-error="Введите правильный номер" required>
                         <label class="form__help help-block with-errors"></label>
-                        <button type='submit' class="button phone-form__button phone-form__business">Отримати посилання</button>
+                        <button class="button phone-form__button phone-form__business">Отримати посилання</button>
                     </div>
                     <div class="phone-form__info">
                         <p>Залиште номер Вашого телефону і ми надішлемо</p>
