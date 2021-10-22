@@ -26,6 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['multiojf.beget.tech', 'multioil.com.ua', '127.0.0.1']
 
+BASE_URL = "http://127.0.0.1:8000"
+
 STATIC_ROOT = '/home/m/multiojf/multiojf.beget.tech/public_html/static'
 
 # Application definition
