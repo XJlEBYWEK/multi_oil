@@ -1460,6 +1460,12 @@ strong {
 
 .news img {
     display: block;
+    width: 100%;
+    height: auto;
+}
+
+.news .img-news__small {
+    display: block;
     width: 300px;
     height: 200px;
 }
